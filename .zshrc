@@ -1,7 +1,3 @@
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
 source ~/antigen.zsh
 
 antigen use oh-my-zsh
@@ -21,5 +17,9 @@ PATH=$PATH:/opt/jdk1.8/bin
 export PATH
 
 bindkey '^ ' autosuggest-execute
-antigen theme https://github.com/halfo/lambda-mod-zsh-theme lambda-mod
 
+antigen theme miloshadzic
+
+source ~/aliases.sh
+export NVM_DIR="/home/vagrant/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

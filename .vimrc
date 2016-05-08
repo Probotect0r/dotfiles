@@ -9,12 +9,47 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'nlknguyen/papercolor-theme'
+Plugin 'morhetz/gruvbox'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
+Plugin 'valloric/youcompleteme'
+Plugin 'vim-airline/vim-airline'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mxw/vim-jsx'
+set laststatus=2
 call vundle#end()
 filetype plugin indent on
 set t_Co=256
 set background=dark
-colorscheme PaperColor
+colorscheme gruvbox 
 set number
+
+" Mappings
+let mapleader = ','
+let g:mapleader = ','
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+map <leader>. :NERDTree<cr>
+map <leader>wq :wq<cr>
+map <leader>q :q<cr>
+
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 4 spaces
+set shiftwidth=2
+set tabstop=2
+
+" Linebreak on 500 characters
+set lbr
+set tw=500
+
+set ai "Auto indent
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|node_modules|svn)$',
+  \ }
