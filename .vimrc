@@ -16,6 +16,11 @@ Plugin 'valloric/youcompleteme'
 Plugin 'vim-airline/vim-airline'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mxw/vim-jsx'
+Plugin 'yggdroot/indentline'
+Plugin 'tpope/vim-surround'
+Plugin 'jiangmiao/auto-pairs'
+
+
 set laststatus=2
 call vundle#end()
 filetype plugin indent on
@@ -23,6 +28,11 @@ set t_Co=256
 set background=dark
 colorscheme gruvbox 
 set number
+set modifiable
+set noswapfile
+
+" Let jsx-vim highlight jsx code in .js files
+let g:jsx_ext_require = 0
 
 " Mappings
 let mapleader = ','
