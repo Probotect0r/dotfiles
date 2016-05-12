@@ -18,7 +18,7 @@ export PATH
 
 bindkey '^ ' autosuggest-execute
 
-antigen theme miloshadzic
+antigen theme agnoster
 
 source ~/.aliases.sh
 export NVM_DIR="/home/vagrant/.nvm"
