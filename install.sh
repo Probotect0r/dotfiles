@@ -20,6 +20,7 @@ sudo apt-get install -y terminator
 
 
 # Install vim with python support
+sudo apt-get install -y ncurses-dev
 git clone https://github.com/vim/vim.git
 cd vim
 ./configure --enable-pythoninterp
@@ -31,7 +32,7 @@ cp -r ~/dotfiles/colors ~/.vim/
 
 
 # Install Antigen
-url -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > antigen.zsh
+curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > antigen.zsh
 
 
 # Install tmux 2.0
