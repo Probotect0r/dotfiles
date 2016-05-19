@@ -12,25 +12,25 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
 Plugin 'valloric/youcompleteme'
-Plugin 'vim-airline/vim-airline'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'yggdroot/indentline'
 Plugin 'tpope/vim-surround'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'wavded/vim-stylus'
 Plugin 'mattn/emmet-vim'
+Plugin 'christoomey/vim-tmux-navigator'
 
 set laststatus=2
 call vundle#end()
 filetype plugin indent on
 
 " Theme and colors stuff
-set t_Co=256
 syntax enable
+let base16colorspace=256
 set background=dark
-colorscheme solarized 
+colorscheme gooey 
+hi MatchParen cterm=none ctermbg=white ctermfg=black
 
 " General stuff
 set number
@@ -44,10 +44,6 @@ let g:jsx_ext_require=0
 " Mappings
 let mapleader = ','
 let g:mapleader = ','
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
 map <leader>. :NERDTree<cr>
 map <leader>wq :wq<cr>
 map <leader>w :w<cr>
@@ -62,7 +58,7 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
+" 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
 

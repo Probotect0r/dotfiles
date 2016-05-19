@@ -2,12 +2,13 @@
   focus = system
   title_inactive_bg_color = "#65737E"
   title_transmit_bg_color = "#EC5f67"
+  window_state = fullscreen
 [keybindings]
 [layouts]
   [[default]]
     [[[child1]]]
       parent = window0
-      profile = Base16 OceanicNext Dark
+      profile = Base16 Gooey Dark
       type = Terminal
     [[[window0]]]
       parent = ""
@@ -44,6 +45,7 @@
     font = DejaVu Sans Mono for Powerline 10
     foreground_color = "#d1d4e0"
     palette = "#101218:#ee829f:#a5ffe1:#ffefcc:#97bbf7:#c0b7f9:#97e0ff:#d1d4e0:#7780a1:#ee829f:#a5ffe1:#ffefcc:#97bbf7:#c0b7f9:#97e0ff:#ffffff"
+    scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
   [[Base16 Google Dark]]

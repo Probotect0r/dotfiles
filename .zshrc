@@ -20,6 +20,5 @@ bindkey '^ ' autosuggest-execute
 
 antigen theme agnoster
 
-source ~/.aliases.sh
-export NVM_DIR="/home/vagrant/.nvm"
+export NVM_DIR="/home/sagar/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
