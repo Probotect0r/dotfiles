@@ -2,7 +2,7 @@
   focus = system
   title_inactive_bg_color = "#65737E"
   title_transmit_bg_color = "#EC5f67"
-  window_state = fullscreen
+  window_state = maximise
 [keybindings]
 [layouts]
   [[default]]
@@ -16,14 +16,6 @@
 [plugins]
 [profiles]
   [[default]]
-    allow_bold = False
-    background_color = "#1b2b34"
-    background_image = None
-    copy_on_selection = True
-    cursor_color = "#C0C5CE"
-    foreground_color = "#c0c5ce"
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    show_titlebar = False
   [[Base16 Eighties Dark]]
     allow_bold = False
     background_color = "#2d2d2d"
@@ -41,7 +33,6 @@
     background_image = None
     copy_on_selection = True
     cursor_color = "#ffffff"
-    cursor_shape = underline
     font = DejaVu Sans Mono for Powerline 10
     foreground_color = "#d1d4e0"
     palette = "#101218:#ee829f:#a5ffe1:#ffefcc:#97bbf7:#c0b7f9:#97e0ff:#d1d4e0:#7780a1:#ee829f:#a5ffe1:#ffefcc:#97bbf7:#c0b7f9:#97e0ff:#ffffff"
@@ -100,7 +91,6 @@
     background_image = None
     copy_on_selection = True
     cursor_color = "#ffffff"
-    cursor_shape = underline
     font = DejaVu Sans Mono for Powerline 10
     foreground_color = "#cbd6e2"
     palette = "#0b1c2c:#bf8b56:#56bf8b:#8bbf56:#8b56bf:#bf568b:#568bbf:#cbd6e2:#627e99:#bf8b56:#56bf8b:#8bbf56:#8b56bf:#bf568b:#568bbf:#f7f9fb"

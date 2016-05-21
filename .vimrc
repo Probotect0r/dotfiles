@@ -26,10 +26,11 @@ call vundle#end()
 filetype plugin indent on
 
 " Theme and colors stuff
+let g:base16_shell_path="~"
 syntax enable
 let base16colorspace=256
 set background=dark
-colorscheme gooey 
+colorscheme base16-gooey 
 hi MatchParen cterm=none ctermbg=white ctermfg=black
 
 " General stuff
@@ -49,6 +50,7 @@ map <leader>wq :wq<cr>
 map <leader>w :w<cr>
 map <leader>q :q<cr>
 map <leader>/ :noh<cr>
+set backspace=eol,start,indent
 
 " Make vim watch for changes to the file externally
 set autoread
@@ -68,5 +70,5 @@ set tw=500
 
 set ai "Auto indent
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|node_modules|svn)$',
+  \ 'dir':  '\v[\/](.git|node_modules|.svn)$',
   \ }
