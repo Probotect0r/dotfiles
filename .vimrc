@@ -14,7 +14,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'valloric/youcompleteme'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mxw/vim-jsx'
-Plugin 'yggdroot/indentline'
 Plugin 'tpope/vim-surround'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'wavded/vim-stylus'
@@ -26,12 +25,25 @@ call vundle#end()
 filetype plugin indent on
 
 " Theme and colors stuff
-let g:base16_shell_path="~"
 syntax enable
 let base16colorspace=256
 set background=dark
-colorscheme base16-gooey 
+colorscheme base16-gooey
+
+" Personal highlighting
+"0 is dark color
+"1 is red
+"2 is green
+"3 is yellow
+"4 is dark blue
+"5 is purple
+"6 is light blue
+"7 is light grey
+"16 is white
+
 hi MatchParen cterm=none ctermbg=white ctermfg=black
+hi Comment ctermfg=6
+
 
 " General stuff
 set number
@@ -65,10 +77,10 @@ set shiftwidth=2
 set tabstop=2
 
 " Linebreak on 500 characters
-set lbr
-set tw=500
+"set lbr
+"set tw=500
 
 set ai "Auto indent
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](.git|node_modules|.svn)$',
+  \ 'dir':  '\v[\/](.git|node_modules|.svn|dist)$',
   \ }
