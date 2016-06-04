@@ -95,12 +95,14 @@ bindsym $mod+a focus parent
 
 set $workspace1 "1: Terminal "
 set $workspace2 "2: Chrome "
+set $workspace3 "3: ToDo "
+set $workspace4 "4: Music "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
+bindsym $mod+3 workspace $workspace3 
+bindsym $mod+4 workspace $workspace4 
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -111,8 +113,8 @@ bindsym $mod+0 workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace $workspace2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
@@ -130,6 +132,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'Shutdown?' -b 'Yes' 'shutdown -h now'"
 bindsym $mod+Shift+c exec "i3-nagbar -t warning -m 'Restart?' -b 'Yes' 'shutdown -r now'"
+#bindsym $mod+Shift+c exec "i3-nagbar -t warning -m 'Restart?' -b 'Yes' 'shutdown -r now'"
+#bindsym $mod+Shift+c exec "i3-nagbar -t warning -m 'Restart?' -b 'Yes' 'shutdown -r now'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -161,35 +165,30 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  i3bar_command i3bar -t
   position top
-  #status_command i3status
+  status_command i3status
   tray_padding 20
   colors {
     background #1f222d
     separator #7780a1
     statusline #d1d4e0
     focused_workspace #97e0ff #97e0ff #000
-    active_workspace #252936 #252936 #ffffff
-    inactive_workspace #252936 #252936 #7780a1
+    active_workspace #c0b7f9 #c0b7f9 #000
+    inactive_workspace #c0b7f9 #c0b7f9 #000
     urgent_workspace #ee829f #ee829f #ffffff
   }
 }
 
-# Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+# Audio controls
+bindsym $mod+p  exec amixer -D pulse set Master 5%+
+bindsym $mod+o  exec amixer -D pulse set Master 5%-
+bindsym $mod+i  exec amixer -D pulse set Master toggle
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
-# Touchpad controls
-bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
-
 exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
-
 
 client.focused #1f222d #1f222d #ffffff #1f222d
 client.focused_inactive #252936 #252936 #7780a1 #1f222d

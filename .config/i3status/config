@@ -1,0 +1,55 @@
+general {
+    output_format = "i3bar"
+    colors = true
+    interval = 5
+    color_good = "#a5ffe1"
+    color_bad = "#ee829f"
+    color_degraded = "#FFEFCC"
+}
+
+order += "ethernet enp5s0"
+order += "wireless wlan0"
+order += "cpu_usage"
+order += "battery 0"
+order += "volume master"
+order += "tztime local"
+
+tztime local {
+  format = "%Y-%m-%d %H:%M"
+
+}
+
+ethernet enp5s0 {
+  # if you use %speed, i3status requires the cap_net_admin capability
+  format_up = "E: %ip"
+  format_down = "E: down"
+
+}
+
+wireless wlan0 {
+  format_up = "W: (%quality at %essid) %ip"
+  format_down = "W: down"
+
+}
+
+battery 0 {
+  format = "%status %percentage %remaining %emptytime"
+  format_down = "No battery"
+  status_chr = "⚇ CHR"
+  status_bat = "⚡ BAT"
+  status_full = "☻ FULL"
+  path = "/sys/class/power_supply/BAT%d/uevent"
+  low_threshold = 10
+}
+
+cpu_usage {
+  format = "CPU: %usage"
+}
+
+volume master {
+  format = "  %volume"
+  format_muted = "  Muted (%volume)"
+  device = "default"
+  mixer = "Master"
+  mixer_idx = 0
+}
