@@ -8,7 +8,7 @@ general {
 }
 
 order += "ethernet enp5s0"
-order += "wireless wlan0"
+order += "wireless wlp4s0"
 order += "cpu_usage"
 order += "battery 0"
 order += "volume master"
@@ -26,14 +26,14 @@ ethernet enp5s0 {
 
 }
 
-wireless wlan0 {
+wireless wlp4s0 {
   format_up = "W: (%quality at %essid) %ip"
   format_down = "W: down"
 
 }
 
 battery 0 {
-  format = "%status %percentage %remaining %emptytime"
+  format = "%status %percentage"
   format_down = "No battery"
   status_chr = "⚇ CHR"
   status_bat = "⚡ BAT"
