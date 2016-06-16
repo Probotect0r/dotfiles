@@ -132,8 +132,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'Shutdown?' -b 'Yes' 'shutdown -h now'"
 bindsym $mod+Shift+c exec "i3-nagbar -t warning -m 'Restart?' -b 'Yes' 'shutdown -r now'"
-#bindsym $mod+Shift+c exec "i3-nagbar -t warning -m 'Restart?' -b 'Yes' 'shutdown -r now'"
-#bindsym $mod+Shift+c exec "i3-nagbar -t warning -m 'Restart?' -b 'Yes' 'shutdown -r now'"
+bindsym $mod+Shift+z exec "i3-nagbar -t warning -m 'Sleep?' -b 'Yes' 'systemctl suspend'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
