@@ -4,12 +4,10 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'pangloss/vim-javascript'
+"Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
 Plugin 'valloric/youcompleteme'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -19,65 +17,61 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'wavded/vim-stylus'
 Plugin 'mattn/emmet-vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'nikvdp/ejs-syntax'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-sensible'
 
-set laststatus=2
 call vundle#end()
 filetype plugin indent on
 
+let javascript_enable_domhtmlcss=1
+set ttimeoutlen=10
+set laststatus=2
+set noshowmode
+
 " Theme and colors stuff
+set t_Co=256
 syntax enable
 set background=dark
-colorscheme base16-gooey
-let javascript_enable_domhtmlcss=1
+colorscheme base16_railscasts
+let g:airline_theme='base16_railscasts'
+let base16colorspace=256
 
-" Personal highlighting
-"0 is dark color
-"1 is red
-"2 is green
-"3 is yellow
-"4 is dark blue
-"5 is purple
-"6 is light blue
-"7 is light grey
-"16 is white
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_right_sep=''
+let g:airline_left_sep=''
+let g:airline_powerline_fonts = 0
+let g:airline_section_warning = ''
+let g:airline_section_y = ''
+let g:airline_section_z = ''
+let g:airline#extensions#tabline#show_buffers = 0
 
-hi MatchParen cterm=none ctermbg=white ctermfg=black
-hi Comment ctermfg=6 
-hi Include ctermfg=1
-hi Boolean ctermfg=1
-hi Identifier ctermfg=3
-hi Function ctermfg=3
-hi Conditional ctermfg=4
-hi String ctermfg=2
-hi Repeat ctermfg=4
-hi Label ctermfg=1
-hi Operator ctermfg=4
-hi Type ctermfg=1
-hi StorageClass ctermfg=3
-hi Todo ctermfg=6
-hi Special ctermfg=1
-hi Noise ctermfg=4
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+
+" Personal highlighting/some fixes
+hi LineNr ctermbg=none
+hi PMenu ctermbg=none
+hi PMenuSel ctermbg=18
+hi CursorLine ctermbg=none
+hi Visual ctermbg=18
+hi Tabline ctermbg=none
+hi TablineFill ctermbg=none
+hi TablineSel ctermbg=18
+hi Todo ctermbg=18
 
 " General stuff
 set number
 set modifiable
 set noswapfile
-set mouse=i
-
-" Let jsx-vim highlight jsx code in .js files
-"let g:jsx_ext_require=0
-
-" Mappings
-let mapleader = ','
-let g:mapleader = ','
-nmap <leader>. :NERDTree<cr>
-nmap <leader>wq :wq<cr>
-nmap <leader>w :w<cr>
-nmap <leader>q :q<cr>
-nmap <leader>/ :noh<cr>
-nmap <leader>- :exe "vertical resize -20"<cr>
-nmap <leader>+ :exe "vertical resize +20"<cr>
-
+set mouse=n
+set ruler
 set backspace=eol,start,indent
 
 " Make vim watch for changes to the file externally
@@ -96,6 +90,27 @@ set tabstop=2
 set nowrap
 
 set ai "Auto indent
+
+" Let jsx-vim highlight jsx code in .js files
+let g:jsx_ext_require=0
+
+" Mappings
+let mapleader = ','
+let g:mapleader = ','
+nmap <leader>. :NERDTree<cr>
+nmap <leader>wq :wq<cr>
+nmap <leader>w :w<cr>
+nmap <leader>q :q<cr>
+map <leader>y "+y
+map <leader>p "+p
+nmap <leader>/ :noh<cr>
+nmap <leader>- :exe "vertical resize -20"<cr>
+nmap <leader>+ :exe "vertical resize +20"<cr>
+
+" comment/uncomment selected lines
+map  <leader>ic :s/^/\/\//g<CR>:let @/ = ""<CR>
+map  <leader>rc :s/^\/\///g<CR>:let @/ = ""<CR>
+
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](.git|node_modules|.svn|dist)$',
   \ }

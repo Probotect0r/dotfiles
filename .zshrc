@@ -11,14 +11,19 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen apply
 
 # User configuration
-
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-PATH=$PATH:/opt/jdk1.8/bin
-export PATH
-
 bindkey '^ ' autosuggest-execute
 
 antigen theme agnoster
 
 export NVM_DIR="/home/sagar/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PROJECT_HOME=$HOME/Code/python-envs
+
+# startup virtualenv-burrito
+if [ -f $HOME/.venvburrito/startup.sh ]; then
+    . $HOME/.venvburrito/startup.sh
+fi
+
+# Source .zprofile so you get login configs as well
+source ~/.profile

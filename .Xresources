@@ -1,0 +1,46 @@
+URxvt.font:         xft:Monofur for Powerline
+URxvt.lineSpace:    2 
+URxvt.scrollBar:    false
+Xft.dpi:            100:unscaled
+Xft.antialias:      true
+Xft.rgba:           rgb
+Xft.hinting:        true
+Xft.autohint:       false
+Xft.hintstyle:      hintmedium
+Xft.lcdfilter:      lcddefault
+
+
+! Base16 Railscasts
+! Scheme: Ryan Bates (http://railscasts.com)
+
+URxvt*background:                     #2b2b2b
+URxvt*foreground:                     #e6e1dc
+URxvt*cursorColor:                    #e6e1dc
+
+URxvt*scrollColor:                    #e6e1dc
+URxvt*highlightColor:                 #3a4055
+URxvt*highlightTextColor:             #d4cfc9
+
+URxvt*color0:                         #2b2b2b
+URxvt*color1:                         #da4939
+URxvt*color2:                         #a5c261
+URxvt*color3:                         #ffc66d
+URxvt*color4:                         #6d9cbe
+URxvt*color5:                         #b6b3eb
+URxvt*color6:                         #519f50
+URxvt*color7:                         #e6e1dc
+URxvt*color8:                         #5a647e
+URxvt*color9:                         #da4939
+URxvt*color10:                        #a5c261
+URxvt*color11:                        #ffc66d
+URxvt*color12:                        #6d9cbe
+URxvt*color13:                        #b6b3eb
+URxvt*color14:                        #519f50
+URxvt*color15:                        #f9f7f3
+
+URxvt*color16:                        #cc7833
+URxvt*color17:                        #bc9458
+URxvt*color18:                        #272935
+URxvt*color19:                        #3a4055
+URxvt*color20:                        #d4cfc9
+URxvt*color21:                        #f4f1ed

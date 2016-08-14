@@ -35,7 +35,7 @@
     background_image = None
     copy_on_selection = True
     cursor_color = "#ffffff"
-    font = Source Code Pro for Powerline Ultra-Light 10
+    font = Source Code Pro for Powerline Light 10
     foreground_color = "#d1d4e0"
     palette = "#101218:#ee829f:#a5ffe1:#ffefcc:#97bbf7:#c0b7f9:#97e0ff:#d1d4e0:#7780a1:#ee829f:#a5ffe1:#ffefcc:#97bbf7:#c0b7f9:#97e0ff:#ffffff"
     scrollbar_position = hidden

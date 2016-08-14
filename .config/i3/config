@@ -76,6 +76,9 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
+# Set default container mode to tabbed
+workspace_layout tabbed
+
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
@@ -187,8 +190,10 @@ bindsym $mod+i  exec amixer -D pulse set Master toggle
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
-exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
-exec_always nm-applet
+exec_always feh --bg-scale ~/Pictures/wallhaven1.jpg # Wallpaper
+exec_always nm-applet # network manager applet
+exec xrandr --output DVI-D-0 --mode 1680x1050 --pos 3200x0 --rotate normal --output HDMI-0 --mode 1280x1024 --pos 0x0 --rotate normal --output DVI-I-1 --mode 1920x1080 --pos 1280x0 --rotate normal --output DVI-I-0 --off --output DP-1 --off --output DP-0 --off #monitor setup
+exec_always node ~/Code/themer/dist/index.js
 
 client.focused #1f222d #1f222d #ffffff #1f222d
 client.focused_inactive #252936 #252936 #7780a1 #1f222d
@@ -197,6 +202,5 @@ client.urgent #252936 #ee829f #ffffff #ee829f
 
 for_window [class="^.*"] border pixel 0
 
-# Gaps stuff
-gaps outer 10
+#GAPS stuff
 gaps inner 15
