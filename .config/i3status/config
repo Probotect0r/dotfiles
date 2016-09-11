@@ -1,11 +1,10 @@
 general {
     output_format = "i3bar"
-    colors = true
     interval = 5
-    color_good = "#a5ffe1"
-    color_bad = "#ee829f"
-    color_degraded = "#FFEFCC"
-}
+    colors = true
+    color_good = "#95C7AE"
+    color_bad = "#C7AE95"
+    }
 
 order += "ethernet enp5s0"
 order += "wireless wlp4s0"

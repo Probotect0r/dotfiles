@@ -7,7 +7,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-"Plugin 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
 Plugin 'valloric/youcompleteme'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -19,27 +19,23 @@ Plugin 'mattn/emmet-vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'nikvdp/ejs-syntax'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-sensible'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'hail2u/vim-css3-syntax'
 
 call vundle#end()
 filetype plugin indent on
 
-let javascript_enable_domhtmlcss=1
-set ttimeoutlen=10
-set laststatus=2
-set noshowmode
 
 " Theme and colors stuff
-set t_Co=256
 syntax enable
 set background=dark
-colorscheme base16_railscasts
-let g:airline_theme='base16_railscasts'
-let base16colorspace=256
+colorscheme generic
+"let g:airline_theme='sagar'
 
-let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_right_sep=''
@@ -55,27 +51,38 @@ if !exists('g:airline_symbols')
 endif
 let g:airline_symbols.space = "\ua0"
 
-" Personal highlighting/some fixes
-hi LineNr ctermbg=none
-hi PMenu ctermbg=none
-hi PMenuSel ctermbg=18
-hi CursorLine ctermbg=none
-hi Visual ctermbg=18
-hi Tabline ctermbg=none
-hi TablineFill ctermbg=none
-hi TablineSel ctermbg=18
-hi Todo ctermbg=18
-
 " General stuff
 set number
 set modifiable
 set noswapfile
+
+set splitbelow
+set splitright
+
+set fillchars+=vert:\ 
+
+" Mouse only in normal mode
 set mouse=n
+
 set ruler
+set cursorline
+
+" Make backspace proper
 set backspace=eol,start,indent
+
+" Decrease update time from 4sec
+set updatetime=250
+
+let javascript_enable_domhtmlcss=1
+set ttimeoutlen=10
+
+" Need for vim-airline
+set laststatus=2
+set noshowmode
 
 " Make vim watch for changes to the file externally
 set autoread
+
 " Use spaces instead of tabs
 set expandtab
 
@@ -106,6 +113,12 @@ map <leader>p "+p
 nmap <leader>/ :noh<cr>
 nmap <leader>- :exe "vertical resize -20"<cr>
 nmap <leader>+ :exe "vertical resize +20"<cr>
+" Move current line up or down
+nnoremap <C-j> :m+<CR>==
+nnoremap <C-k> :m-2<CR>==
+vnoremap <C-j> :m'>+<CR>gv=gv
+vnoremap <C-k> :m-2<CR>gv=gv
+nnoremap <leader>gd :YcmCompleter GoTo<CR>
 
 " comment/uncomment selected lines
 map  <leader>ic :s/^/\/\//g<CR>:let @/ = ""<CR>
