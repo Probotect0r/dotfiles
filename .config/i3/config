@@ -1,20 +1,20 @@
 # Set colors
-set $base00 #1C2023
-set $base01 #393F45
-set $base02 #565E65
-set $base03 #747C84
-set $base04 #ADB3BA
-set $base05 #C7CCD1
-set $base06 #DFE2E5
-set $base07 #F3F4F5
-set $base08 #C7AE95
-set $base09 #C7C795
-set $base0A #AEC795
-set $base0B #95C7AE
-set $base0C #95AEC7
-set $base0D #AE95C7
-set $base0E #C795AE
-set $base0F #C79595
+set $base00 #101218
+set $base01 #1f222d
+set $base02 #252936
+set $base03 #7780a1
+set $base04 #C0C5CE
+set $base05 #d1d4e0
+set $base06 #C9CCDB
+set $base07 #ffffff
+set $base08 #ee829f
+set $base09 #f99170
+set $base0A #ffefcc
+set $base0B #a5ffe1
+set $base0C #97e0ff
+set $base0D #97bbf7
+set $base0E #c0b7f9
+set $base0F #fcc09e
 
 # Set mod key to ALT
 set $mod Mod1
@@ -160,6 +160,7 @@ bar {
   status_command i3status
   # Font
   font pango:Source Code Pro for Powerline 8.5
+
   colors {
         separator $base03
         background $base01
@@ -170,12 +171,6 @@ bar {
         urgent_workspace $base08 $base08 $base07
     }
 }
-
-# Window Colors
-client.focused $base0D $base0D $base00 $base01
-client.focused_inactive $base02 $base02 $base03 $base01
-client.unfocused $base01 $base01 $base03 $base01
-client.urgent $base02 $base08 $base07 $base08
 
 # Audio controls
 bindsym $mod+p  exec amixer -D pulse set Master 5%+
@@ -190,13 +185,21 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 exec_always feh --bg-scale ~/Pictures/wallpaper.jpg # Wallpaper
 exec_always nm-applet # network manager applet
 exec xrandr --output DVI-D-0 --mode 1680x1050 --pos 3200x0 --rotate normal --output HDMI-0 --mode 1280x1024 --pos 0x0 --rotate normal --output DVI-I-1 --mode 1920x1080 --pos 1280x0 --rotate normal --output DVI-I-0 --off --output DP-1 --off --output DP-0 --off #monitor setup
+exec xrdb ~/.Xresources
 #exec_always node ~/Code/themer/dist/index.js >> ~/Code/log.txt
 exec_always ~/node-script.sh
 
 # Set a border
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 0
 
 #GAPS stuff
 gaps inner 15
 #smart_gaps on
 #smart_borders on
+
+# Set Window colors 
+client.focused $base0D $base0D $base00 $base01
+client.focused_inactive $base02 $base02 $base03 $base01
+client.unfocused $base01 $base01 $base03 $base01
+client.urgent $base02 $base08 $base07 $base08
+

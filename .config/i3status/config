@@ -2,8 +2,8 @@ general {
     output_format = "i3bar"
     interval = 5
     colors = true
-    color_good = "#95C7AE"
-    color_bad = "#C7AE95"
+    color_good = "#b9ca4a"
+    color_bad = "#d54e53"
     }
 
 order += "ethernet enp5s0"

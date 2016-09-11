@@ -1,8 +1,8 @@
-URxvt.font:         xft:Source Code Pro for Powerline:size=11
-URxvt.lineSpace:    2 
+URxvt.font:         xft:M+ 1mn light for Powerline:size=11
+
+URxvt.lineSpace:    2
 URxvt.scrollBar:    false
-URxvt.internalBorder: 0
-!Xft.dpi:            96
+URxvt.internalBorder: 10
 Xft.antialias:      true
 Xft.rgba:           rgb
 Xft.hinting:        true
@@ -10,55 +10,18 @@ Xft.autohint:       false
 Xft.hintstyle:      hintmedium
 Xft.lcdfilter:      lcddefault
 
-! Base16 Ashes
-! Scheme: Jannik Siebert (https://github.com/janniks)
+#define bg      #2c2832
+#define fg      #dbd7b8
+#define blk     #332d38
+#define bblk    #6f6b75
+#define red     #bf6257
+#define grn     #82a37c
+#define ylw     #b7a16c
+#define blu     #6d6a80
+#define mag     #825969
+#define cyn     #938e8f
+#define wht     #dbd7b8
 
-!URxvt*background:                     #1C2023
-!URxvt*foreground:                     #C7CCD1
-!URxvt*cursorColor:                    #C7CCD1
-!
-!URxvt*scrollColor:                    #C7CCD1
-!URxvt*highlightColor:                 #565E65
-!URxvt*highlightTextColor:             #ADB3BA
-!
-!URxvt*color0:                         #1C2023
-!URxvt*color1:                         #C7AE95
-!URxvt*color2:                         #95C7AE
-!URxvt*color3:                         #AEC795
-!URxvt*color4:                         #AE95C7
-!URxvt*color5:                         #C795AE
-!URxvt*color6:                         #95AEC7
-!URxvt*color7:                         #C7CCD1
-!URxvt*color8:                         #747C84
-!URxvt*color9:                         #C7AE95
-!URxvt*color10:                        #95C7AE
-!URxvt*color11:                        #AEC795
-!URxvt*color12:                        #AE95C7
-!URxvt*color13:                        #C795AE
-!URxvt*color14:                        #95AEC7
-!URxvt*color15:                        #F3F4F5
-!
-!URxvt*color16:                        #C7C795
-!URxvt*color17:                        #C79595
-!URxvt*color18:                        #393F45
-!URxvt*color19:                        #565E65
-!URxvt*color20:                        #ADB3BA
-!URxvt*color21:                        #DFE2E5
-! -- Title:     5725 
-! -- Author:    dkeg
-! -- Created:   2016
-#define bg    #363334
-#define fg    #c3c1b8
-#define blk   #393638
-#define bblk  #4a484b
-#define red   #97544d
-#define grn   #97a293
-#define ylw   #c29f6f
-#define blu   #5e606c
-#define mag   #7a6054
-#define cyn   #78746c
-#define wht   #c3c1b8
-! Colors  
 *background:   bg  
 *foreground:   fg  
 *cursorColor:  cyn  
