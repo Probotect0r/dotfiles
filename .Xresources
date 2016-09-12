@@ -1,26 +1,41 @@
-URxvt.font:         xft:M+ 1mn light for Powerline:size=11
-
-URxvt.lineSpace:    2
+URxvt.font:         xft:Iosevka:style=light:size=11, xft:Input:style=regular:size=11, xft:M+ 1mn light for Powerline:style=regular:size=11
+URxvt.lineSpace:    3
 URxvt.scrollBar:    false
-URxvt.internalBorder: 10
-Xft.antialias:      true
 Xft.rgba:           rgb
+Xft.dpi:            100:unscaled
+Xft.antialias:      true
 Xft.hinting:        true
 Xft.autohint:       false
 Xft.hintstyle:      hintmedium
 Xft.lcdfilter:      lcddefault
 
-#define bg      #2c2832
-#define fg      #dbd7b8
-#define blk     #332d38
-#define bblk    #6f6b75
-#define red     #bf6257
-#define grn     #82a37c
-#define ylw     #b7a16c
-#define blu     #6d6a80
-#define mag     #825969
-#define cyn     #938e8f
-#define wht     #dbd7b8
+! dkeg 2015
+! blok 
+
+
+
+
+! -- Author:  dkeg
+! -- Created: 2016
+! -- Title:   provrb 
+
+
+
+
+! dkeg 2014
+! browntownReload 
+
+#define bg      #242120
+#define fg      #b7afa4
+#define blk     #272625
+#define bblk    #4f4d4c
+#define red     #925633
+#define grn     #757c60
+#define ylw     #987f4b
+#define blu     #515962
+#define mag     #685054
+#define cyn     #506168 
+#define wht     #b7afa4
 
 *background:   bg  
 *foreground:   fg  
