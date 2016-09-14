@@ -9,51 +9,46 @@ Xft.autohint:       false
 Xft.hintstyle:      hintmedium
 Xft.lcdfilter:      lcddefault
 
-! dkeg 2015
-! blok 
+! Title: parkd 
+! Author: dkeg
+! Created: 2015 
 
+#define bg     #30292d 
+#define fg     #c2b7aa 
+#define blk    #332d30 
+#define bblk   #413c40 
+#define red    #89453c 
+#define grn    #59713f 
+#define ylw    #b29d6a 
+#define blu    #464e59 
+#define mag    #614e44 
+#define cyn    #4f545b 
+#define wht    #c2b7aa 
+#define bred   #89453c 
+#define bgrn   #59713f 
+#define bylw   #b29d6a 
+#define bblu   #464e59 
+#define bmag   #614e44 
+#define bcyn   #4f545b 
+#define bwht   #c2b7aa 
 
-
-
-! -- Author:  dkeg
-! -- Created: 2016
-! -- Title:   provrb 
-
-
-
-
-! dkeg 2014
-! browntownReload 
-
-#define bg      #242120
-#define fg      #b7afa4
-#define blk     #272625
-#define bblk    #4f4d4c
-#define red     #925633
-#define grn     #757c60
-#define ylw     #987f4b
-#define blu     #515962
-#define mag     #685054
-#define cyn     #506168 
-#define wht     #b7afa4
-
+! Colors  
 *background:   bg  
 *foreground:   fg  
-*cursorColor:  cyn  
 
 *color0:      blk  
 *color8:      bblk  
 *color1:      red  
-*color9:      red  
+*color9:      bred  
 *color2:      grn  
-*color10:     grn  
+*color10:     bgrn  
 *color3:      ylw  
-*color11:     ylw  
+*color11:     bylw  
 *color4:      blu  
-*color12:     blu  
+*color12:     bblu  
 *color5:      mag  
-*color13:     mag  
+*color13:     bmag  
 *color6:      cyn  
-*color14:     cyn  
+*color14:     bcyn  
 *color7:      wht  
-*color15:     wht  
+*color15:     bwht 

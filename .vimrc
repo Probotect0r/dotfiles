@@ -58,11 +58,22 @@ set number
 set modifiable
 set noswapfile
 set noshowcmd
-set noruler
+set ruler
+" Always display statusline
 set laststatus=2
+" Update files changed outside vim
+set autoread
 
+" Split directions
 set splitbelow
 set splitright
+
+" Trigger autoread when changing buffers or coming back to vim in terminal.
+au FocusGained,BufEnter * :silent! !
+
+" Ignore case in search
+set ignorecase
+set incsearch
 
 " Seperator character for vertical split (currently a space)
 set fillchars+=vert:\ 
@@ -87,6 +98,9 @@ set statusline+=\ \ \
 " Mouse only in normal mode
 set mouse=n
 
+set scrolloff=10         "Start scrolling when we're 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
 set cursorline
 
 " Make backspace proper
@@ -97,9 +111,6 @@ set updatetime=250
 
 let javascript_enable_domhtmlcss=1
 set ttimeoutlen=10
-
-" Make vim watch for changes to the file externally
-set autoread
 
 " Use spaces instead of tabs
 set expandtab
@@ -118,6 +129,21 @@ set ai "Auto indent
 
 " Let jsx-vim highlight jsx code in .js files
 let g:jsx_ext_require=0
+
+" Relative numbering
+set rnu
+function! ToggleNumbersOn()
+  set nu!
+  set rnu
+endfunction
+function! ToggleRelativeOn()
+  set rnu!
+  set nu
+endfunction
+autocmd FocusLost * call ToggleRelativeOn()
+autocmd FocusGained * call ToggleRelativeOn()
+autocmd InsertEnter * call ToggleRelativeOn()
+autocmd InsertLeave * call ToggleRelativeOn()
 
 " Mappings
 let mapleader = ','
@@ -138,14 +164,18 @@ vnoremap <leader>j :m'>+<CR>gv=gv
 vnoremap <leader>k :m-2<CR>gv=gv
 
 nnoremap <leader>gd :YcmCompleter GoTo<CR>
+nnoremap <CR> o<Esc>
+"Below is to fix issues with the ABOVE mappings in quickfix window
+autocmd CmdwinEnter * nnoremap <CR> <CR>
+autocmd BufReadPost quickfix nnoremap <CR> <CR>
 
 " comment/uncomment selected lines
 map  <leader>ic :s/^/\/\//g<CR>:let @/ = ""<CR>
 map  <leader>rc :s/^\/\///g<CR>:let @/ = ""<CR>
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](.git|node_modules|.svn|dist)$',
-  \ }
+      \ 'dir':  '\v[\/](.git|node_modules|.svn|dist)$',
+      \ }
 
 " Syntastic settings
 set statusline+=%#warningmsg#
