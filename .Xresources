@@ -9,28 +9,28 @@ Xft.autohint:       false
 Xft.hintstyle:      hintmedium
 Xft.lcdfilter:      lcddefault
 
-! Title: parkd 
+! Title: flapr 
 ! Author: dkeg
-! Created: 2015 
+! Created: 2016 
 
-#define bg     #30292d 
-#define fg     #c2b7aa 
-#define blk    #332d30 
-#define bblk   #413c40 
-#define red    #89453c 
-#define grn    #59713f 
-#define ylw    #b29d6a 
-#define blu    #464e59 
-#define mag    #614e44 
-#define cyn    #4f545b 
-#define wht    #c2b7aa 
-#define bred   #89453c 
-#define bgrn   #59713f 
-#define bylw   #b29d6a 
-#define bblu   #464e59 
-#define bmag   #614e44 
-#define bcyn   #4f545b 
-#define bwht   #c2b7aa 
+#define bg     #2f2832 
+#define fg     #b0a8a8 
+#define blk    #353038 
+#define bblk   #58525a 
+#define red    #885d50 
+#define grn    #747965 
+#define ylw    #9a8e80 
+#define blu    #4a4e5a 
+#define mag    #76675b 
+#define cyn    #59555c 
+#define wht    #b0a8a8 
+#define bred   #885d50 
+#define bgrn   #747965 
+#define bylw   #9a8e80 
+#define bblu   #4a4e5a 
+#define bmag   #76675b 
+#define bcyn   #59555c 
+#define bwht   #FFFFFF 
 
 ! Colors  
 *background:   bg  
@@ -52,29 +52,29 @@ Xft.lcdfilter:      lcddefault
 *color14:     bcyn  
 *color7:      wht  
 *color15:     bwht 
-
 !Rofi
 rofi.lines:       5
-rofi.font:        Iosevka 11
 rofi.width:       30
-rofi.hide-scrollbar: true
 
-rofi.fg:          fg
-rofi.bg:          bg
-rofi.bc:          red
+rofi.fg:          #b0a8a8
+rofi.bg:          #2f2832
+rofi.bc:          #885d50
 rofi.bw:          3
 
-rofi.hlfg:        ylw
-rofi.hlbg:        red
+rofi.hlfg:        #9a8e80
+rofi.hlbg:        #885d50
 
-rofi.fg-active:   red 
-rofi.bg-active:   ylw
-rofi.hlbg-active: red
-rofi.hlfg-active: ylw 
+rofi.fg-active:   #885d50 
+rofi.bg-active:   #9a8e80
+rofi.hlbg-active: #885d50
+rofi.hlfg-active: #9a8e80 
 
-rofi.fg-urgent:   red
-rofi.bg-urgent:   bred 
-rofi.hlfg-urgent: red 
-rofi.hlbg-urgent: bylw
+rofi.fg-urgent:   #885d50
+rofi.bg-urgent:   #885d50 
+rofi.hlfg-urgent: #885d50 
+rofi.hlbg-urgent: #9a8e80
 
-rofi.bgalt:       blk
+rofi.bgalt:       #353038
+
+rofi.hide-scrollbar: true
+rofi.font:        Iosevka 11
