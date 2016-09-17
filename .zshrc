@@ -25,5 +25,7 @@ if [ -f $HOME/.venvburrito/startup.sh ]; then
     . $HOME/.venvburrito/startup.sh
 fi
 
-# Source .zprofile so you get login configs as well
+# Aliases
+alias tmux="TERM=screen-256color tmux" # Need this to display proper colors in tmux
+# Source .profile so you get login configs as well
 source ~/.profile

@@ -24,8 +24,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-sensible'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'hail2u/vim-css3-syntax'
-Plugin 'scrooloose/syntastic'
-Plugin 'mtscout6/syntastic-local-eslint.vim'
+"Plugin 'scrooloose/syntastic'
+"Plugin 'mtscout6/syntastic-local-eslint.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -178,9 +178,9 @@ let g:ctrlp_custom_ignore = {
       \ }
 
 " Syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
