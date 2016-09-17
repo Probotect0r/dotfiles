@@ -1,0 +1,28 @@
+[admiral]
+items = ["left",
+         "center", "title",
+         "right", "battery", "clock"]
+
+[title]
+path = "xtitle -s -t -40"
+
+[clock]
+path = "date '+%-I:%M%p  '"
+reload = 1
+
+# Used for formatting lemonbar
+[left]
+path = "echo '%{l}'"
+static = true
+
+[center]
+path = "echo '%{c}'"
+static = true
+
+[right]
+path = "echo '%{r}'"
+static = true
+
+[battery]
+path = "./battery.sh"
+reload = 30

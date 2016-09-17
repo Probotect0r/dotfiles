@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Numix</name>
+    <name>Arc-Dark</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -180,7 +180,7 @@
     <!-- Keybindings for desktop switching -->
     <keybind key="A-Return">
       <action name="Execute">
-        <execute>x-terminal-emulator</execute>
+        <execute>urxvt</execute>
       </action>
     </keybind>
     <keybind key="A-b">
@@ -259,7 +259,7 @@
       <action name="Execute">
         <command>
           shutdown now
-        </command> 
+        </command>
       </action>
     </keybind>
     <keybind key="A-Escape">
@@ -365,6 +365,7 @@
       </action>
     </keybind>
     <keybind key="A-m">
+      <action name="Undecorate" />
       <action name="Maximize"/>
     </keybind>
     <keybind key="A-S-f">
