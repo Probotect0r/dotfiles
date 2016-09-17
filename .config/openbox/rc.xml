@@ -351,22 +351,32 @@
     <!-- Tiling keybinds -->
     <keybind key="A-f">
       <action name="Undecorate"/>
-      <action name="GrowToEdge">
-        <direction>north</direction>
-        <direction>south</direction>
-        <direction>east</direction>
-        <direction>west</direction>
+      <action name="GrowToFill"/>
+      <action name="ResizeRelative">
+        <left>-20</left>
+        <right>-20</right>
+        <top>-20</top>
+        <bottom>-20</bottom>
+      </action>
+      <!--
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width client="yes">100%</width>
+        <height client="yes">100%</height>
       </action>
       <action name="ResizeRelative">
-        <left>-10</left>
-        <right>-10</right>
-        <top>-10</top>
-        <bottom>-10</bottom>
+        <left>-20</left>
+        <right>-20</right>
+        <top>-20</top>
+        <bottom>-20</bottom>
       </action>
+      -->
+
     </keybind>
     <keybind key="A-m">
-      <action name="Undecorate" />
-      <action name="Maximize"/>
+      <action name="ToggleDecorations" />
+      <action name="ToggleMaximize"/>
     </keybind>
     <keybind key="A-S-f">
       <action name="ToggleFullscreen">
