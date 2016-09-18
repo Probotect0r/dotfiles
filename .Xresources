@@ -9,28 +9,28 @@ Xft.autohint:       false
 Xft.hintstyle:      hintmedium
 Xft.lcdfilter:      lcddefault
 
-! Title: shade 
-! Author: dkeg
-! Created: 2015
+! Title: novmbr 
+! Author: dkeg 
+! Created: 2015 
 
-#define bg     #2d2d2d 
-#define fg     #f7f7df 
-#define blk    #2e2e2e 
-#define bblk   #4e4e4e 
-#define red    #c77369 
-#define grn    #93988a 
-#define ylw    #d0c57a 
-#define blu    #747f89 
-#define mag    #825969 
-#define cyn    #938e8f 
-#define wht    #ededb7 
-#define bred   #c77369 
-#define bgrn   #93988a 
-#define bylw   #d0c57a 
-#define bblu   #747f89 
-#define bmag   #825969 
-#define bcyn   #938e8f 
-#define bwht   #f7f7df 
+#define bg     #1f1a17 
+#define fg     #c7b8ac 
+#define blk    #251e1b 
+#define bblk   #433c38 
+#define red    #9f6434 
+#define grn    #9dac5f 
+#define ylw    #cca75f 
+#define blu    #2f7d7c 
+#define mag    #b5896e 
+#define cyn    #52877f 
+#define wht    #c7b8ac 
+#define bred   #9f6434 
+#define bgrn   #9dac5f 
+#define bylw   #cca75f 
+#define bblu   #2f7d7c 
+#define bmag   #b5896e 
+#define bcyn   #52877f 
+#define bwht   #c7b8ac 
 
 ! Colors  
 *background:   bg  
@@ -55,13 +55,12 @@ Xft.lcdfilter:      lcddefault
 !Rofi
 rofi.lines:         5
 rofi.width:         30
-
 rofi.bw:            5
 
-rofi.color-window:  #2d2d2d,#c77369,#ededb7
-rofi.color-normal:  #2d2d2d,#f7f7df,#2e2e2e,#c77369,#2e2e2e
-rofi.color-active:  #93988a,#2e2e2e,#93988a,#c77369,#2e2e2e
-rofi.color-urgent:  #747f89,#2e2e2e,#747f89,#c77369,#2e2e2e
+rofi.color-window:  #1f1a17,#9f6434,#c7b8ac
+rofi.color-normal:  #1f1a17,#c7b8ac,#251e1b,#9f6434,#251e1b
+rofi.color-active:  #9dac5f,#251e1b,#9dac5f,#9f6434,#251e1b
+rofi.color-urgent:  #2f7d7c,#251e1b,#2f7d7c,#9f6434,#251e1b
 
 rofi.hide-scrollbar: true
 rofi.font:        Iosevka 11
