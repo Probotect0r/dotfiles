@@ -7,7 +7,7 @@ items = ["left",
 path = "xtitle -s -t -40"
 
 [clock]
-path = "date '+%-I:%M%p  '"
+path = "./clock.sh"
 reload = 1
 
 # Used for formatting lemonbar
