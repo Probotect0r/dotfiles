@@ -152,7 +152,7 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>20</top>
+    <top>35</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
@@ -372,10 +372,9 @@
         <bottom>-20</bottom>
       </action>
       -->
-
     </keybind>
     <keybind key="A-m">
-      <action name="ToggleDecorations" />
+      <action name="ToggleDecorations"/>
       <action name="ToggleMaximize"/>
     </keybind>
     <keybind key="A-S-f">
@@ -513,17 +512,17 @@
     <!-- Volume Bindings -->
     <keybind key="A-p">
       <action name="Execute">
-        <command>amixer -D pulse set Master 5%+</command>
+        <command>amixer set Master 5%+</command>
       </action>
     </keybind>
     <keybind key="A-o">
       <action name="Execute">
-        <command>amixer -D pulse set Master 5%-</command>
+        <command>amixer set Master 5%-</command>
       </action>
     </keybind>
     <keybind key="A-i">
       <action name="Execute">
-        <command>amixer -D pulse set Master toggle</command>
+        <command>amixer set Master toggle</command>
       </action>
     </keybind>
   </keyboard>

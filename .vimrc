@@ -37,22 +37,6 @@ set background=dark
 colorscheme generic
 "let g:airline_theme='base16_yesterdaybright'
 
-"let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_right_sep=''
-let g:airline_left_sep=''
-let g:airline_powerline_fonts = 0
-let g:airline_section_warning = ''
-let g:airline_section_y = ''
-let g:airline_section_z = ''
-let g:airline#extensions#tabline#show_buffers = 0
-
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_symbols.space = "\ua0"
-
 " General stuff
 set number
 set modifiable
@@ -83,12 +67,12 @@ set fillchars+=vert:\
 set statusline+=\ \ 
 set statusline+=%.30F
 set statusline+=\ \ 
+set statusline+=%m
+set statusline+=\ \ 
 set statusline+=%2*
-"set statusline+=%*
 " Right side
 set statusline+=%=
 set statusline+=%*
-"set statusline+=%1*
 set statusline+=%3c
 set statusline+=\ \ \ 
 set statusline+=%y
@@ -189,5 +173,5 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
  if has('nvim')
-     nmap <BS> <C-W>h
+     nmap <BS> :TmuxNavigateLeft <CR>
  endif

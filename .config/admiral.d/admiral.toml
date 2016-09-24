@@ -1,16 +1,8 @@
 [admiral]
-items = ["left",
-         "center", "title",
-         "right", "battery", "clock"]
+items = [
+  "right", "network", "battery", "volume", "clock"
+]
 
-[title]
-path = "xtitle -s -t -40"
-
-[clock]
-path = "./clock.sh"
-reload = 1
-
-# Used for formatting lemonbar
 [left]
 path = "echo '%{l}'"
 static = true
@@ -23,6 +15,18 @@ static = true
 path = "echo '%{r}'"
 static = true
 
+[network]
+path = "./network.sh"
+reload = 10
+
 [battery]
 path = "./battery.sh"
-reload = 30
+reload = 10
+
+[volume]
+path = "./volume.sh"
+reload = 1
+
+[clock]
+path = "./clock.sh"
+reload = 1

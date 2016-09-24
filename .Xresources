@@ -1,4 +1,4 @@
-URxvt.font:         xft:Iosevka:style=light:size=11, xft:Input:style=regular:size=11, xft:M+ 1mn light for Powerline:style=regular:size=11
+URxvt.font:         xft:Iosevka:style=light:size=11, xft:Input:style=regular:size=11, xft:FontAwesome
 URxvt.lineSpace:    3
 URxvt.scrollBar:    false
 Xft.rgba:           rgb
@@ -9,28 +9,41 @@ Xft.autohint:       false
 Xft.hintstyle:      hintmedium
 Xft.lcdfilter:      lcddefault
 
-! Title: novmbr 
-! Author: dkeg 
-! Created: 2015 
+!Rofi
+rofi.lines:         5
+rofi.width:         30
+rofi.bw:            5
 
-#define bg     #1f1a17 
-#define fg     #c7b8ac 
-#define blk    #251e1b 
-#define bblk   #433c38 
-#define red    #9f6434 
-#define grn    #9dac5f 
-#define ylw    #cca75f 
-#define blu    #2f7d7c 
-#define mag    #b5896e 
-#define cyn    #52877f 
-#define wht    #c7b8ac 
-#define bred   #9f6434 
-#define bgrn   #9dac5f 
-#define bylw   #cca75f 
-#define bblu   #2f7d7c 
-#define bmag   #b5896e 
-#define bcyn   #52877f 
-#define bwht   #c7b8ac 
+rofi.color-window:  #343031,#654c51,#c0bfbf
+rofi.color-normal:  #343031,#c0bfbf,#393637,#654c51,#393637
+rofi.color-active:  #7f8281,#393637,#7f8281,#654c51,#393637
+rofi.color-urgent:  #5b697e,#393637,#5b697e,#654c51,#393637
+
+rofi.hide-scrollbar: true
+rofi.font:        Iosevka 11
+rofi.separator-style: solid
+! Title: provrb  
+! Author: dkeg
+! Created: 2016
+
+#define bg     #343031 
+#define fg     #c0bfbf 
+#define blk    #393637 
+#define bblk   #575556 
+#define red    #654c51 
+#define grn    #7f8281 
+#define ylw    #8d7766 
+#define blu    #5b697e 
+#define mag    #7b6b75 
+#define cyn    #7d8592 
+#define wht    #c0bfbf 
+#define bred   #654c51 
+#define bgrn   #7f8281 
+#define bylw   #8d7766 
+#define bblu   #5b697e 
+#define bmag   #7b6b75 
+#define bcyn   #7d8592 
+#define bwht   #c0bfbf 
 
 ! Colors  
 *background:   bg  
@@ -52,16 +65,3 @@ Xft.lcdfilter:      lcddefault
 *color14:     bcyn  
 *color7:      wht  
 *color15:     bwht 
-!Rofi
-rofi.lines:         5
-rofi.width:         30
-rofi.bw:            5
-
-rofi.color-window:  #1f1a17,#9f6434,#c7b8ac
-rofi.color-normal:  #1f1a17,#c7b8ac,#251e1b,#9f6434,#251e1b
-rofi.color-active:  #9dac5f,#251e1b,#9dac5f,#9f6434,#251e1b
-rofi.color-urgent:  #2f7d7c,#251e1b,#2f7d7c,#9f6434,#251e1b
-
-rofi.hide-scrollbar: true
-rofi.font:        Iosevka 11
-rofi.separator-style: solid
