@@ -14,36 +14,36 @@ rofi.lines:         5
 rofi.width:         30
 rofi.bw:            5
 
-rofi.color-window:  #343031,#654c51,#c0bfbf
-rofi.color-normal:  #343031,#c0bfbf,#393637,#654c51,#393637
-rofi.color-active:  #7f8281,#393637,#7f8281,#654c51,#393637
-rofi.color-urgent:  #5b697e,#393637,#5b697e,#654c51,#393637
+rofi.color-window:  #242a2b,#674839,#939381
+rofi.color-normal:  #242a2b,#939381,#242b2c,#674839,#242b2c
+rofi.color-active:  #6e794f,#242b2c,#6e794f,#674839,#242b2c
+rofi.color-urgent:  #3b474e,#242b2c,#3b474e,#674839,#242b2c
 
 rofi.hide-scrollbar: true
 rofi.font:        Iosevka 11
 rofi.separator-style: solid
-! Title: provrb  
+! Title: slate
 ! Author: dkeg
-! Created: 2016
+! Created: 2016 
 
-#define bg     #343031 
-#define fg     #c0bfbf 
-#define blk    #393637 
-#define bblk   #575556 
-#define red    #654c51 
-#define grn    #7f8281 
-#define ylw    #8d7766 
-#define blu    #5b697e 
-#define mag    #7b6b75 
-#define cyn    #7d8592 
-#define wht    #c0bfbf 
-#define bred   #654c51 
-#define bgrn   #7f8281 
-#define bylw   #8d7766 
-#define bblu   #5b697e 
-#define bmag   #7b6b75 
-#define bcyn   #7d8592 
-#define bwht   #c0bfbf 
+#define bg     #242a2b 
+#define fg     #939381 
+#define blk    #242b2c 
+#define bblk   #393f40 
+#define red    #674839 
+#define grn    #6e794f 
+#define ylw    #8d8150 
+#define blu    #3b474e 
+#define mag    #554c41 
+#define cyn    #495355 
+#define wht    #939381 
+#define bred   #674839 
+#define bgrn   #6e794f 
+#define bylw   #8d8150 
+#define bblu   #3b474e 
+#define bmag   #554c41 
+#define bcyn   #495355 
+#define bwht   #939381 
 
 ! Colors  
 *background:   bg  
