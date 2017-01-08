@@ -21,11 +21,9 @@ export NVM_DIR="/home/sagar/.nvm"
 export PROJECT_HOME=$HOME/Code/python-envs
 
 # startup virtualenv-burrito
-if [ -f $HOME/.venvburrito/startup.sh ]; then
-    . $HOME/.venvburrito/startup.sh
-fi
+#if [ -f $HOME/.venvburrito/startup.sh ]; then
+#    . $HOME/.venvburrito/startup.sh
+#fi
 
-# Aliases
-#alias tmux="TERM=screen-256color tmux" # Need this to display proper colors in tmux
 # Source .profile so you get login configs as well
 source ~/.profile

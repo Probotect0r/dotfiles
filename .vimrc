@@ -9,7 +9,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree'
-"Plugin 'valloric/youcompleteme'
+Plugin 'valloric/youcompleteme'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-surround'
@@ -17,19 +17,19 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'wavded/vim-stylus'
 Plugin 'mattn/emmet-vim'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'nikvdp/ejs-syntax'
 Plugin 'leafgarland/typescript-vim'
-"Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-sensible'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'hail2u/vim-css3-syntax'
-"Plugin 'scrooloose/syntastic'
-"Plugin 'mtscout6/syntastic-local-eslint.vim'
+Plugin 'marijnh/tern_for_vim'
 
 call vundle#end()
 filetype plugin indent on
 
+if !exists("g:ycm_semantic_triggers")
+	let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
 
 " Theme and colors stuff
 syntax enable
@@ -96,15 +96,15 @@ set updatetime=250
 let javascript_enable_domhtmlcss=1
 set ttimeoutlen=10
 
-" Use spaces instead of tabs
-set expandtab
+" Use tabs instead of spaces
+set noexpandtab
 
 " Be smart when using tabs ;)
 set smarttab
 
 " 1 tab == 2 spaces
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 
 " Make lines not automatically move to next line when buffer width is small
 set nowrap
@@ -117,12 +117,12 @@ let g:jsx_ext_require=0
 " Relative numbering
 set rnu
 function! ToggleNumbersOn()
-  set nu!
-  set rnu
+	set nu!
+	set rnu
 endfunction
 function! ToggleRelativeOn()
-  set rnu!
-  set nu
+	set rnu!
+	set nu
 endfunction
 autocmd FocusLost * call ToggleRelativeOn()
 autocmd FocusGained * call ToggleRelativeOn()
@@ -141,6 +141,8 @@ map <leader>p "+p
 nmap <leader>/ :noh<cr>
 nmap <leader>- :exe "vertical resize -20"<cr>
 nmap <leader>+ :exe "vertical resize +20"<cr>
+" Use jj to escape out of insert mode
+imap jj <Esc>
 " Move current line up or down
 nnoremap <leader>j :m+<CR>==
 nnoremap <leader>k :m-2<CR>==
@@ -158,8 +160,8 @@ map  <leader>ic :s/^/\/\//g<CR>:let @/ = ""<CR>
 map  <leader>rc :s/^\/\///g<CR>:let @/ = ""<CR>
 
 let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\v[\/](.git|node_modules|.svn|dist)$',
-      \ }
+			\ 'dir':  '\v[\/](.git|node_modules|.svn|dist)$',
+			\ }
 
 " Syntastic settings
 "set statusline+=%#warningmsg#
@@ -172,6 +174,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
- if has('nvim')
-     nmap <BS> :TmuxNavigateLeft <CR>
- endif
+if has('nvim')
+	nmap <BS> :TmuxNavigateLeft <CR>
+endif

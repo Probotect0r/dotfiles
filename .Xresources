@@ -1,8 +1,9 @@
-URxvt.font:         xft:Iosevka:style=light:size=11, xft:Input:style=regular:size=11, xft:FontAwesome
-URxvt.lineSpace:    3
+URxvt.font:         xft:Input:style=Regular:size=10.5, xft:Siji:style=Regular:size=10, xft:FontAwesome:style=Regular:size=10
+!URxvt.lineSpace:    3
+!URxvt.letterSpace: 	-1
 URxvt.scrollBar:    false
 Xft.rgba:           rgb
-Xft.dpi:            100:unscaled
+Xft.dpi:            96:unscaled
 Xft.antialias:      true
 Xft.hinting:        true
 Xft.autohint:       false
@@ -14,36 +15,36 @@ rofi.lines:         5
 rofi.width:         30
 rofi.bw:            5
 
-rofi.color-window:  #242a2b,#674839,#939381
-rofi.color-normal:  #242a2b,#939381,#242b2c,#674839,#242b2c
-rofi.color-active:  #6e794f,#242b2c,#6e794f,#674839,#242b2c
-rofi.color-urgent:  #3b474e,#242b2c,#3b474e,#674839,#242b2c
+rofi.color-window:  #2c2c36,#9c6647,#c4c4b5
+rofi.color-normal:  #2c2c36,#c4c4b5,#31313d,#9c6647,#31313d
+rofi.color-active:  #708684,#31313d,#708684,#9c6647,#31313d
+rofi.color-urgent:  #697284,#31313d,#697284,#9c6647,#31313d
 
 rofi.hide-scrollbar: true
 rofi.font:        Iosevka 11
 rofi.separator-style: solid
-! Title: slate
+! Title: victory
 ! Author: dkeg
-! Created: 2016 
+! Created: 2015
 
-#define bg     #242a2b 
-#define fg     #939381 
-#define blk    #242b2c 
-#define bblk   #393f40 
-#define red    #674839 
-#define grn    #6e794f 
-#define ylw    #8d8150 
-#define blu    #3b474e 
-#define mag    #554c41 
-#define cyn    #495355 
-#define wht    #939381 
-#define bred   #674839 
-#define bgrn   #6e794f 
-#define bylw   #8d8150 
-#define bblu   #3b474e 
-#define bmag   #554c41 
-#define bcyn   #495355 
-#define bwht   #939381 
+#define bg     #2c2c36 
+#define fg     #c4c4b5 
+#define blk    #31313d 
+#define bblk   #454550 
+#define red    #9c6647 
+#define grn    #708684 
+#define ylw    #a29474 
+#define blu    #697284 
+#define mag    #796a70 
+#define cyn    #47676e 
+#define wht    #c4c4b5 
+#define bred   #9c6647 
+#define bgrn   #708684 
+#define bylw   #a29474 
+#define bblu   #697284 
+#define bmag   #796a70 
+#define bcyn   #47676e 
+#define bwht   #c4c4b5 
 
 ! Colors  
 *background:   bg  

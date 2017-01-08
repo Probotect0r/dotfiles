@@ -31,7 +31,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start rofi
 bindsym $mod+d exec rofi -show run
@@ -69,8 +69,8 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# Set default container mode to tabbed
-workspace_layout tabbed
+# Set default container mode to split
+workspace_layout default
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -121,10 +121,10 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Shift+r restart
 
 # Sleep/Shutdown/Restart/Logout commands
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'Shutdown?' -b 'Yes' 'shutdown -h now'"
-bindsym $mod+Shift+c exec "i3-nagbar -t warning -m 'Restart?' -b 'Yes' 'shutdown -r now'"
-bindsym $mod+Shift+z exec "i3-nagbar -t warning -m 'Sleep?' -b 'Yes' 'systemctl suspend'"
+bindsym $mod+Shift+e exec "i3-msg exit"
+bindsym $mod+Shift+x exec "shutdown now"
+bindsym $mod+Shift+c exec "shutdown -r now"
+bindsym $mod+Shift+z exec "systemctl suspend"
 
 # Resize mode
 mode "resize" {
@@ -154,52 +154,51 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # The i3Bar
-bar {
-  position top
-  verbose yes
-  status_command i3status
-  # Font
-  font pango:Source Code Pro for Powerline 8.5
-
-  colors {
-        separator $base03
-        background $base01
-        statusline $base05
-        focused_workspace $base0C $base0D $base00
-        active_workspace $base02 $base02 $base07
-        inactive_workspace $base01 $base01 $base03
-        urgent_workspace $base08 $base08 $base07
-    }
-}
+#bar {
+#  position top
+#  verbose yes
+#  status_command i3status
+#  # Font
+#  font pango:Source Code Pro for Powerline 8.5
+#
+#  colors {
+#        separator $base03
+#        background $base01
+#        statusline $base05
+#        focused_workspace $base0C $base0D $base00
+#        active_workspace $base02 $base02 $base07
+#        inactive_workspace $base01 $base01 $base03
+#        urgent_workspace $base08 $base08 $base07
+#    }
+#}
 
 # Audio controls
-bindsym $mod+p  exec amixer -D pulse set Master 5%+
-bindsym $mod+o  exec amixer -D pulse set Master 5%-
-bindsym $mod+i  exec amixer -D pulse set Master toggle
+bindsym $mod+p  exec amixer sset Master 5%+
+bindsym $mod+o  exec amixer sset Master 5%-
+bindsym $mod+i  exec amixer sset Master toggle
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Exec commands
-exec_always feh --bg-scale ~/Pictures/wallpaper.jpg # Wallpaper
+exec_always feh --bg-center ~/Pictures/wallpaper.jpg # Wallpaper
 exec_always nm-applet # network manager applet
 exec xrandr --output DVI-D-0 --mode 1680x1050 --pos 3200x0 --rotate normal --output HDMI-0 --mode 1280x1024 --pos 0x0 --rotate normal --output DVI-I-1 --mode 1920x1080 --pos 1280x0 --rotate normal --output DVI-I-0 --off --output DP-1 --off --output DP-0 --off #monitor setup
 exec xrdb ~/.Xresources
-#exec_always node ~/Code/themer/dist/index.js >> ~/Code/log.txt
-exec_always ~/node-script.sh
+exec_always ~/.nvm/versions/node/v7.3.0/bin/node ~/Code/themer/dist/index.js
+exec_always polybar example
 
 # Set a border
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 2
 
 #GAPS stuff
 gaps inner 15
 #smart_gaps on
-#smart_borders on
+smart_borders on
 
 # Set Window colors 
 client.focused $base0D $base0D $base00 $base01
 client.focused_inactive $base02 $base02 $base03 $base01
 client.unfocused $base01 $base01 $base03 $base01
 client.urgent $base02 $base08 $base07 $base08
-
