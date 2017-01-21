@@ -38,6 +38,7 @@ colorscheme generic
 "let g:airline_theme='base16_yesterdaybright'
 
 " General stuff
+set exrc
 set number
 set modifiable
 set noswapfile
@@ -177,3 +178,6 @@ let g:syntastic_javascript_checkers = ['eslint']
 if has('nvim')
 	nmap <BS> :TmuxNavigateLeft <CR>
 endif
+
+
+set secure

@@ -182,11 +182,11 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Exec commands
-exec_always feh --bg-center ~/Pictures/wallpaper.jpg # Wallpaper
+exec_always feh --bg-center ~/Pictures/wallpaper.png # Wallpaper
 exec_always nm-applet # network manager applet
-exec xrandr --output DVI-D-0 --mode 1680x1050 --pos 3200x0 --rotate normal --output HDMI-0 --mode 1280x1024 --pos 0x0 --rotate normal --output DVI-I-1 --mode 1920x1080 --pos 1280x0 --rotate normal --output DVI-I-0 --off --output DP-1 --off --output DP-0 --off #monitor setup
+#exec xrandr --output DVI-D-0 --mode 1680x1050 --pos 3200x0 --rotate normal --output HDMI-0 --mode 1280x1024 --pos 0x0 --rotate normal --output DVI-I-1 --mode 1920x1080 --pos 1280x0 --rotate normal --output DVI-I-0 --off --output DP-1 --off --output DP-0 --off #monitor setup
 exec xrdb ~/.Xresources
-exec_always ~/.nvm/versions/node/v7.3.0/bin/node ~/Code/themer/dist/index.js
+exec_always ~/.nvm/versions/node/v7.4.0/bin/node ~/Code/themer/dist/index.js
 exec_always polybar example
 
 # Set a border
@@ -194,7 +194,7 @@ for_window [class="^.*"] border pixel 2
 
 #GAPS stuff
 gaps inner 15
-#smart_gaps on
+smart_gaps on
 smart_borders on
 
 # Set Window colors 

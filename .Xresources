@@ -15,36 +15,36 @@ rofi.lines:         5
 rofi.width:         30
 rofi.bw:            5
 
-rofi.color-window:  #2c2c36,#9c6647,#c4c4b5
-rofi.color-normal:  #2c2c36,#c4c4b5,#31313d,#9c6647,#31313d
-rofi.color-active:  #708684,#31313d,#708684,#9c6647,#31313d
-rofi.color-urgent:  #697284,#31313d,#697284,#9c6647,#31313d
+rofi.color-window:  #20201f,#996140,#b0b0a2
+rofi.color-normal:  #20201f,#b0b0a2,#242423,#996140,#242423
+rofi.color-active:  #799c6a,#242423,#799c6a,#996140,#242423
+rofi.color-urgent:  #5f656a,#242423,#5f656a,#996140,#242423
 
 rofi.hide-scrollbar: true
 rofi.font:        Iosevka 11
 rofi.separator-style: solid
-! Title: victory
+! Title: mattd
 ! Author: dkeg
-! Created: 2015
+! Created: 2015 
 
-#define bg     #2c2c36 
-#define fg     #c4c4b5 
-#define blk    #31313d 
-#define bblk   #454550 
-#define red    #9c6647 
-#define grn    #708684 
-#define ylw    #a29474 
-#define blu    #697284 
-#define mag    #796a70 
-#define cyn    #47676e 
-#define wht    #c4c4b5 
-#define bred   #9c6647 
-#define bgrn   #708684 
-#define bylw   #a29474 
-#define bblu   #697284 
-#define bmag   #796a70 
-#define bcyn   #47676e 
-#define bwht   #c4c4b5 
+#define bg     #20201f 
+#define fg     #b0b0a2 
+#define blk    #242423 
+#define bblk   #484847 
+#define red    #996140 
+#define grn    #799c6a 
+#define ylw    #9d8554 
+#define blu    #5f656a 
+#define mag    #7b6064 
+#define cyn    #566e6b 
+#define wht    #b0b0a2 
+#define bred   #996140 
+#define bgrn   #799c6a 
+#define bylw   #9d8554 
+#define bblu   #5f656a 
+#define bmag   #7b6064 
+#define bcyn   #566e6b 
+#define bwht   #b0b0a2 
 
 ! Colors  
 *background:   bg  
