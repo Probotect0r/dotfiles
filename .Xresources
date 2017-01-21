@@ -1,13 +1,11 @@
 URxvt.font:         xft:Input:style=Regular:size=10.5, xft:Siji:style=Regular:size=10, xft:FontAwesome:style=Regular:size=10
-!URxvt.lineSpace:    3
-!URxvt.letterSpace: 	-1
 URxvt.scrollBar:    false
-Xft.rgba:           rgb
-Xft.dpi:            96:unscaled
+
+Xft.rgba:			rgb
 Xft.antialias:      true
 Xft.hinting:        true
 Xft.autohint:       false
-Xft.hintstyle:      hintmedium
+Xft.hintstyle:      hintslight
 Xft.lcdfilter:      lcddefault
 
 !Rofi
@@ -15,36 +13,36 @@ rofi.lines:         5
 rofi.width:         30
 rofi.bw:            5
 
-rofi.color-window:  #20201f,#996140,#b0b0a2
-rofi.color-normal:  #20201f,#b0b0a2,#242423,#996140,#242423
-rofi.color-active:  #799c6a,#242423,#799c6a,#996140,#242423
-rofi.color-urgent:  #5f656a,#242423,#5f656a,#996140,#242423
+rofi.color-window:  #1f1a17,#9f6434,#c7b8ac
+rofi.color-normal:  #1f1a17,#c7b8ac,#251e1b,#9f6434,#251e1b
+rofi.color-active:  #9dac5f,#251e1b,#9dac5f,#9f6434,#251e1b
+rofi.color-urgent:  #2f7d7c,#251e1b,#2f7d7c,#9f6434,#251e1b
 
 rofi.hide-scrollbar: true
-rofi.font:        Iosevka 11
+rofi.font:        Input 11
 rofi.separator-style: solid
-! Title: mattd
-! Author: dkeg
+! Title: novmbr 
+! Author: dkeg 
 ! Created: 2015 
 
-#define bg     #20201f 
-#define fg     #b0b0a2 
-#define blk    #242423 
-#define bblk   #484847 
-#define red    #996140 
-#define grn    #799c6a 
-#define ylw    #9d8554 
-#define blu    #5f656a 
-#define mag    #7b6064 
-#define cyn    #566e6b 
-#define wht    #b0b0a2 
-#define bred   #996140 
-#define bgrn   #799c6a 
-#define bylw   #9d8554 
-#define bblu   #5f656a 
-#define bmag   #7b6064 
-#define bcyn   #566e6b 
-#define bwht   #b0b0a2 
+#define bg     #1f1a17 
+#define fg     #c7b8ac 
+#define blk    #251e1b 
+#define bblk   #433c38 
+#define red    #9f6434 
+#define grn    #9dac5f 
+#define ylw    #cca75f 
+#define blu    #2f7d7c 
+#define mag    #b5896e 
+#define cyn    #52877f 
+#define wht    #c7b8ac 
+#define bred   #9f6434 
+#define bgrn   #9dac5f 
+#define bylw   #cca75f 
+#define bblu   #2f7d7c 
+#define bmag   #b5896e 
+#define bcyn   #52877f 
+#define bwht   #c7b8ac 
 
 ! Colors  
 *background:   bg  
