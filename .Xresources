@@ -13,36 +13,36 @@ rofi.lines:         5
 rofi.width:         30
 rofi.bw:            5
 
-rofi.color-window:  #1f1a17,#9f6434,#c7b8ac
-rofi.color-normal:  #1f1a17,#c7b8ac,#251e1b,#9f6434,#251e1b
-rofi.color-active:  #9dac5f,#251e1b,#9dac5f,#9f6434,#251e1b
-rofi.color-urgent:  #2f7d7c,#251e1b,#2f7d7c,#9f6434,#251e1b
+rofi.color-window:  #2c2c35,#b56550,#b4ada4
+rofi.color-normal:  #2c2c35,#b4ada4,#31313b,#b56550,#31313b
+rofi.color-active:  #6b925a,#31313b,#6b925a,#b56550,#31313b
+rofi.color-urgent:  #6e747b,#31313b,#6e747b,#b56550,#31313b
 
 rofi.hide-scrollbar: true
 rofi.font:        Input 11
 rofi.separator-style: solid
-! Title: novmbr 
-! Author: dkeg 
+! Title: subtle 
+! Author: dkeg
 ! Created: 2015 
 
-#define bg     #1f1a17 
-#define fg     #c7b8ac 
-#define blk    #251e1b 
-#define bblk   #433c38 
-#define red    #9f6434 
-#define grn    #9dac5f 
-#define ylw    #cca75f 
-#define blu    #2f7d7c 
-#define mag    #b5896e 
-#define cyn    #52877f 
-#define wht    #c7b8ac 
-#define bred   #9f6434 
-#define bgrn   #9dac5f 
-#define bylw   #cca75f 
-#define bblu   #2f7d7c 
-#define bmag   #b5896e 
-#define bcyn   #52877f 
-#define bwht   #c7b8ac 
+#define bg     #2c2c35 
+#define fg     #b4ada4 
+#define blk    #31313b 
+#define bblk   #45454d 
+#define red    #b56550 
+#define grn    #6b925a 
+#define ylw    #b79b58 
+#define blu    #6e747b 
+#define mag    #96787d 
+#define cyn    #7b8889 
+#define wht    #b4ada4 
+#define bred   #b56550 
+#define bgrn   #6b925a 
+#define bylw   #b79b58 
+#define bblu   #6e747b 
+#define bmag   #96787d 
+#define bcyn   #7b8889 
+#define bwht   #b4ada4 
 
 ! Colors  
 *background:   bg  

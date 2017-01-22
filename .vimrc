@@ -150,7 +150,13 @@ nnoremap <leader>k :m-2<CR>==
 vnoremap <leader>j :m'>+<CR>gv=gv
 vnoremap <leader>k :m-2<CR>gv=gv
 
+" YCM stuff
 nnoremap <leader>gd :YcmCompleter GoTo<CR>
+nnoremap <leader>e :lopen<CR>
+nnoremap <leader>f :YcmCompleter FixIt<CR>
+let g:ycm_always_populate_location_list = 1
+let g:ycm_open_loclist_on_ycm_diags = 1
+
 nnoremap <CR> o<Esc>
 "Below is to fix issues with the ABOVE mappings in quickfix window
 autocmd CmdwinEnter * nnoremap <CR> <CR>
@@ -169,15 +175,15 @@ let g:ctrlp_custom_ignore = {
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_javascript_checkers = ['eslint']
 
-if has('nvim')
-	nmap <BS> :TmuxNavigateLeft <CR>
-endif
+"if has('nvim')
+"	nmap <BS> :TmuxNavigateLeft <CR>
+"endif
 
 
 set secure
