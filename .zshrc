@@ -27,3 +27,4 @@ export PROJECT_HOME=$HOME/Code/python-envs
 
 # Source .profile so you get login configs as well
 source ~/.profile
+source ~/.aliases.sh

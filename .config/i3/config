@@ -154,23 +154,23 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # The i3Bar
-#bar {
-#  position top
-#  verbose yes
-#  status_command i3status
-#  # Font
-#  font pango:Source Code Pro for Powerline 8.5
-#
-#  colors {
-#        separator $base03
-#        background $base01
-#        statusline $base05
-#        focused_workspace $base0C $base0D $base00
-#        active_workspace $base02 $base02 $base07
-#        inactive_workspace $base01 $base01 $base03
-#        urgent_workspace $base08 $base08 $base07
-#    }
-#}
+bar {
+  position top
+  verbose yes
+  status_command i3status
+  # Font
+  font pango:Source Code Pro for Powerline 8.5
+
+  colors {
+        separator $base03
+        background $base01
+        statusline $base05
+        focused_workspace $base0C $base0D $base00
+        active_workspace $base02 $base02 $base07
+        inactive_workspace $base01 $base01 $base03
+        urgent_workspace $base08 $base08 $base07
+    }
+}
 
 # Audio controls
 bindsym $mod+p  exec amixer sset Master 5%+
@@ -182,12 +182,12 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Exec commands
-exec_always ~/default-arandr.sh
-exec_always feh --bg-center ~/Pictures/wallpaper.jpg # Wallpaper
+exec_always feh --bg-center ~/Pictures/wallpaper.png # Wallpaper
 exec_always nm-applet # network manager applet
+#exec xrandr --output DVI-D-0 --mode 1680x1050 --pos 3200x0 --rotate normal --output HDMI-0 --mode 1280x1024 --pos 0x0 --rotate normal --output DVI-I-1 --mode 1920x1080 --pos 1280x0 --rotate normal --output DVI-I-0 --off --output DP-1 --off --output DP-0 --off #monitor setup
 exec xrdb ~/.Xresources
 exec_always ~/.nvm/versions/node/v7.4.0/bin/node ~/Code/themer/dist/index.js
-exec_always polybar example
+#exec_always polybar example
 
 # Set a border
 for_window [class="^.*"] border pixel 2

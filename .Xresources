@@ -1,11 +1,13 @@
 URxvt.font:         xft:Input:style=Regular:size=10.5, xft:Siji:style=Regular:size=10, xft:FontAwesome:style=Regular:size=10
+!URxvt.lineSpace:    3
+!URxvt.letterSpace: 	-1
 URxvt.scrollBar:    false
-
-Xft.rgba:			rgb
+Xft.rgba:           rgb
+!Xft.dpi:            96
 Xft.antialias:      true
 Xft.hinting:        true
 Xft.autohint:       false
-Xft.hintstyle:      hintslight
+Xft.hintstyle:      hintmedium
 Xft.lcdfilter:      lcddefault
 
 !Rofi
@@ -13,36 +15,36 @@ rofi.lines:         5
 rofi.width:         30
 rofi.bw:            5
 
-rofi.color-window:  #2c2c35,#b56550,#b4ada4
-rofi.color-normal:  #2c2c35,#b4ada4,#31313b,#b56550,#31313b
-rofi.color-active:  #6b925a,#31313b,#6b925a,#b56550,#31313b
-rofi.color-urgent:  #6e747b,#31313b,#6e747b,#b56550,#31313b
+rofi.color-window:  #23202c,#af6c69,#bfbec3
+rofi.color-normal:  #23202c,#bfbec3,#272432,#af6c69,#272432
+rofi.color-active:  #7e9c80,#272432,#7e9c80,#af6c69,#272432
+rofi.color-urgent:  #637b81,#272432,#637b81,#af6c69,#272432
 
 rofi.hide-scrollbar: true
-rofi.font:        Input 11
+rofi.font:        Iosevka 11
 rofi.separator-style: solid
-! Title: subtle 
+! Title: raiin
 ! Author: dkeg
 ! Created: 2015 
 
-#define bg     #2c2c35 
-#define fg     #b4ada4 
-#define blk    #31313b 
-#define bblk   #45454d 
-#define red    #b56550 
-#define grn    #6b925a 
-#define ylw    #b79b58 
-#define blu    #6e747b 
-#define mag    #96787d 
-#define cyn    #7b8889 
-#define wht    #b4ada4 
-#define bred   #b56550 
-#define bgrn   #6b925a 
-#define bylw   #b79b58 
-#define bblu   #6e747b 
-#define bmag   #96787d 
-#define bcyn   #7b8889 
-#define bwht   #b4ada4 
+#define bg     #23202c 
+#define fg     #bfbec3 
+#define blk    #272432 
+#define bblk   #46444d 
+#define red    #af6c69 
+#define grn    #7e9c80 
+#define ylw    #b29c7c 
+#define blu    #637b81 
+#define mag    #896e72 
+#define cyn    #5a8585 
+#define wht    #bfbec3 
+#define bred   #af6c69 
+#define bgrn   #7e9c80 
+#define bylw   #b29c7c 
+#define bblu   #637b81 
+#define bmag   #896e72 
+#define bcyn   #5a8585 
+#define bwht   #bfbec3 
 
 ! Colors  
 *background:   bg  
