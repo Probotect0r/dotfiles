@@ -115,10 +115,10 @@ set ai "Auto indent
 
 let g:vim_jsx_pretty_colorful_config = 1
 let g:user_emmet_settings = {
-\	'javascript' : {
-\		'extends' : 'jsx',
-\	},
-\}
+			\	'javascript' : {
+			\		'extends' : 'jsx',
+			\	},
+			\}
 
 " Relative numbering
 set rnu

@@ -15,36 +15,36 @@ rofi.lines:         5
 rofi.width:         30
 rofi.bw:            5
 
-rofi.color-window:  #23202c,#af6c69,#bfbec3
-rofi.color-normal:  #23202c,#bfbec3,#272432,#af6c69,#272432
-rofi.color-active:  #7e9c80,#272432,#7e9c80,#af6c69,#272432
-rofi.color-urgent:  #637b81,#272432,#637b81,#af6c69,#272432
+rofi.color-window:  #352f2f,#854340,#c9c8c8
+rofi.color-normal:  #352f2f,#c9c8c8,#3b3535,#854340,#3b3535
+rofi.color-active:  #668c71,#3b3535,#668c71,#854340,#3b3535
+rofi.color-urgent:  #41647b,#3b3535,#41647b,#854340,#3b3535
 
 rofi.hide-scrollbar: true
 rofi.font:        Iosevka 11
 rofi.separator-style: solid
-! Title: raiin
+! Title: paints 
 ! Author: dkeg
-! Created: 2015 
+! Created: 2016 
 
-#define bg     #23202c 
-#define fg     #bfbec3 
-#define blk    #272432 
-#define bblk   #46444d 
-#define red    #af6c69 
-#define grn    #7e9c80 
-#define ylw    #b29c7c 
-#define blu    #637b81 
-#define mag    #896e72 
-#define cyn    #5a8585 
-#define wht    #bfbec3 
-#define bred   #af6c69 
-#define bgrn   #7e9c80 
-#define bylw   #b29c7c 
-#define bblu   #637b81 
-#define bmag   #896e72 
-#define bcyn   #5a8585 
-#define bwht   #bfbec3 
+#define bg     #352f2f 
+#define fg     #c9c8c8 
+#define blk    #3b3535 
+#define bblk   #4e4949 
+#define red    #854340 
+#define grn    #668c71 
+#define ylw    #b2885d 
+#define blu    #41647b 
+#define mag    #915556 
+#define cyn    #477578 
+#define wht    #c9c8c8 
+#define bred   #854340 
+#define bgrn   #668c71 
+#define bylw   #b2885d 
+#define bblu   #41647b 
+#define bmag   #915556 
+#define bcyn   #477578 
+#define bwht   #c9c8c8 
 
 ! Colors  
 *background:   bg  
