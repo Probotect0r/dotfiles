@@ -182,7 +182,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Exec commands
-exec_always feh --bg-center ~/Pictures/wallpaper.png # Wallpaper
+exec_always feh --bg-center ~/Pictures/wallpaper.jpg # Wallpaper
 exec_always nm-applet # network manager applet
 exec_always ~/screen_setup.sh
 exec xrdb ~/.Xresources
@@ -194,7 +194,7 @@ for_window [class="^.*"] border pixel 2
 
 #GAPS stuff
 gaps inner 15
-smart_gaps on
+#smart_gaps on
 smart_borders on
 
 # Set Window colors 

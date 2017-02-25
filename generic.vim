@@ -4,17 +4,25 @@ syntax reset
 let g:colors_name = "generic"
 
 "0 is black
-"1 is red
-"2 is green
-"3 is yellow
-"4 is blue
-"5 is mag
-"6 is cyn
-"7 is white
 "8 is bblack
+"1 is red
+"9 is bred
+"2 is green
+"10 is bgreen
+"3 is yellow
+"11 is byellow
+"4 is blue
+"12 is bblue
+"5 is mag
+"13 is bmag
+"6 is cyn
+"14 is bcyn
+"7 is white
+"15 is bwht
 
 "Standard syntax 
 "Boolean - red
+" hi Normal ctermbg=0
 hi Boolean ctermfg=01
 "Character - red
 hi Character ctermfg=01
@@ -70,9 +78,9 @@ hi Typedef ctermfg=03
 " Other stuff
 hi NERDTreeDirSlash ctermfg=05
 
-hi MatchParen ctermbg=06 ctermfg=08
+hi MatchParen ctermbg=08 ctermfg=00
 
-hi LineNr ctermbg=none ctermfg=05
+hi LineNr ctermbg=none ctermfg=07
 
 hi PMenu ctermbg=00 ctermfg=05
 hi PMenuSel ctermbg=05 ctermfg=00
@@ -93,7 +101,7 @@ hi StatusLineNC ctermbg=00 ctermfg=01 cterm=none
 hi User1 ctermbg=01 ctermfg=00
 hi User2 ctermbg=00 ctermfg=01
 
-hi VertSplit ctermbg=00 ctermfg=00
+hi VertSplit ctermbg=08 ctermfg=00
 hi SignColumn ctermbg=00 ctermfg=05
 
 hi GitGutterAdd ctermbg=none ctermfg=03 cterm=bold
@@ -101,6 +109,8 @@ hi GitGutterChange ctermbg=none ctermfg=03 cterm=bold
 hi GitGutterDelete ctermbg=none ctermfg=03 cterm=bold
 hi GitGutterChangeDelete ctermbg=none ctermfg=03 cterm=bold
 
+hi ALEErrorSign ctermbg=none ctermfg=01
+hi ALEWarningSign ctermbg=none ctermfg=03
 hi ErrorMsg ctermbg=none ctermfg=01 cterm=italic
 
 hi Title ctermfg=03

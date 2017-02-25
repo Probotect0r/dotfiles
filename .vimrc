@@ -23,6 +23,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'w0rp/ale'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()
 filetype plugin indent on
@@ -147,8 +148,10 @@ map <leader>p "+p
 nmap <leader>/ :noh<cr>
 nmap <leader>- :exe "vertical resize -20"<cr>
 nmap <leader>+ :exe "vertical resize +20"<cr>
+
 " Use jj to escape out of insert mode
 imap jj <Esc>
+
 " Move current line up or down
 nnoremap <leader>j :m+<CR>==
 nnoremap <leader>k :m-2<CR>==
@@ -169,20 +172,6 @@ let g:ctrlp_custom_ignore = {
 			\ 'dir':  '\v[\/](.git|node_modules|.svn|dist)$',
 			\ }
 
-" Syntastic settings
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-
-if has('nvim')
-	nmap <BS> :TmuxNavigateLeft <CR>
-endif
-
-
+" Ale settings
+let g:ale_sign_error = '✘'
 set secure

@@ -15,36 +15,36 @@ rofi.lines:         5
 rofi.width:         30
 rofi.bw:            5
 
-rofi.color-window:  #352f2f,#854340,#c9c8c8
-rofi.color-normal:  #352f2f,#c9c8c8,#3b3535,#854340,#3b3535
-rofi.color-active:  #668c71,#3b3535,#668c71,#854340,#3b3535
-rofi.color-urgent:  #41647b,#3b3535,#41647b,#854340,#3b3535
+rofi.color-window:  #1d2021,#cc241d,#a89984
+rofi.color-normal:  #1d2021,#ebdbb2,#282828,#cc241d,#282828
+rofi.color-active:  #98971a,#282828,#98971a,#cc241d,#282828
+rofi.color-urgent:  #458588,#282828,#458588,#cc241d,#282828
 
 rofi.hide-scrollbar: true
 rofi.font:        Iosevka 11
 rofi.separator-style: solid
-! Title: paints 
-! Author: dkeg
-! Created: 2016 
+! Title: Gruvbox
+! Author: morhetz
+! Created: 2015
 
-#define bg     #352f2f 
-#define fg     #c9c8c8 
-#define blk    #3b3535 
-#define bblk   #4e4949 
-#define red    #854340 
-#define grn    #668c71 
-#define ylw    #b2885d 
-#define blu    #41647b 
-#define mag    #915556 
-#define cyn    #477578 
-#define wht    #c9c8c8 
-#define bred   #854340 
-#define bgrn   #668c71 
-#define bylw   #b2885d 
-#define bblu   #41647b 
-#define bmag   #915556 
-#define bcyn   #477578 
-#define bwht   #c9c8c8 
+#define bg     #1d2021 
+#define fg     #ebdbb2 
+#define blk    #282828 
+#define bblk   #504945 
+#define red    #cc241d 
+#define grn    #98971a 
+#define ylw    #d79921 
+#define blu    #458588 
+#define mag    #b16286 
+#define cyn    #689d6a 
+#define wht    #a89984 
+#define bred   #fb4934 
+#define bgrn   #97a293 
+#define bylw   #c29f6f 
+#define bblu   #5e606c 
+#define bmag   #7a6054 
+#define bcyn   #78746c 
+#define bwht   #ebdbb2 
 
 ! Colors  
 *background:   bg  
