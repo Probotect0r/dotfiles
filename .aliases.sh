@@ -1,7 +1,5 @@
 #!/bin/bash
 alias tmux="tmux -2"
-alias nis="npm install --save"  
-alias nrs="npm run start"
 
 # Git aliases
 alias gcl="git clone"
@@ -13,3 +11,6 @@ alias gs="git status"
 alias nis="npm i --save"
 alias nig="npm i --global"
 alias nid="npm i --save-dev"
+
+# Other aliases
+alias theme="~/.nvm/versions/node/v7.6.0/bin/node ~/Code/themer/src/index.js"

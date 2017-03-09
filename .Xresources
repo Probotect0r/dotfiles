@@ -1,50 +1,49 @@
-URxvt.font:         xft:Input:style=Regular:size=10.5, xft:Siji:style=Regular:size=10, xft:FontAwesome:style=Regular:size=10
-!URxvt.lineSpace:    3
-!URxvt.letterSpace: 	-1
+URxvt.font:         xft:Iosevka:style=Regular:size=12
 URxvt.scrollBar:    false
-Xft.rgba:           rgb
-!Xft.dpi:            96
+!URxvt.lineSpace:	  3
 Xft.antialias:      true
+Xft.rgba:           rgb
 Xft.hinting:        true
 Xft.autohint:       false
 Xft.hintstyle:      hintmedium
 Xft.lcdfilter:      lcddefault
+URxvt*dynamicColors: on
 
 !Rofi
 rofi.lines:         5
 rofi.width:         30
 rofi.bw:            5
 
-rofi.color-window:  #1d2021,#cc241d,#a89984
-rofi.color-normal:  #1d2021,#ebdbb2,#282828,#cc241d,#282828
-rofi.color-active:  #98971a,#282828,#98971a,#cc241d,#282828
-rofi.color-urgent:  #458588,#282828,#458588,#cc241d,#282828
+rofi.color-window:  #2c2833,#bf6257,#dbd7b8
+rofi.color-normal:  #2c2833,#dbd7b8,#322d39,#bf6257,#322d39
+rofi.color-active:  #82a37c,#322d39,#82a37c,#bf6257,#322d39
+rofi.color-urgent:  #6d6a80,#322d39,#6d6a80,#bf6257,#322d39
 
 rofi.hide-scrollbar: true
-rofi.font:        Iosevka 11
+rofi.font:        Iosevka Regular 11
 rofi.separator-style: solid
-! Title: Gruvbox
-! Author: morhetz
-! Created: 2015
+! Title: depth (previously schredd)
+! Author: dkeg 
+! Created: 2015 
 
-#define bg     #1d2021 
-#define fg     #ebdbb2 
-#define blk    #282828 
-#define bblk   #504945 
-#define red    #cc241d 
-#define grn    #98971a 
-#define ylw    #d79921 
-#define blu    #458588 
-#define mag    #b16286 
-#define cyn    #689d6a 
-#define wht    #a89984 
-#define bred   #fb4934 
-#define bgrn   #97a293 
-#define bylw   #c29f6f 
-#define bblu   #5e606c 
-#define bmag   #7a6054 
-#define bcyn   #78746c 
-#define bwht   #ebdbb2 
+#define bg     #2c2833 
+#define fg     #dbd7b8 
+#define blk    #322d39 
+#define bblk   #4e4955 
+#define red    #bf6257 
+#define grn    #82a37c 
+#define ylw    #b7a16c 
+#define blu    #6d6a80 
+#define mag    #825969 
+#define cyn    #938e8f 
+#define wht    #dbd7b8 
+#define bred   #bf6257 
+#define bgrn   #82a37c 
+#define bylw   #b7a16c 
+#define bblu   #6d6a80 
+#define bmag   #825969 
+#define bcyn   #938e8f 
+#define bwht   #dbd7b8 
 
 ! Colors  
 *background:   bg  

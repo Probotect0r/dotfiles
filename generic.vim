@@ -22,7 +22,6 @@ let g:colors_name = "generic"
 
 "Standard syntax 
 "Boolean - red
-" hi Normal ctermbg=0
 hi Boolean ctermfg=01
 "Character - red
 hi Character ctermfg=01
@@ -37,13 +36,13 @@ hi Define ctermfg=05
 "Float - Blue
 hi Float ctermfg=04
 "Function - Blue
-hi Function ctermfg=01
+hi Function ctermfg=04
 "Identifier - red
 hi Identifier ctermfg=01
 "Include - blue
 hi Include ctermfg=04
 "Keyword - mag
-hi Keyword ctermfg=05
+hi Keyword ctermfg=01
 "Label - yellow
 hi Label ctermfg=03
 "Number - red
@@ -60,7 +59,7 @@ hi Special ctermfg=06
 hi SpecialChar ctermfg=06
 "Statement - red
 hi Statement ctermfg=01
-"StorageClass - green
+"StorageClass - yellow
 hi StorageClass ctermfg=03
 "String - green
 hi String ctermfg=02
@@ -71,7 +70,7 @@ hi Tag ctermfg=03
 "Todo - yellow
 hi Todo ctermbg=00 ctermfg=05
 "Type - yellow
-hi Type ctermfg=03
+hi Type ctermfg=05
 "Typedef - yellow
 hi Typedef ctermfg=03
 

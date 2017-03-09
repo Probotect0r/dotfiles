@@ -1,20 +1,22 @@
 # Set colors
-set $base00 #101218
-set $base01 #1f222d
-set $base02 #252936
-set $base03 #7780a1
-set $base04 #C0C5CE
-set $base05 #d1d4e0
-set $base06 #C9CCDB
-set $base07 #ffffff
-set $base08 #ee829f
-set $base09 #f99170
-set $base0A #ffefcc
-set $base0B #a5ffe1
-set $base0C #97e0ff
-set $base0D #97bbf7
-set $base0E #c0b7f9
-set $base0F #fcc09e
+set $colorbg #2c2833
+set $colorfg #dbd7b8
+set $colorblk #322d39
+set $colorbblk #4e4955
+set $colorred #bf6257
+set $colorgrn #82a37c
+set $colorylw #b7a16c
+set $colorblu #6d6a80
+set $colormag #825969
+set $colorcyn #938e8f
+set $colorwht #dbd7b8
+set $colorbred #bf6257
+set $colorbgrn #82a37c
+set $colorbylw #b7a16c
+set $colorbblu #6d6a80
+set $colorbmag #825969
+set $colorbcyn #938e8f
+set $colorbwht #dbd7b8
 
 # Set mod key to ALT
 set $mod Mod1
@@ -22,7 +24,7 @@ set $mod Mod1
 #hide_edge_borders both
 
 # Font
-font pango:Source Code Pro for Powerline 9
+font pango:Iosevka Regular 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -90,8 +92,8 @@ bindsym $mod+u focus child
 
 set $workspace1 "1: Terminal "
 set $workspace2 "2: Chrome "
-set $workspace3 "3: ToDo "
-set $workspace4 "4: Music "
+set $workspace3 "3"
+set $workspace4 "4"
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -125,6 +127,7 @@ bindsym $mod+Shift+e exec "i3-msg exit"
 bindsym $mod+Shift+x exec "shutdown now"
 bindsym $mod+Shift+c exec "shutdown -r now"
 bindsym $mod+Shift+z exec "systemctl suspend"
+bindsym $mod+Shift+v exec "i3lock -u -i ~/Pictures/wallpaper.png"
 
 # Resize mode
 mode "resize" {
@@ -159,17 +162,18 @@ bar {
   verbose yes
   status_command i3status
   # Font
-  font pango:Source Code Pro for Powerline 8.5
+  font pango:Iosevka Regular 10
+
 
   colors {
-        separator $base03
-        background $base01
-        statusline $base05
-        focused_workspace $base0C $base0D $base00
-        active_workspace $base02 $base02 $base07
-        inactive_workspace $base01 $base01 $base03
-        urgent_workspace $base08 $base08 $base07
-    }
+		separator $colorfg
+			background $colorbg
+			statusline $colorfg
+			focused_workspace $colorfg $colorfg $colorbg
+			active_workspace $colorwht $colorwht $colorblk
+			inactive_workspace $colorbg $colorbg $colorfg
+			urgent_workspace $colorred $colorred $colorbg
+	}
 }
 
 # Audio controls
@@ -182,23 +186,22 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Exec commands
-exec_always feh --bg-center ~/Pictures/wallpaper.jpg # Wallpaper
+exec_always --no-startup-id feh --bg-center ~/Pictures/wallpaper.png # Wallpaper
 exec_always nm-applet # network manager applet
 exec_always ~/screen_setup.sh
 exec xrdb ~/.Xresources
-exec_always ~/.nvm/versions/node/v7.4.0/bin/node ~/Code/themer/dist/index.js
-#exec_always polybar example
+exec ~/.nvm/versions/node/v7.6.0/bin/node ~/Code/themer/src/index.js
 
 # Set a border
 for_window [class="^.*"] border pixel 2
 
 #GAPS stuff
 gaps inner 15
-#smart_gaps on
 smart_borders on
+#smart_gaps on
 
 # Set Window colors 
-client.focused $base0D $base0D $base00 $base01
-client.focused_inactive $base02 $base02 $base03 $base01
-client.unfocused $base01 $base01 $base03 $base01
-client.urgent $base02 $base08 $base07 $base08
+client.focused $colorfg $colorbg $colorfg $colorblk $colorfg
+client.focused_inactive $colorfg $colorbg $colorfg $colorblk
+client.unfocused $colorbg $colorbg $colorfg $colorblk
+client.urgent $colorred $colorbg $colorfg $colorblk

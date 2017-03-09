@@ -37,7 +37,6 @@ let g:ycm_semantic_triggers['typescript'] = ['.']
 syntax enable
 set background=dark
 colorscheme generic
-"let g:airline_theme='base16_yesterdaybright'
 
 " General stuff
 set exrc
@@ -174,4 +173,23 @@ let g:ctrlp_custom_ignore = {
 
 " Ale settings
 let g:ale_sign_error = '✘'
+
+let s:hidden_all = 0
+function! ToggleHiddenAll()
+    if s:hidden_all  == 0
+        let s:hidden_all = 1
+        set noshowmode
+        set noruler
+        set laststatus=0
+        set noshowcmd
+    else
+        let s:hidden_all = 0
+        set showmode
+        set ruler
+        set laststatus=2
+        set showcmd
+    endif
+endfunction
+
+nnoremap <leader>h :call ToggleHiddenAll()<CR>
 set secure
