@@ -1,22 +1,22 @@
 # Set colors
-set $colorbg #2c2833
-set $colorfg #dbd7b8
-set $colorblk #322d39
-set $colorbblk #4e4955
-set $colorred #bf6257
-set $colorgrn #82a37c
-set $colorylw #b7a16c
-set $colorblu #6d6a80
-set $colormag #825969
-set $colorcyn #938e8f
-set $colorwht #dbd7b8
-set $colorbred #bf6257
-set $colorbgrn #82a37c
-set $colorbylw #b7a16c
-set $colorbblu #6d6a80
-set $colorbmag #825969
-set $colorbcyn #938e8f
-set $colorbwht #dbd7b8
+set $colorbg #312e39
+set $colorfg #c0a79a
+set $colorblk #33303b
+set $colorbblk #4f4b58
+set $colorred #87404f
+set $colorgrn #74934e
+set $colorylw #ae835a
+set $colorblu #615772
+set $colormag #783e57
+set $colorcyn #554757
+set $colorwht #c0a79a
+set $colorbred #87404f
+set $colorbgrn #74934e
+set $colorbylw #ae835a
+set $colorbblu #615772
+set $colorbmag #783e57
+set $colorbcyn #554757
+set $colorbwht #c0a79a
 
 # Set mod key to ALT
 set $mod Mod1
@@ -86,7 +86,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+Shift+p focus parent
 # focus the child container
 bindsym $mod+u focus child
 
@@ -198,7 +198,7 @@ for_window [class="^.*"] border pixel 2
 #GAPS stuff
 gaps inner 15
 smart_borders on
-#smart_gaps on
+smart_gaps on
 
 # Set Window colors 
 client.focused $colorfg $colorbg $colorfg $colorblk $colorfg

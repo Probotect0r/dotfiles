@@ -28,10 +28,86 @@ general {
 
 				
 
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
 	colors = true
-	color_good = "#82a37c"
-	color_bad = "#bf6257"
-	color_degraded = "#b7a16c"
+	color_good = "#74934e"
+	color_bad = "#87404f"
+	color_degraded = "#ae835a"
 
 }
 

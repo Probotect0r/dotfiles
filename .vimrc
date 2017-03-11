@@ -45,6 +45,14 @@ set modifiable
 set noswapfile
 set noshowcmd
 set ruler
+
+" GVim stuff
+set guifont=Iosevka\ 12
+set guioptions-=M
+set guioptions-=T
+set guioptions-=r
+set guioptions-=L
+
 " Always display statusline
 set laststatus=2
 " Update files changed outside vim
@@ -122,18 +130,6 @@ let g:user_emmet_settings = {
 
 " Relative numbering
 set rnu
-function! ToggleNumbersOn()
-	set nu!
-	set rnu
-endfunction
-function! ToggleRelativeOn()
-	set rnu!
-	set nu
-endfunction
-autocmd FocusLost * call ToggleRelativeOn()
-autocmd FocusGained * call ToggleRelativeOn()
-autocmd InsertEnter * call ToggleRelativeOn()
-autocmd InsertLeave * call ToggleRelativeOn()
 
 " Mappings
 let mapleader = ','
@@ -173,6 +169,8 @@ let g:ctrlp_custom_ignore = {
 
 " Ale settings
 let g:ale_sign_error = '✘'
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_save = 1
 
 let s:hidden_all = 0
 function! ToggleHiddenAll()

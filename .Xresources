@@ -14,36 +14,36 @@ rofi.lines:         5
 rofi.width:         30
 rofi.bw:            5
 
-rofi.color-window:  #2c2833,#bf6257,#dbd7b8
-rofi.color-normal:  #2c2833,#dbd7b8,#322d39,#bf6257,#322d39
-rofi.color-active:  #82a37c,#322d39,#82a37c,#bf6257,#322d39
-rofi.color-urgent:  #6d6a80,#322d39,#6d6a80,#bf6257,#322d39
+rofi.color-window:  #312e39,#87404f,#c0a79a
+rofi.color-normal:  #312e39,#c0a79a,#33303b,#87404f,#33303b
+rofi.color-active:  #74934e,#33303b,#74934e,#87404f,#33303b
+rofi.color-urgent:  #615772,#33303b,#615772,#87404f,#33303b
 
 rofi.hide-scrollbar: true
 rofi.font:        Iosevka Regular 11
 rofi.separator-style: solid
-! Title: depth (previously schredd)
-! Author: dkeg 
-! Created: 2015 
+! Title: urban 
+! Author: dkeg
+! Created: 2016
 
-#define bg     #2c2833 
-#define fg     #dbd7b8 
-#define blk    #322d39 
-#define bblk   #4e4955 
-#define red    #bf6257 
-#define grn    #82a37c 
-#define ylw    #b7a16c 
-#define blu    #6d6a80 
-#define mag    #825969 
-#define cyn    #938e8f 
-#define wht    #dbd7b8 
-#define bred   #bf6257 
-#define bgrn   #82a37c 
-#define bylw   #b7a16c 
-#define bblu   #6d6a80 
-#define bmag   #825969 
-#define bcyn   #938e8f 
-#define bwht   #dbd7b8 
+#define bg     #312e39 
+#define fg     #c0a79a 
+#define blk    #33303b 
+#define bblk   #4f4b58 
+#define red    #87404f 
+#define grn    #74934e 
+#define ylw    #ae835a 
+#define blu    #615772 
+#define mag    #783e57 
+#define cyn    #554757 
+#define wht    #c0a79a 
+#define bred   #87404f 
+#define bgrn   #74934e 
+#define bylw   #ae835a 
+#define bblu   #615772 
+#define bmag   #783e57 
+#define bcyn   #554757 
+#define bwht   #c0a79a 
 
 ! Colors  
 *background:   bg  
