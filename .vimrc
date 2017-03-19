@@ -24,6 +24,7 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'w0rp/ale'
 Plugin 'morhetz/gruvbox'
+Plugin 'easymotion/vim-easymotion'
 
 call vundle#end()
 filetype plugin indent on
