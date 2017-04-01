@@ -14,36 +14,36 @@ rofi.lines:         5
 rofi.width:         30
 rofi.bw:            5
 
-rofi.color-window:  #201f1d,#c34564,#cfcfcf
-rofi.color-normal:  #201f1d,#cfcfcf,#33312E,#c34564,#33312E
-rofi.color-active:  #85a300,#33312E,#85a300,#c34564,#33312E
-rofi.color-urgent:  #6c9ef8,#33312E,#6c9ef8,#c34564,#33312E
+rofi.color-window:  #2c292b,#ab6d4e,#c3b495
+rofi.color-normal:  #2c292b,#c3b495,#312e30,#ab6d4e,#312e30
+rofi.color-active:  #88885d,#312e30,#88885d,#ab6d4e,#312e30
+rofi.color-urgent:  #45626e,#312e30,#45626e,#ab6d4e,#312e30
 
 rofi.hide-scrollbar: true
 rofi.font:        Iosevka Regular 11
 rofi.separator-style: solid
-! Title: Iosevka
-! Author: Probotect0r
-! Created: 2017
+! Title: bulb 
+! Author: dkeg
+! Created: 2015 (revised 2016) 
 
-#define bg     #201f1d 
-#define fg     #cfcfcf 
-#define blk    #33312E 
-#define bblk   #767676 
-#define red    #c34564 
-#define grn    #85a300 
-#define ylw    #D89333 
-#define blu    #6c9ef8 
-#define mag    #b77fdb 
-#define cyn    #6df1f8 
-#define wht    #cfcfcf 
-#define bred   #c34564 
-#define bgrn   #85a300 
-#define bylw   #D89333 
-#define bblu   #6c9ef8 
-#define bmag   #b77fdb 
-#define bcyn   #6df1f8 
-#define bwht   #cfcfcf 
+#define bg     #2c292b 
+#define fg     #c3b495 
+#define blk    #312e30 
+#define bblk   #4f4e4e 
+#define red    #ab6d4e 
+#define grn    #88885d 
+#define ylw    #c8a168 
+#define blu    #45626e 
+#define mag    #7c5545 
+#define cyn    #456e66 
+#define wht    #c3b495 
+#define bred   #ab6d4e 
+#define bgrn   #88885d 
+#define bylw   #c8a168 
+#define bblu   #45626e 
+#define bmag   #7c5545 
+#define bcyn   #456e66 
+#define bwht   #c3b495 
 
 ! Colors  
 *background:   bg  

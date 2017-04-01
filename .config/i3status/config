@@ -22,10 +22,40 @@ general {
 
 				
 
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
 	colors = true
-	color_good = "#85a300"
-	color_bad = "#c34564"
-	color_degraded = "#D89333"
+	color_good = "#88885d"
+	color_bad = "#ab6d4e"
+	color_degraded = "#c8a168"
 
 }
 
