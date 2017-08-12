@@ -52,10 +52,28 @@ general {
 
 				
 
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
 	colors = true
-	color_good = "#88885d"
-	color_bad = "#ab6d4e"
-	color_degraded = "#c8a168"
+	color_good = "#92ab75"
+	color_bad = "#b16c7f"
+	color_degraded = "#bdab77"
 
 }
 

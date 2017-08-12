@@ -1,22 +1,22 @@
 # Set colors
-set $colorbg #2c292b
-set $colorfg #c3b495
-set $colorblk #312e30
-set $colorbblk #4f4e4e
-set $colorred #ab6d4e
-set $colorgrn #88885d
-set $colorylw #c8a168
-set $colorblu #45626e
-set $colormag #7c5545
-set $colorcyn #456e66
-set $colorwht #c3b495
-set $colorbred #ab6d4e
-set $colorbgrn #88885d
-set $colorbylw #c8a168
-set $colorbblu #45626e
-set $colorbmag #7c5545
-set $colorbcyn #456e66
-set $colorbwht #c3b495
+set $colorbg #2b2c33
+set $colorfg #d9c1a9
+set $colorblk #303139
+set $colorbblk #55565b
+set $colorred #b16c7f
+set $colorgrn #92ab75
+set $colorylw #bdab77
+set $colorblu #485476
+set $colormag #746081
+set $colorcyn #636f7d
+set $colorwht #d9c1a9
+set $colorbred #b16c7f
+set $colorbgrn #92ab75
+set $colorbylw #e8dfcd
+set $colorbblu #485476
+set $colorbmag #746081
+set $colorbcyn #636f7d
+set $colorbwht #e9dbce
 
 # Set mod key to ALT
 set $mod Mod1
@@ -90,8 +90,8 @@ bindsym $mod+Shift+p focus parent
 # focus the child container
 bindsym $mod+u focus child
 
-set $workspace1 "1: Terminal "
-set $workspace2 "2: Chrome "
+set $workspace1 "1"
+set $workspace2 "2"
 set $workspace3 "3"
 set $workspace4 "4"
 
@@ -157,24 +157,25 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # The i3Bar
-bar {
-  position top
-  verbose yes
-  status_command i3status
-  # Font
-  font pango:Iosevka Regular 10
-
-
-  colors {
-		separator $colorfg
-			background $colorbg
-			statusline $colorfg
-			focused_workspace $colorfg $colorfg $colorbg
-			active_workspace $colorwht $colorwht $colorblk
-			inactive_workspace $colorbg $colorbg $colorfg
-			urgent_workspace $colorred $colorred $colorbg
-	}
-}
+#bar {
+#  tray_output none
+#  position top
+#  verbose yes
+#  status_command i3status
+#  # Font
+#  font pango:Iosevka Regular 10
+#
+#
+#  colors {
+#		separator $colorfg
+#			background $colorbg
+#			statusline $colorfg
+#			focused_workspace $colorfg $colorfg $colorbg
+#			active_workspace $colorwht $colorwht $colorblk
+#			inactive_workspace $colorbg $colorbg $colorfg
+#			urgent_workspace $colorred $colorred $colorbg
+#	}
+#}
 
 # Audio controls
 bindsym $mod+p  exec amixer sset Master 5%+
@@ -187,10 +188,10 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 
 # Exec commands
 exec_always --no-startup-id feh --bg-center ~/Pictures/wallpaper.png # Wallpaper
-exec_always nm-applet # network manager applet
-exec_always ~/screen_setup.sh
-exec xrdb ~/.Xresources
+# exec_always nm-applet # network manager applet
+# exec_always ~/screen_setup.sh
 exec ~/.nvm/versions/node/v7.6.0/bin/node ~/Code/themer/src/index.js
+exec xrdb ~/.Xresources
 
 # Set a border
 for_window [class="^.*"] border pixel 2

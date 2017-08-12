@@ -25,6 +25,8 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'w0rp/ale'
 Plugin 'morhetz/gruvbox'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'ianks/vim-tsx'
+Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()
 filetype plugin indent on
@@ -38,6 +40,7 @@ let g:ycm_semantic_triggers['typescript'] = ['.']
 syntax enable
 set background=dark
 colorscheme generic
+set guifont="Iosevka Nerd Font"
 
 " General stuff
 set exrc

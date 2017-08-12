@@ -21,11 +21,12 @@ antigen theme agnoster
 export NVM_DIR="/home/sagar/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  
 
+# For python virtual env
 export PROJECT_HOME=$HOME/Code/python-envs
-
-# Source .profile so you get login configs as well
-source ~/.profile
-source ~/.aliases.sh
 
 # Set the default user so the 'user@system' prompt doesn't show
 export DEFAULT_USER=sagar
+
+# Source .profile so you get login configs as well
+source ~/.aliases.sh
+source ~/.profile
