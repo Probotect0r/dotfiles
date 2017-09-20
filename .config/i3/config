@@ -157,25 +157,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # The i3Bar
-#bar {
-#  tray_output none
-#  position top
-#  verbose yes
-#  status_command i3status
-#  # Font
-#  font pango:Iosevka Regular 10
-#
-#
-#  colors {
-#		separator $colorfg
-#			background $colorbg
-#			statusline $colorfg
-#			focused_workspace $colorfg $colorfg $colorbg
-#			active_workspace $colorwht $colorwht $colorblk
-#			inactive_workspace $colorbg $colorbg $colorfg
-#			urgent_workspace $colorred $colorred $colorbg
-#	}
-#}
+bar { 
+	i3bar_command $HOME/.config/polybar/launch.sh
+}
 
 # Audio controls
 bindsym $mod+p  exec amixer sset Master 5%+
@@ -186,17 +170,16 @@ bindsym $mod+i  exec amixer sset Master toggle
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
-# Exec commands
-exec_always --no-startup-id feh --bg-center ~/Pictures/wallpaper.png # Wallpaper
-# exec_always nm-applet # network manager applet
-# exec_always ~/screen_setup.sh
-exec ~/.nvm/versions/node/v7.6.0/bin/node ~/Code/themer/src/index.js
-exec xrdb ~/.Xresources
+# Set wallpaper
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
+
+# Run themer
+exec --no-startup-id ~/.nvm/versions/node/v7.6.0/bin/node ~/Code/themer/src/index.js
 
 # Set a border
 for_window [class="^.*"] border pixel 2
 
-#GAPS stuff
+# GAPS stuff
 gaps inner 15
 smart_borders on
 smart_gaps on

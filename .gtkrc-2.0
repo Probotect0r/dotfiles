@@ -1,9 +1,10 @@
 style "panel"
 {
-  bg[NORMAL] = "#303139"
-  fg[NORMAL] = "#d9c1a9"
+	bg[NORMAL] = "#302e2d"
+	fg[NORMAL] = "#d0d0d0"
 }
 
 widget_class "*Panel*"		style "panel"
 widget "*Panel*"			style "panel"
 class "*Panel*"				style "panel"
+

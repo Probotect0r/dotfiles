@@ -23,6 +23,13 @@
     </property>
   </property>
   <property name="splash" type="empty">
-    <property name="Engine" type="string" value="mice"/>
+    <property name="Engine" type="string" value=""/>
+  </property>
+  <property name="shutdown" type="empty">
+    <property name="LockScreen" type="bool" value="true"/>
+  </property>
+  <property name="compat" type="empty">
+    <property name="LaunchGNOME" type="bool" value="false"/>
+    <property name="LaunchKDE" type="bool" value="false"/>
   </property>
 </channel>

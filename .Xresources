@@ -1,6 +1,5 @@
-URxvt.font:         xft:Iosevka:style=Regular:size=12
+URxvt.font:         xft:Iosevka Term:style=Regular:size=14
 URxvt.scrollBar:    false
-!URxvt.lineSpace:	  3
 Xft.antialias:      true
 Xft.rgba:           rgb
 Xft.hinting:        true
@@ -14,36 +13,36 @@ rofi.lines:         5
 rofi.width:         30
 rofi.bw:            5
 
-rofi.color-window:  #2b2c33,#b16c7f,#d9c1a9
-rofi.color-normal:  #2b2c33,#d9c1a9,#303139,#b16c7f,#303139
-rofi.color-active:  #92ab75,#303139,#92ab75,#b16c7f,#303139
-rofi.color-urgent:  #485476,#303139,#485476,#b16c7f,#303139
+rofi.color-window:  #1a1917,#c34564,#d0d0d0
+rofi.color-normal:  #1a1917,#d0d0d0,#302e2d,#c34564,#302e2d
+rofi.color-active:  #85a300,#302e2d,#85a300,#c34564,#302e2d
+rofi.color-urgent:  #446fbd,#302e2d,#446fbd,#c34564,#302e2d
 
 rofi.hide-scrollbar: true
 rofi.font:        Iosevka Regular 11
 rofi.separator-style: solid
-! Title: vans 
-! Author: dkeg
-! Created: 2016 
+! Title: Iosevka
+! Author: be5invis
+! Created: 2017
 
-#define bg     #2b2c33 
-#define fg     #d9c1a9 
-#define blk    #303139 
-#define bblk   #55565b 
-#define red    #b16c7f 
-#define grn    #92ab75 
-#define ylw    #bdab77 
-#define blu    #485476 
-#define mag    #746081 
-#define cyn    #636f7d 
-#define wht    #d9c1a9 
-#define bred   #b16c7f 
-#define bgrn   #92ab75 
-#define bylw   #e8dfcd 
-#define bblu   #485476 
-#define bmag   #746081 
-#define bcyn   #636f7d 
-#define bwht   #e9dbce 
+#define bg     #1a1917 
+#define fg     #d0d0d0 
+#define blk    #302e2d 
+#define bblk   #767676 
+#define red    #c34564 
+#define grn    #85a300 
+#define ylw    #D89333 
+#define blu    #446fbd 
+#define mag    #b77fdb 
+#define cyn    #6df1f8 
+#define wht    #d0d0d0 
+#define bred   #c34564 
+#define bgrn   #85a300 
+#define bylw   #D89333 
+#define bblu   #6c9ef8 
+#define bmag   #b77fdb 
+#define bcyn   #6df1f8 
+#define bwht   #cfcfcf 
 
 ! Colors  
 *background:   bg  

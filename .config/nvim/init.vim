@@ -14,16 +14,18 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-repeat'
 
+" Code search
+Plug 'mileszs/ack.vim'
 
+" Tmux navigation
 Plug 'christoomey/vim-tmux-navigator'
 
 " Autocomplete / Intellisense
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+Plug 'artur-shaik/vim-javacomplete2'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'zchee/deoplete-go', { 'do': 'make' }
-Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.config/nvim/plugged/gocode/vim/symlink.sh' }
 
 " Searching Zeal docs
 Plug 'KabbAmine/zeavim.vim', {'on': [
@@ -40,10 +42,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'wavded/vim-stylus'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'fatih/vim-go'
-
-" Asthetics
-" Plug 'vim-airline/vim-airline'
-" Plug 'ryanoasis/vim-devicons'
 
 " Git helper
 Plug 'tpope/vim-fugitive'
@@ -99,19 +97,18 @@ set fillchars+=vert:\
 " Change format of status line
 " Left side
 set statusline+=\ \ 
-set statusline+=%.30F
+set statusline+=%.30F " full file path with max lenght 30
 set statusline+=\ \ 
-set statusline+=%m
+set statusline+=%m " modified flag (+)
 set statusline+=\ \ 
-set statusline+=%2*
+set statusline+=%2* " Change highlight group to User2
 " Right side
-set statusline+=%=
-set statusline+=%*
-set statusline+=%3c
+set statusline+=%= " Create seperation point (Each section is spaced out equally)
+set statusline+=%* " Reset highlight group
+set statusline+=%3c " Column length
 set statusline+=\ \ \ 
-set statusline+=%y
+set statusline+=%y  " File type
 set statusline+=\ \ \ 
-
 
 " Mouse only in normal mode
 set mouse=n
@@ -145,11 +142,6 @@ set ai
 
 " Relative numbering
 set rnu
-
-" Set up cursor line highlighting when in insert mode
-set nocul
-autocmd InsertEnter * set cul
-autocmd InsertLeave * set nocul
 
 " Mappings
 let mapleader = ','
@@ -194,3 +186,10 @@ let g:LanguageClient_autoStart = 1
 nnoremap <leader>K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+
+" CtrlP ignore files
+let g:ctrlp_custom_ignore = {
+	\ 'dir': 'node_modules'
+\ }
+
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
