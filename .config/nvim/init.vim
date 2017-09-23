@@ -49,6 +49,9 @@ Plug 'tpope/vim-fugitive'
 " Comments
 Plug 'scrooloose/nerdcommenter'
 
+" Asthetics
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 " Theme and colors stuff

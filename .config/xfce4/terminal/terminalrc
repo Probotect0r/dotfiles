@@ -1,5 +1,4 @@
 [Configuration]
-FontName=Iosevka Term 14
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
@@ -19,16 +18,16 @@ MiscTabCloseMiddleClick=TRUE
 MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
 MiscMiddleClickOpensUri=FALSE
-MiscCopyOnSelect=FALSE
+MiscCopyOnSelect=TRUE
 MiscDefaultWorkingDir=
 MiscRewrapOnResize=TRUE
 MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
-ColorForeground=#839496
-ColorBackground=#002b36
-ColorCursor=#93a1a1
-ColorPalette=#073642;#dc322f;#859900;#b58900;#268bd2;#d33682;#2aa198;#eee8d5;#002b36;#cb4b16;#586e75;#657b83;#839496;#6c71c4;#93a1a1;#fdf6e3
-ColorBold=#93a1a1
-ColorBoldUseDefault=FALSE
-TabActivityColor=#dc322f
-
+FontName=Iosevka Term 14
+ScrollingBar=TERMINAL_SCROLLBAR_NONE
+ColorCursorUseDefault=FALSE
+ColorForeground=#d9c1a9
+ColorBackground=#2b2c33
+ColorCursor=#d9c1a9
+ColorCursorForeground=#303139
+ColorPalette=#303139;#b16c7f;#92ab75;#bdab77;#485476;#746081;#636f7d;#d9c1a9;#55565b;#b16c7f;#92ab75;#e8dfcd;#485476;#746081;#636f7d;#e9dbce
