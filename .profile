@@ -6,12 +6,15 @@ PATH=$PATH:/opt/apache-maven-3.5.0/bin
 PATH=$PATH:~/Code/gocode/bin
 PATH=$PATH:/opt/Gogland-171.4694.61/bin
 
-
+# Java
 JAVA_HOME=/opt/jdk1.8.0_131
 PATH=$PATH:$JAVA_HOME/bin
 
 GOPATH=~/Code/gocode
 
+TERMINAL=xfce4-terminal
+
+export TERMINAL
 export GOPATH
 export PATH
 export JAVA_HOME

@@ -7,4 +7,4 @@ killall -q polybar
 while pgrep -x polybar >/dev/null; do sleep 0.5; done
 
 # Launch bar
-polybar example &
+polybar default &

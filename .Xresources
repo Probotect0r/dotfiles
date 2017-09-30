@@ -8,19 +8,6 @@ Xft.hintstyle:      hintmedium
 Xft.lcdfilter:      lcddefault
 URxvt*dynamicColors: on
 
-!Rofi
-rofi.lines:         5
-rofi.width:         20
-rofi.bw:            5
-
-rofi.color-window:  #2b2c33,#b16c7f,#d9c1a9
-rofi.color-normal:  #2b2c33,#d9c1a9,#303139,#b16c7f,#303139
-rofi.color-active:  #92ab75,#303139,#92ab75,#b16c7f,#303139
-rofi.color-urgent:  #485476,#303139,#485476,#b16c7f,#303139
-
-rofi.hide-scrollbar: true
-rofi.font:        Iosevka Regular 11
-rofi.separator-style: solid
 ! Title: vans 
 ! Author: dkeg
 ! Created: 2016 
@@ -64,3 +51,16 @@ rofi.separator-style: solid
 *color14:     bcyn  
 *color7:      wht  
 *color15:     bwht 
+!Rofi
+rofi.lines:         5
+rofi.width:         30
+rofi.bw:            5
+
+rofi.color-window:  #272a2a,#b05f5f,#eaeaed
+rofi.color-normal:  #272a2a,#eaeaed,#282c2c,#b05f5f,#282c2c
+rofi.color-active:  #88aa55,#282c2c,#88aa55,#b05f5f,#282c2c
+rofi.color-urgent:  #556973,#282c2c,#556973,#b05f5f,#282c2c
+
+rofi.hide-scrollbar: true
+rofi.font:        Iosevka Regular 11
+rofi.separator-style: solid

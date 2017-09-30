@@ -26,8 +26,10 @@ MiscSlimTabs=FALSE
 FontName=Iosevka Term 14
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
 ColorCursorUseDefault=FALSE
-ColorForeground=#d9c1a9
-ColorBackground=#2b2c33
-ColorCursor=#d9c1a9
-ColorCursorForeground=#303139
-ColorPalette=#303139;#b16c7f;#92ab75;#bdab77;#485476;#746081;#636f7d;#d9c1a9;#55565b;#b16c7f;#92ab75;#e8dfcd;#485476;#746081;#636f7d;#e9dbce
+ScrollingLines=10000
+
+ColorForeground=#eaeaed
+ColorBackground=#272a2a
+ColorCursor=#eaeaed
+ColorCursorForeground=#282c2c
+ColorPalette=#282c2c;#b05f5f;#88aa55;#ccb05f;#556973;#80807e;#558888;#eaeaed;#484c4e;#b05f5f;#88aa55;#ccb05f;#556973;#80807e;#558888;#f6f7f8
