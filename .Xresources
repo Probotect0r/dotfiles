@@ -10,7 +10,7 @@ URxvt*dynamicColors: on
 
 !Rofi
 rofi.lines:         5
-rofi.width:         30
+rofi.width:         20
 rofi.bw:            5
 
 rofi.color-window:  #2b2c33,#b16c7f,#d9c1a9
