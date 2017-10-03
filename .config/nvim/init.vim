@@ -20,12 +20,19 @@ Plug 'mileszs/ack.vim'
 " Tmux navigation
 Plug 'christoomey/vim-tmux-navigator'
 
+" Tags
+Plug 'majutsushi/tagbar'
+
 " Autocomplete / Intellisense
 Plug 'artur-shaik/vim-javacomplete2'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'zchee/deoplete-go', { 'do': 'make' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" Code formatting and linting
+Plug 'sbdchd/neoformat'
+Plug 'neomake/neomake'
 
 " Searching Zeal docs
 Plug 'KabbAmine/zeavim.vim', {'on': [
@@ -54,11 +61,13 @@ Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
+" ######## GENERAL CONFIG ########
+
 " Theme and colors stuff
 syntax enable
 set background=dark
 colorscheme generic
-set guifont="Iosevka Nerd Font"
+set guifont="Iosevka Term"
 
 " Start deoplete autocompletion on startup
 let g:deoplete#enable_at_startup = 1
@@ -153,8 +162,8 @@ nmap <leader>. :NERDTree<cr>
 nmap <leader>wq :wq<cr>
 nmap <leader>w :w<cr>
 nmap <leader>q :q<cr>
-map <leader>y "+y
-map <leader>p "+p
+nmap <leader>y "+y
+nmap <leader>p "+p
 nmap <leader>/ :noh<cr>
 nmap <leader>- :exe "vertical resize -20"<cr>
 nmap <leader>+ :exe "vertical resize +20"<cr>
@@ -168,6 +177,7 @@ nnoremap <leader>k :m-2<CR>==
 vnoremap <leader>j :m'>+<CR>gv=gv
 vnoremap <leader>k :m-2<CR>gv=gv
 
+" ####### PLUGIN CONFIG #######
 " NERD Commenter
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
@@ -175,24 +185,15 @@ let g:NERDSpaceDelims = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 
-
-" Language Client
 set hidden
-
-" Commands for servers 
-let g:LanguageClient_serverCommands = {
-    \ 'go': ['go-langserver'],
-    \ 'javascript': ['/opt/javascript-typescript-langserver/lib/language-server-stdio.js'],
-    \ }
-let g:LanguageClient_autoStart = 1
-
-nnoremap <leader>K :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 
 " CtrlP ignore files
 let g:ctrlp_custom_ignore = {
-	\ 'dir': 'node_modules'
+	\ 'dir': 'node_modules|target',
 \ }
 
+" Set java omnifunc to javacomplete
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+" Set auto neomaking on read and write
+call neomake#configure#automake('rw', 750)

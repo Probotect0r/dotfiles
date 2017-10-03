@@ -15,10 +15,10 @@ foreground = ${colors.foreground}
 
 padding-left = 2
 padding-right = 2
-module-margin-left = 1
-module-margin-right = 1
+module-margin-left = 2
+module-margin-right = 2
 
-font-0 = "Iosevka Term:size=11;2"
+font-0 = "Iosevka Term:size=12;2"
 
 modules-left = i3 xwindow
 modules-right = volume memory cpu date
@@ -78,7 +78,7 @@ date = "  %Y-%m-%d"
 
 time = "  %H:%M"
 
-label = %time%  %date%
+label = %date%    %time%
 
 [module/volume]
 type = internal/volume

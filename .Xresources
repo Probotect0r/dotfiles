@@ -53,13 +53,13 @@ URxvt*dynamicColors: on
 *color15:     bwht 
 !Rofi
 rofi.lines:         5
-rofi.width:         30
+rofi.width:         20
 rofi.bw:            5
 
-rofi.color-window:  #272a2a,#b05f5f,#eaeaed
-rofi.color-normal:  #272a2a,#eaeaed,#282c2c,#b05f5f,#282c2c
-rofi.color-active:  #88aa55,#282c2c,#88aa55,#b05f5f,#282c2c
-rofi.color-urgent:  #556973,#282c2c,#556973,#b05f5f,#282c2c
+rofi.color-window:  #221f2c,#af6c69,#bfbec3
+rofi.color-normal:  #221f2c,#bfbec3,#23202c,#af6c69,#23202c
+rofi.color-active:  #7e9c80,#23202c,#7e9c80,#af6c69,#23202c
+rofi.color-urgent:  #637b81,#23202c,#637b81,#af6c69,#23202c
 
 rofi.hide-scrollbar: true
 rofi.font:        Iosevka Regular 11
