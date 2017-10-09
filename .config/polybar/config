@@ -48,9 +48,10 @@ label-focused-padding = 2
 label-unfocused = %index%
 label-unfocused-padding = ${self.label-focused-padding}
 
-label-urgent = %index%!
+label-urgent = %index%
 label-urgent-background = ${colors.red}
 label-urgent-foreground = ${colors.wht}
+label-urgent-padding = 2
 
 label-visible = %index%
 label-visible-background = ${colors.background}

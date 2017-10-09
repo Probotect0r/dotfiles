@@ -196,4 +196,4 @@ let g:ctrlp_custom_ignore = {
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " Set auto neomaking on read and write
-call neomake#configure#automake('rw', 750)
+call neomake#configure#automake('rw', 500)

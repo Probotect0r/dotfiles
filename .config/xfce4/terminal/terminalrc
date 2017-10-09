@@ -28,8 +28,8 @@ ScrollingBar=TERMINAL_SCROLLBAR_NONE
 ColorCursorUseDefault=FALSE
 ScrollingLines=10000
 
-ColorForeground=#bfbec3
-ColorBackground=#221f2c
-ColorCursor=#bfbec3
-ColorCursorForeground=#23202c
-ColorPalette=#23202c;#af6c69;#7e9c80;#b29c7c;#637b81;#896e72;#5a8585;#bfbec3;#46444d;#af6c69;#7e9c80;#b29c7c;#637b81;#896e72;#5a8585;#bfbec3
+ColorForeground=#c3b495
+ColorBackground=#2c292b
+ColorCursor=#c3b495
+ColorCursorForeground=#312e30
+ColorPalette=#312e30;#ab6d4e;#88885d;#c8a168;#45626e;#7c5545;#456e66;#c3b495;#4f4e4e;#ab6d4e;#88885d;#c8a168;#45626e;#7c5545;#456e66;#c3b495
