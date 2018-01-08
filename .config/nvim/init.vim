@@ -24,11 +24,17 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'majutsushi/tagbar'
 
 " Autocomplete / Intellisense
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'artur-shaik/vim-javacomplete2'
 Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'fatih/vim-go'
 Plug 'zchee/deoplete-go', { 'do': 'make' }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'racer-rust/vim-racer'
+Plug 'tbastos/vim-lua'
+
+" Syntax highlight
+Plug 'rust-lang/rust.vim'
 
 " Code formatting and linting
 Plug 'sbdchd/neoformat'
@@ -42,13 +48,6 @@ Plug 'KabbAmine/zeavim.vim', {'on': [
 			\	'<Plug>ZVKeyDocset',
 			\	'<Plug>ZVMotion'
 			\ ]}
-
-" Language
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'wavded/vim-stylus'
-Plug 'hail2u/vim-css3-syntax'
-Plug 'fatih/vim-go'
 
 " Git helper
 Plug 'tpope/vim-fugitive'
@@ -69,8 +68,6 @@ set background=dark
 colorscheme generic
 set guifont="Iosevka Term"
 
-" Start deoplete autocompletion on startup
-let g:deoplete#enable_at_startup = 1
 
 " General stuff
 set exrc
@@ -178,6 +175,9 @@ vnoremap <leader>j :m'>+<CR>gv=gv
 vnoremap <leader>k :m-2<CR>gv=gv
 
 " ####### PLUGIN CONFIG #######
+" Start deoplete autocompletion on startup
+let g:deoplete#enable_at_startup = 1
+
 " NERD Commenter
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
@@ -189,11 +189,8 @@ set hidden
 
 " CtrlP ignore files
 let g:ctrlp_custom_ignore = {
-	\ 'dir': 'node_modules|target',
+	\ 'dir': '(node_modules|target)',
 \ }
 
 " Set java omnifunc to javacomplete
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
-
-" Set auto neomaking on read and write
-call neomake#configure#automake('rw', 500)
