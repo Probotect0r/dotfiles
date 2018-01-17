@@ -35,7 +35,7 @@
       <property name="Primary" type="bool" value="false"/>
       <property name="Position" type="empty">
         <property name="X" type="int" value="0"/>
-        <property name="Y" type="int" value="184"/>
+        <property name="Y" type="int" value="177"/>
       </property>
     </property>
     <property name="DP-0" type="string" value="2. Ancor Communications Inc 27&quot;">

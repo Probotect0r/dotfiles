@@ -1,46 +1,75 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+call plug#begin('~/.config/nvim/plugged')
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" File browsing
+Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf'
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'scrooloose/nerdtree'
-Plugin 'valloric/youcompleteme'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'maxmellon/vim-jsx-pretty'
-Plugin 'tpope/vim-surround'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'wavded/vim-stylus'
-Plugin 'mattn/emmet-vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'tpope/vim-sensible'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'marijnh/tern_for_vim'
-Plugin 'w0rp/ale'
-Plugin 'morhetz/gruvbox'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'ianks/vim-tsx'
-Plugin 'ryanoasis/vim-devicons'
+" General quality of life
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
+Plug 'easymotion/vim-easymotion'
+Plug 'airblade/vim-gitgutter'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-repeat'
 
-call vundle#end()
-filetype plugin indent on
+" Code search
+Plug 'mileszs/ack.vim'
 
-if !exists("g:ycm_semantic_triggers")
-	let g:ycm_semantic_triggers = {}
-endif
-let g:ycm_semantic_triggers['typescript'] = ['.']
+" Tmux navigation
+Plug 'christoomey/vim-tmux-navigator'
+
+" Tags
+Plug 'majutsushi/tagbar'
+
+" Autocomplete / Intellisense
+" Plug 'autozimu/LanguageClient-neovim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'artur-shaik/vim-javacomplete2'
+Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'zchee/deoplete-go', { 'do': 'make' }
+Plug 'racer-rust/vim-racer'
+Plug 'tbastos/vim-lua'
+
+" Syntax highlight
+Plug 'rust-lang/rust.vim'
+
+" Code formatting and linting
+Plug 'sbdchd/neoformat'
+Plug 'neomake/neomake'
+
+" Searching Zeal docs
+Plug 'KabbAmine/zeavim.vim', {'on': [
+			\	'Zeavim', 'Docset',
+			\	'<Plug>Zeavim',
+			\	'<Plug>ZVVisSelection',
+			\	'<Plug>ZVKeyDocset',
+			\	'<Plug>ZVMotion'
+			\ ]}
+
+" Git helper
+Plug 'tpope/vim-fugitive'
+
+" Comments
+Plug 'scrooloose/nerdcommenter'
+
+" Asthetics
+Plug 'ryanoasis/vim-devicons'
+
+call plug#end()
+
+" ######## GENERAL CONFIG ########
 
 " Theme and colors stuff
 syntax enable
 set background=dark
 colorscheme generic
-set guifont="Iosevka Nerd Font"
+set guifont="Iosevka Term"
+
+" Start deoplete autocompletion on startup
+let g:deoplete#enable_at_startup = 1
 
 " General stuff
 set exrc
@@ -79,19 +108,18 @@ set fillchars+=vert:\
 " Change format of status line
 " Left side
 set statusline+=\ \ 
-set statusline+=%.30F
+set statusline+=%.30F " full file path with max lenght 30
 set statusline+=\ \ 
-set statusline+=%m
+set statusline+=%m " modified flag (+)
 set statusline+=\ \ 
-set statusline+=%2*
+set statusline+=%2* " Change highlight group to User2
 " Right side
-set statusline+=%=
-set statusline+=%*
-set statusline+=%3c
+set statusline+=%= " Create seperation point (Each section is spaced out equally)
+set statusline+=%* " Reset highlight group
+set statusline+=%3c " Column length
 set statusline+=\ \ \ 
-set statusline+=%y
+set statusline+=%y  " File type
 set statusline+=\ \ \ 
-
 
 " Mouse only in normal mode
 set mouse=n
@@ -107,30 +135,21 @@ set backspace=eol,start,indent
 " Decrease update time from 4sec
 set updatetime=250
 
-let javascript_enable_domhtmlcss=1
-set ttimeoutlen=10
-
 " Use tabs instead of spaces
 set noexpandtab
 
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 2 spaces
+" 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
 
 " Make lines not automatically move to next line when buffer width is small
 set nowrap
 
-set ai "Auto indent
-
-let g:vim_jsx_pretty_colorful_config = 1
-let g:user_emmet_settings = {
-			\	'javascript' : {
-			\		'extends' : 'jsx',
-			\	},
-			\}
+"Auto indent
+set ai 
 
 " Relative numbering
 set rnu
@@ -142,8 +161,8 @@ nmap <leader>. :NERDTree<cr>
 nmap <leader>wq :wq<cr>
 nmap <leader>w :w<cr>
 nmap <leader>q :q<cr>
-map <leader>y "+y
-map <leader>p "+p
+nmap <leader>y "+y
+nmap <leader>p "+p
 nmap <leader>/ :noh<cr>
 nmap <leader>- :exe "vertical resize -20"<cr>
 nmap <leader>+ :exe "vertical resize +20"<cr>
@@ -157,41 +176,23 @@ nnoremap <leader>k :m-2<CR>==
 vnoremap <leader>j :m'>+<CR>gv=gv
 vnoremap <leader>k :m-2<CR>gv=gv
 
-nnoremap <leader>gd :YcmCompleter GoTo<CR>
-nnoremap <CR> o<Esc>
-"Below is to fix issues with the ABOVE mappings in quickfix window
-autocmd CmdwinEnter * nnoremap <CR> <CR>
-autocmd BufReadPost quickfix nnoremap <CR> <CR>
+" ####### PLUGIN CONFIG #######
+" NERD Commenter
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
 
-" comment/uncomment selected lines
-map  <leader>ic :s/^/\/\//g<CR>:let @/ = ""<CR>
-map  <leader>rc :s/^\/\///g<CR>:let @/ = ""<CR>
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
 
+set hidden
+
+" CtrlP ignore files
 let g:ctrlp_custom_ignore = {
-			\ 'dir':  '\v[\/](.git|node_modules|.svn|dist)$',
-			\ }
+	\ 'dir': 'node_modules|target',
+\ }
 
-" Ale settings
-let g:ale_sign_error = '✘'
-let g:ale_lint_on_text_changed = 0
-let g:ale_lint_on_save = 1
+" Set java omnifunc to javacomplete
+" autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
-let s:hidden_all = 0
-function! ToggleHiddenAll()
-    if s:hidden_all  == 0
-        let s:hidden_all = 1
-        set noshowmode
-        set noruler
-        set laststatus=0
-        set noshowcmd
-    else
-        let s:hidden_all = 0
-        set showmode
-        set ruler
-        set laststatus=2
-        set showcmd
-    endif
-endfunction
-
-nnoremap <leader>h :call ToggleHiddenAll()<CR>
-set secure
+" Set auto neomaking on read and write
+call neomake#configure#automake('w')

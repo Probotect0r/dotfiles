@@ -13,6 +13,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-repeat'
+Plug 'majutsushi/tagbar'
 
 " Code search
 Plug 'mileszs/ack.vim'
@@ -35,6 +36,7 @@ Plug 'tbastos/vim-lua'
 
 " Syntax highlight
 Plug 'rust-lang/rust.vim'
+Plug 'mxw/vim-jsx'
 
 " Code formatting and linting
 Plug 'sbdchd/neoformat'
@@ -156,6 +158,7 @@ set rnu
 let mapleader = ','
 let g:mapleader = ','
 nmap <leader>. :NERDTree<cr>
+nmap <leader>t :TagbarOpen jf<cr>
 nmap <leader>wq :wq<cr>
 nmap <leader>w :w<cr>
 nmap <leader>q :q<cr>
@@ -189,8 +192,9 @@ set hidden
 
 " CtrlP ignore files
 let g:ctrlp_custom_ignore = {
-	\ 'dir': '(node_modules|target)',
+	\ 'dir': 'node_modules\|target',
 \ }
 
 " Set java omnifunc to javacomplete
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
+let g:jsx_ext_required=0

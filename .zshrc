@@ -30,3 +30,7 @@ export DEFAULT_USER=sagar
 # Source .profile so you get login configs as well
 source ~/.aliases.sh
 source ~/.profile
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/sagar/.sdkman"
+[[ -s "/home/sagar/.sdkman/bin/sdkman-init.sh" ]] && source "/home/sagar/.sdkman/bin/sdkman-init.sh"

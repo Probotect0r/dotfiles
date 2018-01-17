@@ -56,10 +56,10 @@ rofi.lines:         5
 rofi.width:         20
 rofi.bw:            5
 
-rofi.color-window:  #2c292b,#ab6d4e,#c3b495
-rofi.color-normal:  #2c292b,#c3b495,#312e30,#ab6d4e,#312e30
-rofi.color-active:  #88885d,#312e30,#88885d,#ab6d4e,#312e30
-rofi.color-urgent:  #45626e,#312e30,#45626e,#ab6d4e,#312e30
+rofi.color-window:  #2c2c35,#b56550,#b4ada4
+rofi.color-normal:  #2c2c35,#b4ada4,#2d2d36,#b56550,#2d2d36
+rofi.color-active:  #6b925a,#2d2d36,#6b925a,#b56550,#2d2d36
+rofi.color-urgent:  #6e747b,#2d2d36,#6e747b,#b56550,#2d2d36
 
 rofi.hide-scrollbar: true
 rofi.font:        Iosevka Regular 11
