@@ -25,11 +25,14 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'majutsushi/tagbar'
 
 " Autocomplete / Intellisense
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh'
+    \ }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'artur-shaik/vim-javacomplete2'
 Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-Plug 'fatih/vim-go'
 Plug 'zchee/deoplete-go', { 'do': 'make' }
 Plug 'racer-rust/vim-racer'
 Plug 'tbastos/vim-lua'
@@ -135,8 +138,8 @@ set backspace=eol,start,indent
 " Decrease update time from 4sec
 set updatetime=250
 
-" Use tabs instead of spaces
-set noexpandtab
+" Use spaces instead of tabs
+set expandtab
 
 " Be smart when using tabs ;)
 set smarttab
@@ -163,6 +166,7 @@ nmap <leader>wq :wq<cr>
 nmap <leader>w :w<cr>
 nmap <leader>q :q<cr>
 nmap <leader>y "+y
+vmap <leader>y "+y
 nmap <leader>p "+p
 nmap <leader>/ :noh<cr>
 nmap <leader>- :exe "vertical resize -20"<cr>
@@ -180,6 +184,7 @@ vnoremap <leader>k :m-2<CR>gv=gv
 " ####### PLUGIN CONFIG #######
 " Start deoplete autocompletion on startup
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#jedi#debug_server = 1
 
 " NERD Commenter
 " Add spaces after comment delimiters by default
@@ -188,6 +193,7 @@ let g:NERDSpaceDelims = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 
+" Don't unload buffers, hide them instead
 set hidden
 
 " CtrlP ignore files
@@ -197,4 +203,15 @@ let g:ctrlp_custom_ignore = {
 
 " Set java omnifunc to javacomplete
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
 let g:jsx_ext_required=0
+
+let g:LanguageClient_autoStart = 1
+let g:LanguageClient_serverCommands = {
+    \ 'python': ['pyls']
+    \ }
+nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+
+autocmd Filetype text setlocal wrap linebreak
