@@ -1,21 +1,19 @@
-source ~/antigen.zsh
+# Plugins
+source ~/.zplug/init.zsh
 
-antigen use oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/nvm", from:oh-my-zsh
+zplug "plugins/wd", from:oh-my-zsh
 
-antigen bundle git 
-antigen bundle nvm 
-antigen bundle wd
-antigen bundle tomsquest/nvm-auto-use.zsh
+zplug "tomsquest/nvm-auto-use.zsh"
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-autosuggestions"
 
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-antigen apply
+zplug "agnoster/agnoster-zsh-theme", as:theme
+zplug load
 
 # User configuration
 bindkey '^ ' autosuggest-execute
-
-antigen theme agnoster
-#PROMPT='HELLo'
 
 # This loads nvm
 export NVM_DIR="/home/sagar/.nvm"
