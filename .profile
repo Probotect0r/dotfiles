@@ -9,6 +9,7 @@ PATH=$PATH:~/.cargo/bin
 PATH=$PATH:/opt/android-studio/bin
 PATH=$PATH:/opt/gradle-4.3.1/bin
 PATH=$PATH:/opt/robot3t/bin
+PATH=$PATH:~/.local/bin
 
 
 # Java

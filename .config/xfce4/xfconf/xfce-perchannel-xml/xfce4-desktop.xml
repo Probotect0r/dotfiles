@@ -117,8 +117,8 @@
     </property>
   </property>
   <property name="last" type="empty">
-    <property name="window-width" type="int" value="670"/>
-    <property name="window-height" type="int" value="537"/>
+    <property name="window-width" type="int" value="752"/>
+    <property name="window-height" type="int" value="538"/>
   </property>
   <property name="windowlist-menu" type="empty">
     <property name="show-submenus" type="bool" value="false"/>
