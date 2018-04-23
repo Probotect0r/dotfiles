@@ -207,8 +207,16 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 let g:jsx_ext_required=0
 
 let g:LanguageClient_autoStart = 1
+let g:LanguageClient_loadSettings = 1
+let g:LangaugeClient_settingsPath = '/home/sagar/.config/nvim/settings.json'
 let g:LanguageClient_serverCommands = {
-    \ 'python': ['pyls']
+    \ 'python': ['pyls'],
+    \ 'c': ['cquery'],
+    \ 'cpp': ['cquery']
+    \ }
+
+let g:LanguageClient_rootMarkers = {
+    \ 'c': ['makefile']
     \ }
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>

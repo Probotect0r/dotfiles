@@ -33,7 +33,9 @@
       <property name="&lt;Super&gt;p" type="string" value="xfce4-display-settings --minimal"/>
       <property name="&lt;Primary&gt;Escape" type="string" value="xfdesktop --menu"/>
       <property name="override" type="bool" value="true"/>
-      <property name="&lt;Alt&gt;d" type="string" value="rofi -show drun"/>
+      <property name="&lt;Alt&gt;Return" type="string" value="xfce4-terminal --drop-down"/>
+      <property name="&lt;Alt&gt;w" type="string" value="rofi -show window -modi &quot;drun,run,window,ssh&quot;"/>
+      <property name="&lt;Alt&gt;d" type="string" value="rofi -show drun -modi &quot;drun,run,window,ssh&quot;"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
@@ -142,20 +144,23 @@
       <property name="&lt;Super&gt;Down" type="string" value="tile_down_key"/>
       <property name="&lt;Super&gt;Left" type="string" value="tile_left_key"/>
       <property name="&lt;Super&gt;Right" type="string" value="tile_right_key"/>
-      <property name="&lt;Alt&gt;f" type="string" value="maximize_window_key"/>
       <property name="&lt;Alt&gt;v" type="string" value="maximize_vert_key"/>
       <property name="&lt;Alt&gt;h" type="string" value="maximize_horiz_key"/>
       <property name="&lt;Super&gt;d" type="string" value="show_desktop_key"/>
       <property name="&lt;Alt&gt;q" type="string" value="close_window_key"/>
-      <property name="&lt;Alt&gt;l" type="string" value="switch_application_key"/>
       <property name="&lt;Shift&gt;&lt;Alt&gt;Insert" type="string" value="add_workspace_key"/>
       <property name="&lt;Shift&gt;&lt;Alt&gt;Delete" type="string" value="del_workspace_key"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;1" type="string" value="workspace_1_key"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;2" type="string" value="workspace_2_key"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;3" type="string" value="workspace_3_key"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;4" type="string" value="workspace_4_key"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;5" type="string" value="workspace_5_key"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;6" type="string" value="workspace_6_key"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;f" type="string" value="fill_window_key"/>
+      <property name="&lt;Alt&gt;f" type="string" value="maximize_window_key"/>
+      <property name="&lt;Alt&gt;s" type="string" value="shade_window_key"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;j" type="string" value="next_workspace_key"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;k" type="string" value="prev_workspace_key"/>
+      <property name="&lt;Alt&gt;1" type="string" value="workspace_1_key"/>
+      <property name="&lt;Alt&gt;2" type="string" value="workspace_2_key"/>
+      <property name="&lt;Alt&gt;3" type="string" value="workspace_3_key"/>
+      <property name="&lt;Alt&gt;4" type="string" value="workspace_4_key"/>
+      <property name="&lt;Alt&gt;5" type="string" value="workspace_5_key"/>
     </property>
   </property>
   <property name="providers" type="array">

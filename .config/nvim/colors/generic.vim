@@ -15,98 +15,98 @@ let g:colors_name = "generic"
 
 "Standard syntax 
 "Normal
-hi Normal guifg=#c0c5ce guibg=#2b303b
+hi Normal guifg=#c4c4b5 guibg=#2d2d33
 "Boolean - red
-hi Boolean ctermfg=01 guifg=#bf616a
+hi Boolean ctermfg=01 guifg=#9c6647
 "Character - red
-hi Character ctermfg=01 guifg=#bf616a
+hi Character ctermfg=01 guifg=#9c6647
 "Comment - bblk
-hi Comment ctermfg=08 guifg=#65737e
+hi Comment ctermfg=08 guifg=#44444a
 "Conditional - mag
-hi Conditional ctermfg=05 guifg=#b48ead
+hi Conditional ctermfg=05 guifg=#796a70
 "Constant - Blue
-hi Constant ctermfg=04 guifg=#8fa1b3
+hi Constant ctermfg=04 guifg=#697284
 "Define - Mag
-hi Define ctermfg=05 guifg=#b48ead
+hi Define ctermfg=05 guifg=#796a70
 "Float - Blue
-hi Float ctermfg=04 guifg=#8fa1b3
+hi Float ctermfg=04 guifg=#697284
 "Function - Blue
-hi Function ctermfg=01 guifg=#bf616a
+hi Function ctermfg=01 guifg=#9c6647
 "Identifier - red
-hi Identifier ctermfg=01 guifg=#bf616a
+hi Identifier ctermfg=01 guifg=#9c6647
 "Include - blue
-hi Include ctermfg=04 guifg=#8fa1b3
+hi Include ctermfg=04 guifg=#697284
 "Keyword - mag
-hi Keyword ctermfg=05 guifg=#b48ead
+hi Keyword ctermfg=05 guifg=#796a70
 "Label - yellow
-hi Label ctermfg=03 guifg=#ebcb8b
+hi Label ctermfg=03 guifg=#a29474
 "Number - red
-hi Number ctermfg=01 guifg=#bf616a
+hi Number ctermfg=01 guifg=#9c6647
 "Operator - red
-hi Operator ctermfg=01 guifg=#bf616a
+hi Operator ctermfg=01 guifg=#9c6647
 "PreProc - yellow
-hi PreProc ctermfg=03 guifg=#ebcb8b
+hi PreProc ctermfg=03 guifg=#a29474
 "Repeat - yellow
-hi Repeat ctermfg=03 guifg=#ebcb8b
+hi Repeat ctermfg=03 guifg=#a29474
 "Special - cyn
-hi Special ctermfg=06 guifg=#96b5b4
+hi Special ctermfg=06 guifg=#47676e
 "SpecialChar - cyn
-hi SpecialChar ctermfg=06 guifg=#96b5b4
+hi SpecialChar ctermfg=06 guifg=#47676e
 "Statement - red
-hi Statement ctermfg=01 guifg=#bf616a
+hi Statement ctermfg=01 guifg=#9c6647
 "StorageClass - green
-hi StorageClass ctermfg=03 guifg=#ebcb8b
+hi StorageClass ctermfg=03 guifg=#a29474
 "String - green
-hi String ctermfg=02 guifg=#a3be8c
+hi String ctermfg=02 guifg=#708684
 "Structure - mag
-hi Structure ctermfg=05 guifg=#b48ead
+hi Structure ctermfg=05 guifg=#796a70
 "Tag - yellow
-hi Tag ctermfg=03 guifg=#ebcb8b
+hi Tag ctermfg=03 guifg=#a29474
 "Todo - yellow
-hi Todo ctermbg=00 guibg=#343d46 ctermfg=03 guifg=#ebcb8b
+hi Todo ctermbg=00 guibg=#303036 ctermfg=03 guifg=#a29474
 "Type - yellow
-hi Type ctermfg=03 guifg=#ebcb8b
+hi Type ctermfg=03 guifg=#a29474
 "Typedef - yellow
-hi Typedef ctermfg=03 guifg=#ebcb8b
+hi Typedef ctermfg=03 guifg=#a29474
 
 " Other stuff
-hi NERDTreeDirSlash ctermfg=05 guifg=#b48ead
+hi NERDTreeDirSlash ctermfg=05 guifg=#796a70
 
-hi MatchParen ctermbg=03 guibg=#ebcb8b ctermfg=00 guifg=#343d46
+hi MatchParen ctermbg=03 guibg=#a29474 ctermfg=00 guifg=#303036
 
-hi LineNr ctermbg=none guibg=#2b303b ctermfg=none guifg=#c0c5ce
-hi CursorLineNr ctermbg=none guibg=#2b303b ctermfg=05 guifg=#b48ead
+hi LineNr ctermbg=none guibg=#2d2d33 ctermfg=none guifg=#c4c4b5
+hi CursorLineNr ctermbg=none guibg=#2d2d33 ctermfg=05 guifg=#796a70
 
-hi PMenu ctermbg=00 guibg=#343d46 ctermfg=05 guifg=#b48ead
-hi PMenuSel ctermbg=05 guibg=#b48ead ctermfg=00 guifg=#343d46
+hi PMenu ctermbg=00 guibg=#303036 ctermfg=05 guifg=#796a70
+hi PMenuSel ctermbg=05 guibg=#796a70 ctermfg=00 guifg=#303036
 
-hi Directory ctermfg=05 guifg=#b48ead
+hi Directory ctermfg=05 guifg=#796a70
 
-hi CursorLine ctermbg=00 cterm=none gui=none guibg=#343d46
-hi Cursor ctermbg=00 ctermfg=07 guibg=#343d46 guifg=#dfe1e8
+hi CursorLine ctermbg=00 cterm=none gui=none guibg=#303036
+hi Cursor ctermbg=00 ctermfg=07 guibg=#303036 guifg=#c4c4b5
 
-hi Visual ctermbg=08 guibg=#65737e ctermfg=03 guifg=#ebcb8b
+hi Visual ctermbg=08 guibg=#44444a ctermfg=03 guifg=#a29474
 
-hi Tabline ctermbg=00 guibg=#343d46 ctermfg=01 guifg=#bf616a cterm=none gui=none
-hi TablineFill ctermbg=00 guibg=#343d46 cterm=none gui=none
-hi TablineSel ctermbg=08 guibg=#65737e ctermfg=03 guifg=#ebcb8b cterm=none gui=none
+hi Tabline ctermbg=00 guibg=#303036 ctermfg=01 guifg=#9c6647 cterm=none gui=none
+hi TablineFill ctermbg=00 guibg=#303036 cterm=none gui=none
+hi TablineSel ctermbg=08 guibg=#44444a ctermfg=03 guifg=#a29474 cterm=none gui=none
 
-hi StatusLine ctermbg=07 guibg=#bf616a ctermfg=00 guifg=#343d46 cterm=none gui=none
-hi StatusLineNC ctermbg=00 guibg=#343d46 ctermfg=07 guifg=#bf616a cterm=none gui=none
-hi User2 ctermbg=00 guibg=#343d46 ctermfg=07 guifg=#bf616a
+hi StatusLine ctermbg=07 guibg=#9c6647 ctermfg=00 guifg=#303036 cterm=none gui=none
+hi StatusLineNC ctermbg=00 guibg=#303036 ctermfg=07 guifg=#9c6647 cterm=none gui=none
+hi User2 ctermbg=00 guibg=#303036 ctermfg=07 guifg=#9c6647
 
-hi VertSplit ctermbg=00 guibg=#343d46 ctermfg=00 guifg=#343d46
-hi SignColumn ctermbg=00 guibg=#343d46 ctermfg=05 guifg=#b48ead
+hi VertSplit ctermbg=00 guibg=#303036 ctermfg=00 guifg=#303036
+hi SignColumn ctermbg=00 guibg=#303036 ctermfg=05 guifg=#796a70
 
-hi GitGutterAdd ctermbg=none guibg=#2b303b ctermfg=03 guifg=#ebcb8b cterm=bold gui=bold
-hi GitGutterChange ctermbg=none guibg=#2b303b ctermfg=03 guifg=#ebcb8b cterm=bold gui=bold
-hi GitGutterDelete ctermbg=none guibg=#2b303b ctermfg=03 guifg=#ebcb8b cterm=bold gui=bold
-hi GitGutterChangeDelete ctermbg=none guibg=#2b303b ctermfg=03 guifg=#ebcb8b cterm=bold gui=bold 
+hi GitGutterAdd ctermbg=none guibg=#2d2d33 ctermfg=03 guifg=#a29474 cterm=bold gui=bold
+hi GitGutterChange ctermbg=none guibg=#2d2d33 ctermfg=03 guifg=#a29474 cterm=bold gui=bold
+hi GitGutterDelete ctermbg=none guibg=#2d2d33 ctermfg=03 guifg=#a29474 cterm=bold gui=bold
+hi GitGutterChangeDelete ctermbg=none guibg=#2d2d33 ctermfg=03 guifg=#a29474 cterm=bold gui=bold 
 
-hi ErrorMsg ctermbg=none guibg=#2b303b ctermfg=01 guifg=#bf616a cterm=italic gui=italic
+hi ErrorMsg ctermbg=none guibg=#2d2d33 ctermfg=01 guifg=#9c6647 cterm=italic gui=italic
 
-hi Title ctermfg=03 guifg=#ebcb8b
-hi NonText ctermfg=03 guifg=#8fa1b3
+hi Title ctermfg=03 guifg=#a29474
+hi NonText ctermfg=03 guifg=#697284
 
-hi ALEErrorSign ctermfg=01 guifg=#bf616a ctermbg=none guibg=#2b303b
-hi ALEWarningSign ctermfg=03 guifg=#ebcb8b ctermbg=none guibg=#2b303b
+hi ALEErrorSign ctermfg=01 guifg=#9c6647 ctermbg=none guibg=#2d2d33
+hi ALEWarningSign ctermfg=03 guifg=#a29474 ctermbg=none guibg=#2d2d33
