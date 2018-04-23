@@ -12,8 +12,19 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "agnoster/agnoster-zsh-theme", as:theme
 zplug load
 
-# User configuration
+# Keybindings
 bindkey '^ ' autosuggest-execute
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^R' history-incremental-search-backward
+
+# History settings
+HISTSIZE=5000
+HISTFILE=~/.zsh-history
+SAVEHIST=5000
+setopt incappendhistory
+setopt appendhistory
+setopt sharehistory
 
 # This loads nvm
 export NVM_DIR="/home/sagar/.nvm"
@@ -30,5 +41,5 @@ source ~/.aliases.sh
 source ~/.profile
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/sagar/.sdkman"
-[[ -s "/home/sagar/.sdkman/bin/sdkman-init.sh" ]] && source "/home/sagar/.sdkman/bin/sdkman-init.sh"
+#export SDKMAN_DIR="/home/sagar/.sdkman"
+#[[ -s "/home/sagar/.sdkman/bin/sdkman-init.sh" ]] && source "/home/sagar/.sdkman/bin/sdkman-init.sh"
