@@ -27,14 +27,11 @@ setopt appendhistory
 setopt sharehistory
 
 # This loads nvm
-export NVM_DIR="/home/sagar/.nvm"
+export NVM_DIR="/home/vagrant/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  
 
 # For python virtual env
 export PROJECT_HOME=$HOME/Code/python-envs
-
-# Set the default user so the 'user@system' prompt doesn't show
-export DEFAULT_USER=sagar
 
 # Source .profile so you get login configs as well
 source ~/.aliases.sh
