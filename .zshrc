@@ -1,4 +1,9 @@
-# Plugins
+# Check if zplug is installed
+if [[ ! -d ~/.zplug ]]; then
+  git clone https://github.com/zplug/zplug ~/.zplug
+  source ~/.zplug/init.zsh && zplug update --self
+fi
+
 source ~/.zplug/init.zsh
 
 zplug "plugins/git", from:oh-my-zsh
@@ -10,33 +15,17 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 
 zplug "agnoster/agnoster-zsh-theme", as:theme
+
+zplug "robbyrussell/oh-my-zsh", as:plugin, use:"lib/*.zsh"
+
 zplug load
 
 # Keybindings
 bindkey '^ ' autosuggest-execute
-bindkey '^P' up-history
-bindkey '^N' down-history
-bindkey '^R' history-incremental-search-backward
-
-# History settings
-HISTSIZE=5000
-HISTFILE=~/.zsh-history
-SAVEHIST=5000
-setopt incappendhistory
-setopt appendhistory
-setopt sharehistory
 
 # This loads nvm
 export NVM_DIR="/home/vagrant/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  
 
-# For python virtual env
-export PROJECT_HOME=$HOME/Code/python-envs
-
-# Source .profile so you get login configs as well
 source ~/.aliases.sh
 source ~/.profile
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-#export SDKMAN_DIR="/home/sagar/.sdkman"
-#[[ -s "/home/sagar/.sdkman/bin/sdkman-init.sh" ]] && source "/home/sagar/.sdkman/bin/sdkman-init.sh"
