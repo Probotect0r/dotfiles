@@ -1,7 +1,6 @@
 # Check if zplug is installed
 if [[ ! -d ~/.zplug ]]; then
   git clone https://github.com/zplug/zplug ~/.zplug
-  source ~/.zplug/init.zsh && zplug update --self
 fi
 
 source ~/.zplug/init.zsh
@@ -20,11 +19,11 @@ zplug "robbyrussell/oh-my-zsh", as:plugin, use:"lib/*.zsh"
 
 zplug load
 
-# Keybindings
+# User configuration
 bindkey '^ ' autosuggest-execute
 
 # This loads nvm
-export NVM_DIR="/home/vagrant/.nvm"
+export NVM_DIR="/home/sagar/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  
 
 source ~/.aliases.sh
