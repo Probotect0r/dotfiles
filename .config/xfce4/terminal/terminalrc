@@ -36,8 +36,8 @@ DropdownMoveToActive=FALSE
 DropdownKeepOpenDefault=TRUE
 DropdownKeepAbove=FALSE
 
-ColorForeground=#c4c4b5
-ColorBackground=#2d2d33
-ColorCursor=#c4c4b5
-ColorCursorForeground=#303036
-ColorPalette=#303036;#9c6647;#708684;#a29474;#697284;#796a70;#47676e;#c4c4b5;#44444a;#9c6647;#708684;#a29474;#697284;#796a70;#47676e;#c4c4b5
+ColorForeground=#feffff
+ColorBackground=#2d2b33
+ColorCursor=#969a97
+ColorCursorForeground=#383640
+ColorPalette=#383640;#a09ebb;#92b6b1;#edaf97;#8789c0;#e47b66;#6b9080;#969a97;#5a5353;#a09ebb;#92b6b1;#edaf97;#8789c0;#e47b66;#6b9080;#f3e8ee

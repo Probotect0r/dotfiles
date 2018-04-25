@@ -1,6 +1,6 @@
 layout=2
 date_font=Iosevka 13
 time_font=Iosevka 8
-date_format=%B %d %H:%M
+date_format=%B %d %l:%M %P
 time_format=%H:%M
 
