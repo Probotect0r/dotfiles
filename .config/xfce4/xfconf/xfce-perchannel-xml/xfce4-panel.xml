@@ -65,6 +65,7 @@
         <value type="string" value="clipman"/>
         <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="slack"/>
+        <value type="string" value="notes"/>
       </property>
       <property name="show-frame" type="bool" value="true"/>
       <property name="size-max" type="uint" value="18"/>
