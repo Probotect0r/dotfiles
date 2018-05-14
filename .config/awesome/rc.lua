@@ -155,6 +155,8 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create the wibox
     s.mywibox = awful.wibar({ position = "top", screen = s })
 
+    systray = wibox.widget.systray()
+
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
@@ -165,7 +167,7 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            wibox.widget.systray(),
+            systray,
             mytextclock,
             s.mylayoutbox,
         },
@@ -377,19 +379,23 @@ clientbuttons = gears.table.join(
     awful.button({ modkey }, 1, awful.mouse.client.move),
     awful.button({ modkey }, 3, awful.mouse.client.resize))
 
--- Set keys
 root.keys(globalkeys)
--- }}}
 
--- {{{ Rules
--- Rules to apply to new clients (through the "manage" signal).
+
+firefox_screen = 1
+firefox_tag = "2"
+if screen.count() > 1 then
+    firefox_screen = 2
+    firefox_tag = "1"
+end
+
+
 awful.rules.rules = {
-    -- All clients will match this rule.
 	{ 
 		rule = { },
       	properties = { 
 			border_width = beautiful.border_width,
-            -- border_color = beautiful.border_normal,
+            border_color = beautiful.border_normal,
             focus = awful.client.focus.filter,
             raise = true,
             keys = clientkeys,
@@ -425,18 +431,11 @@ awful.rules.rules = {
 			  "AlarmWindow",  -- Thunderbird's calendar.
 			  "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
 			}
-      }, properties = { floating = true }},
+      },
+        properties = { floating = true }},
 
-    -- Add titlebars to normal clients and dialogs
-    { 
-		rule_any = {
-			type = { "normal", "dialog" }
-      	}, properties = { titlebars_enabled = false }
-    },
-
-    -- Set Firefox to always map on the tag named "2" on screen 1.
     { rule = { class = "Firefox" },
-      properties = { screen = 2, tag = "1" } },
+      properties = { screen = firefox_screen, tag = firefox_tag } },
 }
 -- }}}
 

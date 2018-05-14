@@ -39,10 +39,11 @@ theme.border_marked = ylw
 theme.taglist_fg_focus = blk
 theme.taglist_fg_urgent = blk
 theme.taglist_fg_occupied = fg
-theme.taglist_fg_empty = fg
+theme.taglist_fg_empty = bblk
 
 theme.taglist_bg_focus = red
 theme.taglist_bg_urgent = ylw
+theme.taglist_bg_occupied = bg
 
 -- Tasklist
 theme.tasklist_fg_normal = bblk
