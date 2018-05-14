@@ -31,7 +31,7 @@ theme.bg_normal  = bg
 theme.bg_focus   = bg
 
 -- Border
-theme.border_focus = red
+theme.border_focus = wht
 theme.border_normal = bblk
 theme.border_marked = ylw
 
@@ -44,6 +44,14 @@ theme.taglist_fg_empty = fg
 theme.taglist_bg_focus = red
 theme.taglist_bg_urgent = ylw
 
+-- Tasklist
+theme.tasklist_fg_normal = bblk
+theme.tasklist_fg_focus = fg
+theme.tasklist_fg_urgent = red
+theme.tasklist_shape_border_width = 5
+theme.tasklist__shape_border_color = red
+
+-- Layout icons
 theme.layout_tile       = themes_path .. "zenburn/layouts/tile.png"
 theme.layout_tileleft   = themes_path .. "zenburn/layouts/tileleft.png"
 theme.layout_tilebottom = themes_path .. "zenburn/layouts/tilebottom.png"
@@ -61,4 +69,6 @@ theme.layout_cornerne   = themes_path .. "zenburn/layouts/cornerne.png"
 theme.layout_cornersw   = themes_path .. "zenburn/layouts/cornersw.png"
 theme.layout_cornerse   = themes_path .. "zenburn/layouts/cornerse.png"
 
+theme.useless_gap = 10
+theme.border_width = 5
 return theme

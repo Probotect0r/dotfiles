@@ -35,7 +35,6 @@ end
 -- Themes define colours, icons, font and wallpapers.
 -- beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
 beautiful.init("/home/sagar/.config/awesome/theme.lua")
-beautiful.border_width = 3
 
 terminal = os.getenv("TERMINAL")
 menubar.utils.terminal = terminal
@@ -458,4 +457,3 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
-beautiful.useless_gap = 8
