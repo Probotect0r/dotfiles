@@ -34,7 +34,8 @@ end
 
 -- Themes define colours, icons, font and wallpapers.
 -- beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
-beautiful.init("/home/sagar/.config/awesome/theme.lua")
+beautiful.init("~/.config/awesome/theme.lua")
+beautiful.wallpaper = gears.filesystem.get_xdg_config_home() .. "/awesome/wallpaper.png"
 
 terminal = os.getenv("TERMINAL")
 menubar.utils.terminal = terminal
@@ -253,31 +254,12 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Control" }, "n",
               function ()
                   local c = awful.client.restore()
-                  -- Focus restored client
                   if c then
                       client.focus = c
                       c:raise()
                   end
               end,
-              {description = "restore minimized", group = "client"}),
-
-    -- Prompt
-    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
-
-    awful.key({ modkey }, "x",
-              function ()
-                  awful.prompt.run {
-                    prompt       = "Run Lua code: ",
-                    textbox      = awful.screen.focused().mypromptbox.widget,
-                    exe_callback = awful.util.eval,
-                    history_path = awful.util.get_cache_dir() .. "/history_eval"
-                  }
-              end,
-              {description = "lua execute prompt", group = "awesome"}),
-    -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+              {description = "restore minimized", group = "client"})
 )
 
 clientkeys = gears.table.join(

@@ -40,6 +40,7 @@ theme.taglist_fg_focus = blk
 theme.taglist_fg_urgent = blk
 theme.taglist_fg_occupied = fg
 theme.taglist_fg_empty = bblk
+theme.border_width = 5
 
 theme.taglist_bg_focus = red
 theme.taglist_bg_urgent = ylw
@@ -50,7 +51,6 @@ theme.tasklist_fg_normal = bblk
 theme.tasklist_fg_focus = fg
 theme.tasklist_fg_urgent = red
 theme.tasklist_shape_border_width = 5
-theme.tasklist__shape_border_color = red
 
 -- Layout icons
 theme.layout_tile       = themes_path .. "zenburn/layouts/tile.png"
@@ -70,6 +70,11 @@ theme.layout_cornerne   = themes_path .. "zenburn/layouts/cornerne.png"
 theme.layout_cornersw   = themes_path .. "zenburn/layouts/cornersw.png"
 theme.layout_cornerse   = themes_path .. "zenburn/layouts/cornerse.png"
 
+-- Gap
 theme.useless_gap = 10
-theme.border_width = 5
+
+theme.notification_border_color = red
+theme.notification_width = 400
+theme.notification_height = 100
+
 return theme
