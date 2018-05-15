@@ -75,6 +75,5 @@ theme.useless_gap = 10
 
 theme.notification_border_color = red
 theme.notification_width = 400
-theme.notification_height = 100
 
 return theme
