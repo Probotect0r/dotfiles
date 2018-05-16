@@ -4,24 +4,24 @@ local theme = {}
 theme.font = "Iosevka Term 11"
 
 
-bg = "#2b2c33" 
-fg = "#d9c1a9" 
-blk = "#303139" 
-bblk = "#55565b" 
-red = "#b16c7f" 
-grn = "#92ab75" 
-ylw = "#bdab77" 
-blu = "#485476" 
-mag = "#746081" 
-cyn = "#636f7d" 
-wht = "#d9c1a9" 
-bred = "#b16c7f" 
-bgrn = "#92ab75" 
-bylw = "#e8dfcd" 
-bblu = "#485476" 
-bmag = "#746081" 
-bcyn = "#636f7d" 
-bwht = "#e9dbce" 
+bg = "#322b26"
+fg = "#c8b49d"
+blk = "#332c27"
+bblk = "#63554c"
+red = "#bd6151"
+grn = "#6e9383"
+ylw = "#d7b18a"
+blu = "#8a8f94"
+mag = "#bd9a81"
+cyn = "#91a1a5"
+wht = "#c8b49d"
+bred = "#bd6151"
+bgrn = "#6e9383"
+bylw = "#d7b18a"
+bblu = "#8a8f94"
+bmag = "#bd9a81"
+bcyn = "#91a1a5"
+bwht = "#c8b49d"
 
 -- General fg/bg
 theme.fg_normal  = fg
@@ -43,7 +43,7 @@ theme.taglist_fg_empty = bblk
 theme.border_width = 5
 
 theme.taglist_bg_focus = wht
-theme.taglist_bg_urgent = ylw
+theme.taglist_bg_urgent = red
 theme.taglist_bg_occupied = bg
 
 -- Tasklist
@@ -81,5 +81,6 @@ theme.notification_width = 400
 
 -- Wibar
 theme.wibar_bg = bg
+theme.wibar_fg = fg
 
 return theme
