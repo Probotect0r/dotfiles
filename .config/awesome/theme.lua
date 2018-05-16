@@ -42,7 +42,7 @@ theme.taglist_fg_occupied = fg
 theme.taglist_fg_empty = bblk
 theme.border_width = 5
 
-theme.taglist_bg_focus = red
+theme.taglist_bg_focus = wht
 theme.taglist_bg_urgent = ylw
 theme.taglist_bg_occupied = bg
 
