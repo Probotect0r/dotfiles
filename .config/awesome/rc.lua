@@ -32,19 +32,21 @@ do
     end)
 end
 
--- Themes define colours, icons, font and wallpapers.
--- beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
+-- Theme
 beautiful.init("~/.config/awesome/theme.lua")
 beautiful.wallpaper = gears.filesystem.get_xdg_config_home() .. "/awesome/wallpaper.png"
+beautiful.tasklist_disable_icon = true
 
+-- Utils
 terminal = os.getenv("TERMINAL")
 menubar.utils.terminal = terminal
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
+-- Modkey
 modkey = "Mod1"
 
--- Table of layouts to cover with awful.layout.inc, order matters.
+-- Layouts
 awful.layout.layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
@@ -158,14 +160,13 @@ awful.screen.connect_for_each_screen(function(s)
 
     systray = wibox.widget.systray()
 
-    -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             s.mytaglist,
         },
-        s.mytasklist, -- Middle widget
+        s.mytasklist,
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             systray,

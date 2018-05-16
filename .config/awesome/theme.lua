@@ -50,7 +50,9 @@ theme.taglist_bg_occupied = bg
 theme.tasklist_fg_normal = bblk
 theme.tasklist_fg_focus = fg
 theme.tasklist_fg_urgent = red
-theme.tasklist_shape_border_width = 5
+theme.tasklist_shape_border_width = 1
+theme.tasklist_shape_border_color = red
+theme.tasklist_spacing = 5
 
 -- Layout icons
 theme.layout_tile       = themes_path .. "zenburn/layouts/tile.png"
@@ -73,7 +75,11 @@ theme.layout_cornerse   = themes_path .. "zenburn/layouts/cornerse.png"
 -- Gap
 theme.useless_gap = 10
 
+-- Notification
 theme.notification_border_color = red
 theme.notification_width = 400
+
+-- Wibar
+theme.wibar_bg = bg
 
 return theme
