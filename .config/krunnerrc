@@ -1,0 +1,32 @@
+[General]
+history=Kate,kate,global keyboard short,keyboard,screen brightness,screen brightness 100,screen brightness 10,spell linux,Marble,switch,thunar,Thunar,Home,google.com,userbase.kde.org,dolphin,file,shutdown,fire,restart,xfce4-session-logout,sett,shortcuts,short,arduino ide
+
+[PlasmaRunnerManager]
+LaunchCounts=1 desktopsessions_2,1 services_standard_actions.desktop,1 services_systemsettings.desktop,1 shell_xfce4-session-logout,1 services_khotkeys.desktop,1 services_firefox.desktop,1 desktopsessions_3,1 services_arduino.desktop
+
+[Plugins]
+CharacterRunnerEnabled=true
+DictionaryEnabled=true
+Kill RunnerEnabled=true
+PowerDevilEnabled=true
+Spell CheckerEnabled=true
+baloosearchEnabled=true
+bookmarksEnabled=true
+browsertabsEnabled=true
+calculatorEnabled=true
+desktopsessionsEnabled=true
+konsoleprofilesEnabled=true
+krunner_appstreamEnabled=true
+kwinEnabled=true
+locationsEnabled=true
+org.kde.activitiesEnabled=true
+org.kde.datetimeEnabled=true
+org.kde.windowedwidgetsEnabled=true
+placesEnabled=true
+plasma-desktopEnabled=true
+recentdocumentsEnabled=true
+servicesEnabled=true
+shellEnabled=true
+unitconverterEnabled=true
+webshortcutsEnabled=true
+windowsEnabled=true
