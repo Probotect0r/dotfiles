@@ -1,8 +1,8 @@
 [General]
-history=Kate,kate,global keyboard short,keyboard,screen brightness,screen brightness 100,screen brightness 10,spell linux,Marble,switch,thunar,Thunar,Home,google.com,userbase.kde.org,dolphin,file,shutdown,fire,restart,xfce4-session-logout,sett,shortcuts,short,arduino ide
+history=shutdown,kwall,kgpg,logout,thunar,connect,kde connect,gg:kde connect,terminal,settings,sleep,fire,yt:bikepacking,gg:hello,google.com,settin,system,xfce ter,sett,Kate,kate,global keyboard short,keyboard,screen brightness,screen brightness 100,screen brightness 10,spell linux,Marble,switch,Thunar,Home,userbase.kde.org,dolphin,file,restart,xfce4-session-logout,shortcuts,short,arduino ide
 
 [PlasmaRunnerManager]
-LaunchCounts=1 desktopsessions_2,1 services_standard_actions.desktop,1 services_systemsettings.desktop,1 shell_xfce4-session-logout,1 services_khotkeys.desktop,1 services_firefox.desktop,1 desktopsessions_3,1 services_arduino.desktop
+LaunchCounts=1 desktopsessions_2,1 services_standard_actions.desktop,1 PowerDevil_Suspend,1 krunner_appstream_org.kde.kdeconnect.kcm.desktop,1 services_arduino.desktop,1 windows_0_71303171,1 services_khotkeys.desktop,1 krunner_appstream_deepin-terminal.desktop,1 services_kcm_kdeconnect.desktop,1 services_firefox.desktop,1 webshortcuts_WebShortcut:gg,1 locations_openunknown,1 desktopsessions_1,4 services_org.kde.kgpg.desktop,1 services_systemsettings.desktop,4 services_org.kde.kwalletmanager5.desktop,1 shell_xfce4-session-logout,1 shell_thunar,1 krunner_appstream_org.kde.kgpg.desktop,2 krunner_appstream_org.kde.kwalletmanager5,1 webshortcuts_WebShortcut:yt,1 services_xfce4-terminal.desktop,1 desktopsessions_3
 
 [Plugins]
 CharacterRunnerEnabled=true

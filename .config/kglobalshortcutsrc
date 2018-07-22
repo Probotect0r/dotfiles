@@ -19,7 +19,6 @@ display=Display\tMeta+P,Display\tMeta+P,Switch Display
 
 [khotkeys]
 _k_friendly_name=KDE Daemon
-{000f0848-2732-40d0-8d5a-416aa233da39}=Alt+R,none,Rofi
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=Search,none,Search
 
 [kmix]
@@ -136,7 +135,7 @@ Walk Through Windows of Current Application Alternative (Reverse)=none,none,Walk
 Window Above Other Windows=none,none,Keep Window Above Others
 Window Below Other Windows=none,none,Keep Window Below Others
 Window Close=Alt+F4\tAlt+Q,Alt+F4,Close Window
-Window Fullscreen=none,none,Make Window Fullscreen
+Window Fullscreen=Alt+F\tAlt+Shift+F,none,Make Window Fullscreen
 Window Grow Horizontal=none,none,Pack Grow Window Horizontally
 Window Grow Vertical=none,none,Pack Grow Window Vertically
 Window Lower=none,none,Lower Window
@@ -201,10 +200,19 @@ Window to Screen 4=none,none,Window to Screen 4
 Window to Screen 5=none,none,Window to Screen 5
 Window to Screen 6=none,none,Window to Screen 6
 Window to Screen 7=none,none,Window to Screen 7
-_k_friendly_name=System Settings Module
+_k_friendly_name=KWin
 view_actual_size=,Meta+0,Actual Size
 view_zoom_in=Meta+=,Meta+=,Zoom In
 view_zoom_out=Meta+-,Meta+-,Zoom Out
+
+[mediacontrol]
+_k_friendly_name=Media Controller
+mediavolumedown=none,none,Media volume down
+mediavolumeup=none,none,Media volume up
+nextmedia=Media Next,Media Next,Media playback next
+playpausemedia=Media Play,Media Play,Play/Pause media playback
+previousmedia=Media Previous,Media Previous,Media playback previous
+stopmedia=Media Stop,Media Stop,Stop media playback
 
 [org_kde_powerdevil]
 Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness
@@ -231,6 +239,7 @@ activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 22=none,none,Activate Task Manager Widget
 activate widget 23=none,none,Activate Activity Pager Widget
+activate widget 3=,none,Activate Application Launcher Widget
 activate widget 4=Alt+F1,none,Activate Application Launcher Widget
 clear-history=none,none,Clear Clipboard History
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Enable Clipboard Actions
@@ -248,4 +257,4 @@ stop current activity=Meta+S,Meta+S,Stop Current Activity
 
 [xfce4-terminal.desktop]
 _k_friendly_name=Launch Xfce Terminal
-_launch=Alt+Return,none,Launch Xfce Terminal
+_launch=Alt+Return\tAlt+Shift+Return,none,Launch Xfce Terminal
