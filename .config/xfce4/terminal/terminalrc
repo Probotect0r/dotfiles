@@ -2,7 +2,7 @@
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
-MiscBordersDefault=FALSE
+MiscBordersDefault=TRUE
 MiscCursorBlinks=FALSE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
 MiscDefaultGeometry=80x24
@@ -35,9 +35,8 @@ DropdownAlwaysShowTabs=FALSE
 DropdownMoveToActive=FALSE
 DropdownKeepOpenDefault=TRUE
 DropdownKeepAbove=FALSE
-ColorForeground=#F3F3F3
-ColorBackground=#28282C
-ColorCursor=#E9E9E9
-ColorCursorForeground=#29292D
-ColorPalette=#29292D;#BF5C56;#97B19C;#D7BD8A;#545F72;#A18673;#75909F;#E9E9E9;#404047;#BF5C56;#97B19C;#D7BD8A;#545f72;#A18673;#BE926B;#F4F4F2
-
+ColorForeground=#feffff
+ColorBackground=#2d2b33
+ColorCursor=#969a97
+ColorCursorForeground=#383640
+ColorPalette=#383640;#a09ebb;#92b6b1;#edaf97;#8789c0;#e47b66;#6b9080;#969a97;#5a5353;#a09ebb;#92b6b1;#edaf97;#8789c0;#e47b66;#6b9080;#f3e8ee

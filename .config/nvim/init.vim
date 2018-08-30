@@ -30,9 +30,9 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh'
     \ }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'artur-shaik/vim-javacomplete2'
+" Plug 'artur-shaik/vim-javacomplete2'
 Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' }
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'zchee/deoplete-go', { 'do': 'make' }
 Plug 'racer-rust/vim-racer'
 Plug 'tbastos/vim-lua'
@@ -212,7 +212,9 @@ let g:LangaugeClient_settingsPath = '/home/sagar/.config/nvim/settings.json'
 let g:LanguageClient_serverCommands = {
     \ 'python': ['pyls'],
     \ 'c': ['cquery'],
-    \ 'cpp': ['cquery']
+    \ 'cpp': ['cquery'],
+    \ 'javascript.jsx': ['javascript-typescript-stdio'],
+    \ 'java': ['jdtls']
     \ }
 
 let g:LanguageClient_rootMarkers = {

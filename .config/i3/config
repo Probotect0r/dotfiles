@@ -30,13 +30,13 @@ font pango:Iosevka Regular 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+q kill
 
 # start rofi
-bindsym $mod+d exec rofi -show run
+# bindsym $mod+d exec rofi -show run
 
 # change focus
 bindsym $mod+h focus left
@@ -189,3 +189,28 @@ client.focused $colorfg $colorbg $colorfg $colorblk $colorfg
 client.focused_inactive $colorfg $colorbg $colorfg $colorblk
 client.unfocused $colorbg $colorbg $colorfg $colorblk
 client.urgent $colorred $colorbg $colorfg $colorblk
+
+## Plasma Integration
+# Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
+
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
+
+## Avoid tiling popups, dropdown windows from plasma
+
+# for the first time, manually resize them, i3 will remember the setting for floating windows
+
+for_window [class="plasmashell"] floating enable;
+
+for_window [class="Plasma"] floating enable; border none
+
+for_window [title="plasma-desktop"] floating enable; border none
+
+for_window [title="win7"] floating enable; border none
+
+for_window [class="krunner"] floating enable; border none
+
+for_window [class="Kmix"] floating enable; border none
+
+for_window [class="Klipper"] floating enable; border none
+
+for_window [class="Plasmoidviewer"] floating enable; border none

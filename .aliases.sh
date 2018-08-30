@@ -1,12 +1,3 @@
-#!/bin/bash
-alias tmux="tmux -2"
-
-# Git aliases
-alias gcl="git clone"
-alias gc="git commit"
-alias gp="git push"
-alias gs="git status"
-
 # NPM aliases
 alias nis="npm i --save"
 alias nig="npm i --global"
