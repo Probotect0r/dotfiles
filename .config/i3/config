@@ -28,15 +28,16 @@ font pango:Iosevka Regular 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+focus_follows_mouse no
 
 # start a terminal
-# bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+q kill
 
 # start rofi
-# bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun
 
 # change focus
 bindsym $mod+h focus left
@@ -156,10 +157,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# The i3Bar
-bar { 
-	i3bar_command $HOME/.config/polybar/launch.sh
-}
+# Launch Polybar, Compton
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id compton -b
+exec_always echo $TERMINAL > ~/term
 
 # Audio controls
 bindsym $mod+p  exec amixer sset Master 5%+
@@ -178,6 +179,7 @@ exec --no-startup-id ~/.nvm/versions/node/v7.6.0/bin/node ~/Code/themer/src/inde
 
 # Set a border
 for_window [class="^.*"] border pixel 2
+for_window [class="Yad"] floating enable
 
 # GAPS stuff
 gaps inner 15
@@ -189,28 +191,3 @@ client.focused $colorfg $colorbg $colorfg $colorblk $colorfg
 client.focused_inactive $colorfg $colorbg $colorfg $colorblk
 client.unfocused $colorbg $colorbg $colorfg $colorblk
 client.urgent $colorred $colorbg $colorfg $colorblk
-
-## Plasma Integration
-# Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
-
-for_window [title="Desktop — Plasma"] kill; floating enable; border none
-
-## Avoid tiling popups, dropdown windows from plasma
-
-# for the first time, manually resize them, i3 will remember the setting for floating windows
-
-for_window [class="plasmashell"] floating enable;
-
-for_window [class="Plasma"] floating enable; border none
-
-for_window [title="plasma-desktop"] floating enable; border none
-
-for_window [title="win7"] floating enable; border none
-
-for_window [class="krunner"] floating enable; border none
-
-for_window [class="Kmix"] floating enable; border none
-
-for_window [class="Klipper"] floating enable; border none
-
-for_window [class="Plasmoidviewer"] floating enable; border none
