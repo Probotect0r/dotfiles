@@ -32,7 +32,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time time)
 bindkey '^ ' autosuggest-execute
 
 # This loads nvm
-export NVM_DIR="/home/sagar/.nvm"
+export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  
 
 source ~/.aliases.sh
