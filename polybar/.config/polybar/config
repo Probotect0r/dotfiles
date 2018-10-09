@@ -1,0 +1,110 @@
+; vim:ft=dosini
+[colors]
+include-file = /home/sagar/.config/polybar/colors
+
+[bar/default]
+monitor = DVI-I-1
+monitor-fallback =
+width = 100%
+height = 26
+offset-x = 0
+offset-y = 0
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+padding-left = 2
+padding-right = 2
+module-margin-left = 2
+module-margin-right = 2
+
+font-0 = "Iosevka Term:size=12;2"
+
+modules-left = i3 xwindow
+modules-right = volume memory cpu date
+
+tray-position = right
+tray-padding = 10
+
+[module/xwindow]
+type = internal/xwindow
+label-maxlen = 40
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+label-mode-padding = 2
+label-mode-foreground = ${colors.foreground}
+label-mode-background = ${colors.blu}
+
+label-focused = %index%
+label-focused-background = ${colors.foreground}
+label-focused-foreground = ${colors.background}
+label-focused-padding = 2
+
+label-unfocused = %index%
+label-unfocused-padding = ${self.label-focused-padding}
+
+label-urgent = %index%
+label-urgent-background = ${colors.red}
+label-urgent-foreground = ${colors.wht}
+label-urgent-padding = 2
+
+label-visible = %index%
+label-visible-background = ${colors.background}
+label-visible-padding = ${self.label-focused-padding}
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground}
+label = %percentage%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground}
+label = %percentage_used%
+
+[module/date]
+type = internal/date
+interval = 1
+
+date = "  %Y-%m-%d"
+
+time = "  %H:%M"
+
+label = %date%    %time%
+
+[module/volume]
+type = internal/volume
+
+format-volume = <label-volume> <bar-volume>
+label-volume = " "
+label-volume-foreground = ${colors.foreground}
+
+format-muted-foreground = ${colors.red}
+label-muted = " "
+
+bar-volume-width = 10
+bar-volume-foreground-0 = ${colors.grn}
+bar-volume-foreground-1 = ${colors.grn}
+bar-volume-foreground-2 = ${colors.grn}
+bar-volume-foreground-3 = ${colors.grn}
+bar-volume-foreground-4 = ${colors.grn}
+bar-volume-foreground-5 = ${colors.ylw}
+bar-volume-foreground-6 = ${colors.red}
+bar-volume-gradient = false
+bar-volume-indicator = │
+bar-volume-indicator-font = 2
+bar-volume-indicator-foreground = #ff
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground}

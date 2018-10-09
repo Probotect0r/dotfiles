@@ -1,0 +1,6 @@
+layout=3
+date_font=Iosevka 12
+time_font=Iosevka 12
+date_format=%a, %d %b %Y
+time_format=%l:%M %P
+
