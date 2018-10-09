@@ -1,22 +1,22 @@
 # Set colors
-set $colorbg #2b2c33
-set $colorfg #d9c1a9
-set $colorblk #303139
-set $colorbblk #55565b
-set $colorred #b16c7f
-set $colorgrn #92ab75
-set $colorylw #bdab77
-set $colorblu #485476
-set $colormag #746081
-set $colorcyn #636f7d
-set $colorwht #d9c1a9
-set $colorbred #b16c7f
-set $colorbgrn #92ab75
-set $colorbylw #e8dfcd
-set $colorbblu #485476
-set $colorbmag #746081
-set $colorbcyn #636f7d
-set $colorbwht #e9dbce
+set $colorbg #2c292b
+set $colorfg #c3b495
+set $colorblk #312e30
+set $colorbblk #4f4e4e
+set $colorred #ab6d4e
+set $colorgrn #88885d
+set $colorylw #c8a168
+set $colorblu #45626e
+set $colormag #7c5545
+set $colorcyn #456e66
+set $colorwht #c3b495
+set $colorbred #ab6d4e
+set $colorbgrn #88885d
+set $colorbylw #c8a168
+set $colorbblu #45626e
+set $colorbmag #7c5545
+set $colorbcyn #456e66
+set $colorbwht #c3b495
 
 # Set mod key to ALT
 set $mod Mod1
@@ -77,7 +77,7 @@ workspace_layout default
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating

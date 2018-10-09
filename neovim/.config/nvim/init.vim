@@ -24,18 +24,16 @@ Plug 'christoomey/vim-tmux-navigator'
 " Tags
 Plug 'majutsushi/tagbar'
 
-" Autocomplete / Intellisense
+" Autocomplete / Intellisense / Syntax highlighting
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh'
     \ }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'artur-shaik/vim-javacomplete2'
-Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins' }
-" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'zchee/deoplete-go', { 'do': 'make' }
 Plug 'racer-rust/vim-racer'
 Plug 'tbastos/vim-lua'
+Plug 'leafgarland/typescript-vim'
 
 " Syntax highlight
 Plug 'rust-lang/rust.vim'
@@ -214,6 +212,7 @@ let g:LanguageClient_serverCommands = {
     \ 'c': ['cquery'],
     \ 'cpp': ['cquery'],
     \ 'javascript.jsx': ['javascript-typescript-stdio'],
+    \ 'typescript': ['javascript-typescript-stdio'],
     \ 'java': ['jdtls']
     \ }
 
