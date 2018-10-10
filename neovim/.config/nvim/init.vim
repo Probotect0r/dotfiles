@@ -102,6 +102,7 @@ au FocusGained,BufEnter * :silent! !
 " Ignore case in search
 set ignorecase
 set incsearch
+set inccommand=nosplit
 
 " Seperator character for vertical split (currently a space)
 set fillchars+=vert:\ 
