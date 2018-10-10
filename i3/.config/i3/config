@@ -159,7 +159,6 @@ bindsym $mod+r mode "resize"
 
 # Launch Polybar, Compton
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always --no-startup-id compton -b
 exec_always echo $TERMINAL > ~/term
 
 # Audio controls
