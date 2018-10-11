@@ -1,4 +1,4 @@
-POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Check if zplug is installed
 if [[ ! -d ~/.zplug ]]; then
@@ -14,8 +14,6 @@ zplug "plugins/wd", from:oh-my-zsh
 zplug "tomsquest/nvm-auto-use.zsh"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
-
-zplug "agnoster/agnoster-zsh-theme", as:theme
 
 zplug "robbyrussell/oh-my-zsh", as:plugin, use:"lib/*.zsh"
 
