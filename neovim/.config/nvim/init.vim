@@ -3,7 +3,6 @@ call plug#begin('~/.config/nvim/plugged')
 " File browsing
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'junegunn/fzf'
 
 " General quality of life
 Plug 'tpope/vim-sensible'
@@ -25,12 +24,12 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'majutsushi/tagbar'
 
 " Autocomplete / Intellisense / Syntax highlighting
+Plug 'junegunn/fzf'
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh'
     \ }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-go', { 'do': 'make' }
 Plug 'racer-rust/vim-racer'
 Plug 'tbastos/vim-lua'
 Plug 'leafgarland/typescript-vim'
