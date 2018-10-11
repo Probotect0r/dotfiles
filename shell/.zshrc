@@ -33,5 +33,4 @@ bindkey '^ ' autosuggest-execute
 export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  
 
-source ~/.aliases.sh
 source ~/.profile
