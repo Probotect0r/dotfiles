@@ -159,7 +159,7 @@ set rnu
 " Mappings
 let mapleader = ','
 let g:mapleader = ','
-nmap <leader>. :NERDTree<cr>
+nmap <leader>. :NERDTreeFind<cr>
 nmap <leader>t :TagbarOpen jf<cr>
 nmap <leader>wq :wq<cr>
 nmap <leader>w :w<cr>
