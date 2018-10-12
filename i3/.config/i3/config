@@ -37,7 +37,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+q kill
 
 # start rofi
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec albert show
 
 # change focus
 bindsym $mod+h focus left
