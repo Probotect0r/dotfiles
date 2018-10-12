@@ -180,7 +180,10 @@ exec --no-startup-id ~/.nvm/versions/node/v7.6.0/bin/node ~/Code/themer/src/inde
 
 # Set a border
 for_window [class="^.*"] border pixel 2
+
+# Window specific properties
 for_window [class="Yad"] floating enable
+for_window [class="albert"] floating enable
 
 # GAPS stuff
 gaps inner 15
