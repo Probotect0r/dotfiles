@@ -161,7 +161,7 @@ bindsym $mod+r mode "resize"
 
 # Launch Polybar, Compton
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec --no-startup-id albert
+exec_always --no-startup-id albert
 
 # Audio controls
 bindsym $mod+p  exec amixer sset Master 5%+
