@@ -36,9 +36,6 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+q kill
 
-# start rofi
-bindsym $mod+d exec albert show
-
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -164,7 +161,7 @@ bindsym $mod+r mode "resize"
 
 # Launch Polybar, Compton
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always echo $TERMINAL > ~/term
+exec --no-startup-id albert
 
 # Audio controls
 bindsym $mod+p  exec amixer sset Master 5%+
