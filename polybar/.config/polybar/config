@@ -1,9 +1,9 @@
 ; vim:ft=dosini
 [colors]
-include-file = ~/.config/polybar/colors
+include-file = /home/sagar/.config/polybar/colors
 
 [bar/default]
-monitor =
+monitor = DVI-I-1
 monitor-fallback =
 width = 100%
 height = 26
@@ -21,7 +21,7 @@ module-margin-right = 2
 font-0 = "Iosevka Term:size=12;2"
 
 modules-left = i3 xwindow
-modules-right = volume memory cpu date
+modules-right = volume memory cpu battery date
 
 tray-position = right
 tray-padding = 10
@@ -82,16 +82,15 @@ time = "  %H:%M"
 label = %date%    %time%
 
 [module/volume]
-type = internal/volume
+type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = " "
-label-volume-foreground = ${colors.foreground}
+format-volume = <ramp-volume> <bar-volume>
+ramp-volume-0 = " "
 
 format-muted-foreground = ${colors.red}
 label-muted = " "
 
-bar-volume-width = 10
+bar-volume-width = 15
 bar-volume-foreground-0 = ${colors.grn}
 bar-volume-foreground-1 = ${colors.grn}
 bar-volume-foreground-2 = ${colors.grn}
@@ -99,7 +98,7 @@ bar-volume-foreground-3 = ${colors.grn}
 bar-volume-foreground-4 = ${colors.grn}
 bar-volume-foreground-5 = ${colors.ylw}
 bar-volume-foreground-6 = ${colors.red}
-bar-volume-gradient = false
+bar-volume-gradient = true
 bar-volume-indicator = │
 bar-volume-indicator-font = 2
 bar-volume-indicator-foreground = #ff
@@ -108,3 +107,20 @@ bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground}
+
+[module/calendar]
+type = custom/script
+exec = ~/.config/polybar/popup-calendar.sh
+interval = 5
+click-left = ~/.config/polybar/popup-calendar.sh --popup
+
+[module/battery]
+type = internal/battery
+full-at = 99
+format-charging = <ramp-capacity> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
