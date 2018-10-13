@@ -159,9 +159,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Launch Polybar, Compton
+# Launch Polybar, Albert, kdeconnect-cli
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id albert
+exec_always --no-startup-id kdeconnect-indicator
 
 # Audio controls
 bindsym $mod+p  exec amixer sset Master 5%+
