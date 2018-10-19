@@ -1,22 +1,22 @@
 # Set colors
-set $colorbg #2c292b
-set $colorfg #c3b495
-set $colorblk #312e30
-set $colorbblk #4f4e4e
-set $colorred #ab6d4e
-set $colorgrn #88885d
-set $colorylw #c8a168
-set $colorblu #45626e
-set $colormag #7c5545
-set $colorcyn #456e66
-set $colorwht #c3b495
-set $colorbred #ab6d4e
-set $colorbgrn #88885d
-set $colorbylw #c8a168
-set $colorbblu #45626e
-set $colorbmag #7c5545
-set $colorbcyn #456e66
-set $colorbwht #c3b495
+set $colorbg #2c2a2b
+set $colorfg #bab9ba
+set $colorblk #2d2b2c
+set $colorbblk #545253
+set $colorred #a67979
+set $colorgrn #809f7b
+set $colorylw #baad8a
+set $colorblu #6d7575
+set $colormag #7d6969
+set $colorcyn #7b9899
+set $colorwht #bab9ba
+set $colorbred #a67979
+set $colorbgrn #809f7b
+set $colorbylw #baad8a
+set $colorbblu #6d7575
+set $colorbmag #7d6969
+set $colorbcyn #7b9899
+set $colorbwht #bab9ba
 
 # Set mod key to ALT
 set $mod Mod1
@@ -163,6 +163,7 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id albert
 exec_always --no-startup-id kdeconnect-indicator
+exec_always --no-startup-id nm-applet
 
 # Audio controls
 bindsym $mod+p  exec amixer sset Master 5%+
