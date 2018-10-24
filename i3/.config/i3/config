@@ -128,6 +128,10 @@ bindsym $mod+Ctrl+Shift+k move workspace to output left
 bindsym $mod+Ctrl+j focus output right
 bindsym $mod+Ctrl+k focus output left
 
+# move container to next monitor
+bindsym Ctrl+Shift+j move container to output right
+bindsym Ctrl++Shift+k move container to output left
+
 # Sleep/Shutdown/Restart/Logout commands
 bindsym $mod+Shift+e exec "i3-msg exit"
 bindsym $mod+Shift+v exec "i3lock -u -i ~/Pictures/wallpaper.png"
