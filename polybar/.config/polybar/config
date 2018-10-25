@@ -1,6 +1,6 @@
 ; vim:ft=dosini
 [colors]
-include-file = /home/sagar/.config/polybar/colors
+include-file = ~/.config/polybar/colors
 
 [bar/default]
 monitor =
