@@ -7,7 +7,7 @@ PATH=$PATH:~/.local/bin
 GOPATH=~/Code/gocode
 
 TERMINAL=xfce4-terminal
-EDITOR=gvim
+EDITOR=nvim
 
 export TERMINAL
 export EDITOR
