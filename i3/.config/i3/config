@@ -192,9 +192,9 @@ for_window [class="Yad"] floating enable
 for_window [class="albert"] floating enable
 
 # GAPS stuff
-gaps inner 15
-smart_borders on
-smart_gaps on
+# gaps inner 15
+# smart_borders on
+# smart_gaps on
 
 # Set Window colors 
 client.focused $colorfg $colorbg $colorfg $colorblk $colorfg

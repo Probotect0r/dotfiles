@@ -5,14 +5,12 @@ Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 
 " General quality of life
-Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
-Plug 'easymotion/vim-easymotion'
 Plug 'airblade/vim-gitgutter'
-Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-repeat'
 Plug 'majutsushi/tagbar'
+Plug 'vim-airline/vim-airline'
 
 " Code search
 Plug 'mileszs/ack.vim'
@@ -108,19 +106,19 @@ set fillchars+=vert:\
 
 " Change format of status line
 " Left side
-set statusline+=\ \ 
-set statusline+=%.30F " full file path with max lenght 30
-set statusline+=\ \ 
-set statusline+=%m " modified flag (+)
-set statusline+=\ \ 
-set statusline+=%2* " Change highlight group to User2
-" Right side
-set statusline+=%= " Create seperation point (Each section is spaced out equally)
-set statusline+=%* " Reset highlight group
-set statusline+=%3c " Column length
-set statusline+=\ \ \ 
-set statusline+=%y  " File type
-set statusline+=\ \ \ 
+" set statusline+=\ \
+" set statusline+=%.30F " full file path with max lenght 30
+" set statusline+=\ \
+" set statusline+=%m " modified flag (+)
+" set statusline+=\ \
+" set statusline+=%2* " Change highlight group to User2
+" " Right side
+" set statusline+=%= " Create seperation point (Each section is spaced out equally)
+" set statusline+=%* " Reset highlight group
+" set statusline+=%3c " Column length
+" set statusline+=\ \ \
+" set statusline+=%y  " File type
+" set statusline+=\ \ \
 
 " Mouse only in normal mode
 set mouse=n
@@ -219,8 +217,14 @@ let g:LanguageClient_serverCommands = {
 let g:LanguageClient_rootMarkers = {
     \ 'c': ['makefile']
     \ }
-nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> <leader>K :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> <leader>gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> <leader>gt :call LanguageClient_textDocument_typeDefinition()<CR>
+nnoremap <silent> <leader>gi :call LanguageClient_textDocument_implementation()<CR>
+nnoremap <silent> <leader>a :call LanguageClient_contextMenu()<CR>
+nnoremap <silent> <leader>gs :call LanguageClient_textDocument_documentSymbol()<CR>
+nnoremap <silent> <leader>gr :call LanguageClient_textDocument_references()<CR>
+nnoremap <silent> <leader>c :call LanguageClient_textDocument_codeAction()<CR>
 nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 
 autocmd Filetype text setlocal wrap linebreak
