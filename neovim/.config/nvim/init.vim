@@ -40,6 +40,9 @@ Plug 'mxw/vim-jsx'
 Plug 'sbdchd/neoformat'
 Plug 'neomake/neomake'
 
+" Markdow
+Plug 'shime/vim-livedown'
+
 " Searching Zeal docs
 Plug 'KabbAmine/zeavim.vim', {'on': [
 			\	'Zeavim', 'Docset',

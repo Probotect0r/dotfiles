@@ -20,7 +20,7 @@ module-margin-right = 2
 
 font-0 = "Iosevka Term:size=12;2"
 
-modules-left = i3 xwindow
+modules-left = i3
 modules-right = volume memory cpu battery date
 
 tray-position = right
@@ -69,7 +69,7 @@ type = internal/memory
 interval = 2
 format-prefix = "  "
 format-prefix-foreground = ${colors.foreground}
-label = %percentage_used%
+label = %gb_used%
 
 [module/date]
 type = internal/date
