@@ -11,6 +11,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-repeat'
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
+Plug 'morhetz/gruvbox'
 
 " Code search
 Plug 'mileszs/ack.vim'
@@ -68,7 +69,9 @@ call plug#end()
 " Theme and colors stuff
 syntax enable
 set background=dark
-colorscheme generic
+set termguicolors
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
 set guifont="Iosevka Term"
 
 

@@ -1,22 +1,22 @@
 # Set colors
-set $colorbg #2c2a2b
-set $colorfg #bab9ba
-set $colorblk #2d2b2c
-set $colorbblk #545253
-set $colorred #a67979
-set $colorgrn #809f7b
-set $colorylw #baad8a
-set $colorblu #6d7575
-set $colormag #7d6969
-set $colorcyn #7b9899
-set $colorwht #bab9ba
-set $colorbred #a67979
-set $colorbgrn #809f7b
-set $colorbylw #baad8a
-set $colorbblu #6d7575
-set $colorbmag #7d6969
-set $colorbcyn #7b9899
-set $colorbwht #bab9ba
+set $colorbg #272725
+set $colorfg #edeee8
+set $colorblk #282826
+set $colorbblk #4f4f4b
+set $colorred #7d5151
+set $colorgrn #959c4f
+set $colorylw #a78749
+set $colorblu #455563
+set $colormag #9f908d
+set $colorcyn #4a5e5b
+set $colorwht #f2f2f2
+set $colorbred #9c6565
+set $colorbgrn #b6bd6e
+set $colorbylw #bc9f67
+set $colorbblu #4d6377
+set $colorbmag #b0a7b4
+set $colorbcyn #80a09b
+set $colorbwht #ffffff
 
 # Set mod key to ALT
 set $mod Mod1
@@ -31,7 +31,7 @@ floating_modifier $mod
 focus_follows_mouse no
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+q kill
