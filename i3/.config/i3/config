@@ -1,27 +1,25 @@
 # Set colors
-set $colorbg #272725
-set $colorfg #edeee8
-set $colorblk #282826
-set $colorbblk #4f4f4b
-set $colorred #7d5151
-set $colorgrn #959c4f
-set $colorylw #a78749
-set $colorblu #455563
-set $colormag #9f908d
-set $colorcyn #4a5e5b
-set $colorwht #f2f2f2
-set $colorbred #9c6565
-set $colorbgrn #b6bd6e
-set $colorbylw #bc9f67
-set $colorbblu #4d6377
-set $colorbmag #b0a7b4
-set $colorbcyn #80a09b
-set $colorbwht #ffffff
+set $colorbg #242e32
+set $colorfg #c4c4b5
+set $colorblk #253034
+set $colorbblk #35444b
+set $colorred #a66959
+set $colorgrn #769070
+set $colorylw #ac8d6e
+set $colorblu #607a86
+set $colormag #8a757e
+set $colorcyn #60867f
+set $colorwht #c4c4b5
+set $colorbred #a66959
+set $colorbgrn #769070
+set $colorbylw #ac8d6e
+set $colorbblu #607a86
+set $colorbmag #8a757e
+set $colorbcyn #60867f
+set $colorbwht #c4c4b5
 
 # Set mod key to ALT
 set $mod Mod1
-
-#hide_edge_borders both
 
 # Font
 font pango:Iosevka Regular 10
@@ -165,7 +163,7 @@ bindsym $mod+r mode "resize"
 
 # Launch Polybar, Albert, kdeconnect-cli
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always --no-startup-id albert
+# exec_always --no-startup-id albert
 exec_always --no-startup-id kdeconnect-indicator
 exec_always --no-startup-id nm-applet
 
@@ -181,15 +179,12 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 # Set wallpaper
 exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
 
-# Run themer
-exec --no-startup-id ~/.nvm/versions/node/v7.6.0/bin/node ~/Code/themer/src/index.js
-
 # Set a border
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 4
 
 # Window specific properties
 for_window [class="Yad"] floating enable
-for_window [class="albert"] floating enable
+for_window [title="albert - Albert"] floating disable; move position center;
 
 # GAPS stuff
 # gaps inner 15
