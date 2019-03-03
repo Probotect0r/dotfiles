@@ -163,7 +163,7 @@ bindsym $mod+r mode "resize"
 
 # Launch Polybar, Albert, kdeconnect-cli
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-# exec_always --no-startup-id albert
+exec_always --no-startup-id albert
 exec_always --no-startup-id kdeconnect-indicator
 exec_always --no-startup-id nm-applet
 
@@ -192,7 +192,7 @@ for_window [title="albert - Albert"] floating disable; move position center;
 # smart_gaps on
 
 # Set Window colors 
-client.focused $colorfg $colorbg $colorfg $colorblk $colorfg
+client.focused $colorred $colorbg $colorfg $colorfg $colorred
 client.focused_inactive $colorfg $colorbg $colorfg $colorblk
 client.unfocused $colorbg $colorbg $colorfg $colorblk
 client.urgent $colorred $colorbg $colorfg $colorblk
