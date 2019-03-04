@@ -179,20 +179,20 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 # Set wallpaper
 exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
 
-# Set a border
-for_window [class="^.*"] border pixel 4
-
-# Window specific properties
-for_window [class="Yad"] floating enable
-for_window [title="albert - Albert"] floating disable; move position center;
-
 # GAPS stuff
 # gaps inner 15
 # smart_borders on
 # smart_gaps on
+
+# Set a border
+for_window [class="^.*"] border pixel 4
 
 # Set Window colors 
 client.focused $colorred $colorbg $colorfg $colorfg $colorred
 client.focused_inactive $colorfg $colorbg $colorfg $colorblk
 client.unfocused $colorbg $colorbg $colorfg $colorblk
 client.urgent $colorred $colorbg $colorfg $colorblk
+
+# Assign windows to workspaces
+assign [class="discord"] 3
+assign [class="Firefox"] 2
