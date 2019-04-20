@@ -27,9 +27,9 @@ Plug 'majutsushi/tagbar'
 
 " UI
 Plug 'morhetz/gruvbox'
-Plug 'mhartington/oceanic-next'
+" Plug 'mhartington/oceanic-next'
+" Plug 'ayu-theme/ayu-vim'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 
 " Git Plugins

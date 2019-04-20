@@ -72,30 +72,6 @@ set hidden
 " Auto indent the next line based on current line
 set ai
 
-" Mappings
-let mapleader = ','
-let g:mapleader = ','
-nmap <leader>. :NERDTreeFind<cr>
-nmap <leader>t :TagbarOpen jf<cr>
-nmap <leader>wq :wq<cr>
-nmap <leader>w :w<cr>
-nmap <leader>q :q<cr>
-nmap <leader>y "+y
-vmap <leader>y "+y
-nmap <leader>p "+p
-nmap <leader>/ :noh<cr>
-nmap <leader>- :exe "vertical resize -20"<cr>
-nmap <leader>+ :exe "vertical resize +20"<cr>
-
-" Use jj to escape out of insert mode
-imap jj <Esc>
-
-" Move current line up or down
-nnoremap <leader>j :m+<CR>==
-nnoremap <leader>k :m-2<CR>==
-vnoremap <leader>j :m'>+<CR>gv=gv
-vnoremap <leader>k :m-2<CR>gv=gv
-
 " ####### PLUGIN CONFIG #######
 " Start deoplete autocompletion on startup
 let g:deoplete#enable_at_startup = 1
@@ -133,6 +109,33 @@ let g:LanguageClient_serverCommands = {
 let g:LanguageClient_rootMarkers = {
             \ 'c': ['makefile']
             \ }
+
+" ######################
+" ###### Mappings ######
+" ######################
+
+let mapleader = ','
+let g:mapleader = ','
+nmap <leader>. :NERDTreeFind<cr>
+nmap <leader>t :TagbarOpen jf<cr>
+nmap <leader>wq :wq<cr>
+nmap <leader>w :w<cr>
+nmap <leader>q :q<cr>
+nmap <leader>y "+y
+vmap <leader>y "+y
+nmap <leader>p "+p
+nmap <leader>/ :noh<cr>
+nmap <leader>- :exe "vertical resize -20"<cr>
+nmap <leader>+ :exe "vertical resize +20"<cr>
+
+" Use jj to escape out of insert mode
+imap jj <Esc>
+
+" Move current line up or down
+nnoremap <leader>j :m+<CR>==
+nnoremap <leader>k :m-2<CR>==
+vnoremap <leader>j :m'>+<CR>gv=gv
+vnoremap <leader>k :m-2<CR>gv=gv
 
 nnoremap <silent> <leader>K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> <leader>gd :call LanguageClient_textDocument_definition()<CR>
