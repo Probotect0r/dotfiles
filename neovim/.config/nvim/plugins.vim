@@ -27,8 +27,6 @@ Plug 'majutsushi/tagbar'
 
 " UI
 Plug 'morhetz/gruvbox'
-" Plug 'mhartington/oceanic-next'
-" Plug 'ayu-theme/ayu-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 
@@ -50,8 +48,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Syntax highlight
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'othree/yajs.vim'
-Plug 'rust-lang/rust.vim'
 Plug 'mxw/vim-jsx'
+Plug 'rust-lang/rust.vim'
 Plug 'tbastos/vim-lua'
 
 " Code formatting and linting
