@@ -18,7 +18,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 " File browsing
 Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Shougo/denite.nvim'
 
 " General 
 Plug 'tpope/vim-surround'

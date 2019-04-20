@@ -84,14 +84,7 @@ let g:NERDSpaceDelims = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 
-" CtrlP ignore files
-let g:ctrlp_custom_ignore = {
-            \ 'dir': 'node_modules\|target',
-            \ }
-
-" Set java omnifunc to javacomplete
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-
+" Enable JSX highlighting in all files
 let g:jsx_ext_required=0
 
 let g:LanguageClient_autoStart = 1
@@ -136,6 +129,26 @@ nnoremap <leader>j :m+<CR>==
 nnoremap <leader>k :m-2<CR>==
 vnoremap <leader>j :m'>+<CR>gv=gv
 vnoremap <leader>k :m-2<CR>gv=gv
+
+" Denite s
+nmap <C-b> :Denite buffer -split=floating -winrow=1<CR>
+nmap <C-p> :Denite file/rec -split=floating -winrow=1<CR>
+nmap <leader>g :<C-u>Denite grep:. -no-empty -mode=normal<CR>
+nmap <leader>j :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
+
+" Change mappings.
+call denite#custom#map(
+            \ 'insert',
+            \ '<C-j>',
+            \ '<denite:move_to_next_line>',
+            \ 'noremap'
+            \)
+call denite#custom#map(
+            \ 'insert',
+            \ '<C-k>',
+            \ '<denite:move_to_previous_line>',
+            \ 'noremap'
+            \)
 
 nnoremap <silent> <leader>K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> <leader>gd :call LanguageClient_textDocument_definition()<CR>
