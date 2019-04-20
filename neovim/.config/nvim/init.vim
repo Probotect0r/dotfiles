@@ -1,70 +1,4 @@
-call plug#begin('~/.config/nvim/plugged')
-
-" File browsing
-Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
-
-" General quality of life
-Plug 'tpope/vim-surround'
-Plug 'jiangmiao/auto-pairs'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-repeat'
-Plug 'majutsushi/tagbar'
-Plug 'vim-airline/vim-airline'
-Plug 'morhetz/gruvbox'
-
-" Code search
-Plug 'mileszs/ack.vim'
-
-" Tmux navigation
-Plug 'christoomey/vim-tmux-navigator'
-
-" Tags
-Plug 'majutsushi/tagbar'
-
-" Autocomplete / Intellisense / Syntax highlighting
-Plug 'junegunn/fzf'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh'
-    \ }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'racer-rust/vim-racer'
-Plug 'tbastos/vim-lua'
-Plug 'leafgarland/typescript-vim'
-
-" Syntax highlight
-Plug 'rust-lang/rust.vim'
-Plug 'mxw/vim-jsx'
-
-" Code formatting and linting
-Plug 'sbdchd/neoformat'
-Plug 'neomake/neomake'
-
-" Markdow
-Plug 'shime/vim-livedown'
-
-" Searching Zeal docs
-Plug 'KabbAmine/zeavim.vim', {'on': [
-			\	'Zeavim', 'Docset',
-			\	'<Plug>Zeavim',
-			\	'<Plug>ZVVisSelection',
-			\	'<Plug>ZVKeyDocset',
-			\	'<Plug>ZVMotion'
-			\ ]}
-
-" Git helper
-Plug 'tpope/vim-fugitive'
-
-" Comments
-Plug 'scrooloose/nerdcommenter'
-
-" Asthetics
-Plug 'ryanoasis/vim-devicons'
-
-call plug#end()
-
-" ######## GENERAL CONFIG ########
+source ~/.config/nvim/plugins.vim
 
 " Theme and colors stuff
 syntax enable
@@ -72,26 +6,19 @@ set background=dark
 set termguicolors
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
-set guifont="Iosevka Term"
-
+set fillchars+=vert:\ 
+let g:airline#extensions#tabline#enabled = 1
 
 " General stuff
-set exrc
 set number
-set modifiable
 set noswapfile
 set noshowcmd
-set ruler
-
-" GVim stuff
-set guifont=Iosevka\ 12
-set guioptions-=M
-set guioptions-=T
-set guioptions-=r
-set guioptions-=L
+" Relative numbering
+set rnu
 
 " Always display statusline
 set laststatus=2
+
 " Update files changed outside vim
 set autoread
 
@@ -103,33 +30,19 @@ set splitright
 au FocusGained,BufEnter * :silent! !
 
 " Ignore case in search
+" Search as you type
+" Show results of commands as you type (like :s)
 set ignorecase
 set incsearch
 set inccommand=nosplit
 
-" Seperator character for vertical split (currently a space)
-set fillchars+=vert:\ 
-
-" Change format of status line
-" Left side
-" set statusline+=\ \
-" set statusline+=%.30F " full file path with max lenght 30
-" set statusline+=\ \
-" set statusline+=%m " modified flag (+)
-" set statusline+=\ \
-" set statusline+=%2* " Change highlight group to User2
-" " Right side
-" set statusline+=%= " Create seperation point (Each section is spaced out equally)
-" set statusline+=%* " Reset highlight group
-" set statusline+=%3c " Column length
-" set statusline+=\ \ \
-" set statusline+=%y  " File type
-" set statusline+=\ \ \
-
 " Mouse only in normal mode
 set mouse=n
 
-set scrolloff=10         "Start scrolling when we're 8 lines away from margins
+" Start scrolling when we're 10 lines away from top or bottom
+" And 15 characters from end of line
+" highlight cursorline
+set scrolloff=10
 set sidescrolloff=15
 set sidescroll=1
 set cursorline
@@ -141,23 +54,23 @@ set backspace=eol,start,indent
 set updatetime=250
 
 " Use spaces instead of tabs
+" Tabs will insert shiftwidth at beginning of line
 set expandtab
-
-" Be smart when using tabs ;)
 set smarttab
 
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
 
-" Make lines not automatically move to next line when buffer width is small
+" Don't wrap unless in a text file
 set nowrap
+autocmd Filetype text setlocal wrap linebreak
 
-"Auto indent
-set ai 
+" Don't unload buffers, hide them instead
+set hidden
 
-" Relative numbering
-set rnu
+" Auto indent the next line based on current line
+set ai
 
 " Mappings
 let mapleader = ','
@@ -195,13 +108,10 @@ let g:NERDSpaceDelims = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
 
-" Don't unload buffers, hide them instead
-set hidden
-
 " CtrlP ignore files
 let g:ctrlp_custom_ignore = {
-	\ 'dir': 'node_modules\|target',
-\ }
+            \ 'dir': 'node_modules\|target',
+            \ }
 
 " Set java omnifunc to javacomplete
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
@@ -212,17 +122,18 @@ let g:LanguageClient_autoStart = 1
 let g:LanguageClient_loadSettings = 1
 let g:LangaugeClient_settingsPath = '/home/sagar/.config/nvim/settings.json'
 let g:LanguageClient_serverCommands = {
-    \ 'python': ['pyls'],
-    \ 'c': ['cquery'],
-    \ 'cpp': ['cquery'],
-    \ 'javascript.jsx': ['javascript-typescript-stdio'],
-    \ 'typescript': ['javascript-typescript-stdio'],
-    \ 'java': ['jdtls']
-    \ }
+            \ 'python': ['pyls'],
+            \ 'c': ['cquery'],
+            \ 'cpp': ['cquery'],
+            \ 'javascript.jsx': ['javascript-typescript-stdio'],
+            \ 'typescript': ['javascript-typescript-stdio'],
+            \ 'java': ['jdtls']
+            \ }
 
 let g:LanguageClient_rootMarkers = {
-    \ 'c': ['makefile']
-    \ }
+            \ 'c': ['makefile']
+            \ }
+
 nnoremap <silent> <leader>K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> <leader>gd :call LanguageClient_textDocument_definition()<CR>
 nnoremap <silent> <leader>gt :call LanguageClient_textDocument_typeDefinition()<CR>
@@ -233,4 +144,3 @@ nnoremap <silent> <leader>gr :call LanguageClient_textDocument_references()<CR>
 nnoremap <silent> <leader>c :call LanguageClient_textDocument_codeAction()<CR>
 nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 
-autocmd Filetype text setlocal wrap linebreak
