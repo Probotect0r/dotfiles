@@ -10,15 +10,17 @@ source ~/.zplug/init.zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/nvm", from:oh-my-zsh
 zplug "plugins/wd", from:oh-my-zsh
+zplug "plugins/tmux", from:oh-my-zsh
+zplug "plugins/docker", from:oh-my-zsh
 
-zplug "tomsquest/nvm-auto-use.zsh"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-substring-search"
 
 zplug "robbyrussell/oh-my-zsh", as:plugin, use:"lib/*.zsh"
+zplug "tomsquest/nvm-auto-use.zsh"
 
-zplug "b4b4r07/enhancd", use:init.sh
-
+# Theme
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 
 zplug load
@@ -32,5 +34,9 @@ bindkey '^ ' autosuggest-execute
 # This loads nvm
 export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  
+
+# Source system specific zshrc file
+SYSTEM_SPECIFIC_ZSHRC="~/.system_zshrc"
+[[ -f "$SYSTEM_SPECIFIC_ZSHRC" ]] && $SYSTEM_SPECIFIC_ZSHRC
 
 source ~/.profile

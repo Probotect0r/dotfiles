@@ -9,6 +9,7 @@ Plug 'Shougo/denite.nvim'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'majutsushi/tagbar'
+Plug 'TaDaa/vimade'
 
 " UI
 Plug 'morhetz/gruvbox'

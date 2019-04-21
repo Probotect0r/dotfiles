@@ -72,10 +72,15 @@ set hidden
 " Auto indent the next line based on current line
 set ai
 
-" ####### PLUGIN CONFIG #######
+" ==========================================================================================================
+" ========================================== PLUGIN CONFIG =================================================
+" ==========================================================================================================
+
+" Increase NerdTree window size
+let NERDTreeWinSize=50
+
 " Start deoplete autocompletion on startup
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#jedi#debug_server = 1
 
 " NERD Commenter
 " Add spaces after comment delimiters by default
@@ -92,20 +97,13 @@ let g:LanguageClient_loadSettings = 1
 let g:LangaugeClient_settingsPath = '/home/sagar/.config/nvim/settings.json'
 let g:LanguageClient_serverCommands = {
             \ 'python': ['pyls'],
-            \ 'c': ['cquery'],
-            \ 'cpp': ['cquery'],
             \ 'javascript.jsx': ['javascript-typescript-stdio'],
-            \ 'typescript': ['javascript-typescript-stdio'],
-            \ 'java': ['jdtls']
+            \ 'typescript': ['javascript-typescript-stdio']
             \ }
 
-let g:LanguageClient_rootMarkers = {
-            \ 'c': ['makefile']
-            \ }
-
-" ######################
-" ###### Mappings ######
-" ######################
+" ==========================================================================================================
+" =========================================== Mappings =====================================================
+" ==========================================================================================================
 
 let mapleader = ','
 let g:mapleader = ','
