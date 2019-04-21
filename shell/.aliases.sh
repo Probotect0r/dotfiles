@@ -9,3 +9,6 @@ alias ll="ls -ahl"
 
 # Vim -> Nvim
 alias vim="nvim"
+
+# Docker
+alias dr="docker run --rm -it"
