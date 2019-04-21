@@ -15,7 +15,7 @@ zplug "plugins/docker", from:oh-my-zsh
 
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-substring-search"
+zplug "zsh-users/zsh-history-substring-search"
 
 zplug "robbyrussell/oh-my-zsh", as:plugin, use:"lib/*.zsh"
 zplug "tomsquest/nvm-auto-use.zsh"
