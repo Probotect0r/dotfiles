@@ -2,14 +2,14 @@ call plug#begin('~/.config/nvim/plugged')
 
 " File browsing
 Plug 'scrooloose/nerdtree'
-" Plug 'ctrlpvim/ctrlp.vim'
-Plug 'Shougo/denite.nvim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " General 
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'majutsushi/tagbar'
 Plug 'TaDaa/vimade'
+Plug 'junegunn/fzf.vim'
 
 " UI
 Plug 'morhetz/gruvbox'

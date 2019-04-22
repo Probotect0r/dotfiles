@@ -101,6 +101,11 @@ let g:LanguageClient_serverCommands = {
             \ 'typescript': ['javascript-typescript-stdio']
             \ }
 
+" Let Ctrlp show hidden files
+let g:ctrlp_show_hidden = 1
+
+" Let fzf jump to open windows when possible
+let g:fzf_buffers_jump = 1
 " ==========================================================================================================
 " =========================================== Mappings =====================================================
 " ==========================================================================================================
@@ -128,25 +133,8 @@ nnoremap <leader>k :m-2<CR>==
 vnoremap <leader>j :m'>+<CR>gv=gv
 vnoremap <leader>k :m-2<CR>gv=gv
 
-" Denite s
-nmap <C-b> :Denite buffer -split=floating -winrow=1<CR>
-nmap <C-p> :Denite file/rec -split=floating -winrow=1<CR>
-nmap <leader>g :<C-u>Denite grep:. -no-empty -mode=normal<CR>
-nmap <leader>j :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
-
-" Change mappings.
-call denite#custom#map(
-            \ 'insert',
-            \ '<C-j>',
-            \ '<denite:move_to_next_line>',
-            \ 'noremap'
-            \)
-call denite#custom#map(
-            \ 'insert',
-            \ '<C-k>',
-            \ '<denite:move_to_previous_line>',
-            \ 'noremap'
-            \)
+" Browse open buffers
+nmap <leader>b :Buffers<cr>
 
 nnoremap <silent> <leader>K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> <leader>gd :call LanguageClient_textDocument_definition()<CR>
