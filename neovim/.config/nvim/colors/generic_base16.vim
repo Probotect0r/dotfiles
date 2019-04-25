@@ -169,10 +169,7 @@ call <sid>hi("Normal",        s:gui05, s:gui00, s:cterm05, s:cterm00, "", "")
 call <sid>hi("LineNr",        s:gui03, s:gui00, s:cterm03, s:cterm01, "", "")
 call <sid>hi("SignColumn",    s:gui03, s:gui01, s:cterm03, s:cterm01, "", "")
 
-" fg, bg
-" bg2 (dark2), fg1 (light1)
-" bg1 (dark1), fg4 (light4)
-call <sid>hi("StatusLine",    s:gui02, s:gui04, s:cterm02, s:cterm04, "none", "")
+call <sid>hi("StatusLine",    s:gui04, s:gui02, s:cterm04, s:cterm02, "none", "")
 call <sid>hi("StatusLineNC",  s:gui02, s:gui04, s:cterm02, s:cterm04, "none", "")
 
 call <sid>hi("VertSplit",     s:gui02, s:gui02, s:cterm02, s:cterm02, "none", "")
