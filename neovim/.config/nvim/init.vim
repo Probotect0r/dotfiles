@@ -5,8 +5,9 @@ syntax enable
 set background=dark
 set termguicolors
 let g:gruvbox_contrast_dark = 'hard'
-colorscheme generic_base16
+colorscheme gooey
 set fillchars+=vert:\ 
+let g:airline_theme = 'generic_airline'
 let g:airline#extensions#tabline#enabled = 1
 
 " General stuff
