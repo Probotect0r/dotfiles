@@ -1,5 +1,10 @@
 POWERLEVEL9K_MODE='nerdfont-complete'
 
+# Source system specific zshrc file
+export SYSTEM_SPECIFIC_ZSHRC=~/.system_zshrc
+[[ -f "$SYSTEM_SPECIFIC_ZSHRC" ]] && . "$SYSTEM_SPECIFIC_ZSHRC"
+
+
 # Check if zplug is installed
 if [[ ! -d ~/.zplug ]]; then
   git clone https://github.com/zplug/zplug ~/.zplug
@@ -34,9 +39,5 @@ bindkey '^ ' autosuggest-execute
 # This loads nvm
 export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  
-
-# Source system specific zshrc file
-SYSTEM_SPECIFIC_ZSHRC="~/.system_zshrc"
-[[ -f "$SYSTEM_SPECIFIC_ZSHRC" ]] && $SYSTEM_SPECIFIC_ZSHRC
 
 source ~/.profile
