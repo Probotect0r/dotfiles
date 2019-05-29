@@ -41,3 +41,5 @@ export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  
 
 source ~/.profile
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
