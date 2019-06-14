@@ -162,30 +162,18 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Launch Polybar, Albert, kdeconnect-cli
-exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always --no-startup-id albert
-exec_always --no-startup-id kdeconnect-indicator
-exec_always --no-startup-id nm-applet
+# exec_always --no-startup-id ~/.config/polybar/launch.sh
+# exec_always --no-startup-id albert
+# exec_always --no-startup-id kdeconnect-indicator
+# exec_always --no-startup-id nm-applet
 
 # Audio controls
 bindsym $mod+p  exec amixer sset Master 5%+
 bindsym $mod+o  exec amixer sset Master 5%-
 bindsym $mod+i  exec amixer sset Master toggle
 
-# Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-
 # Set wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
-
-# GAPS stuff
-# gaps inner 15
-# smart_borders on
-# smart_gaps on
-
-# Set a border
-for_window [class="^.*"] border pixel 4
+exec_always --no-startup-id feh --bg-fill ~/Pictures/mountains.jpg
 
 # Set Window colors 
 client.focused $colorred $colorbg $colorfg $colorfg $colorred
@@ -196,3 +184,7 @@ client.urgent $colorred $colorbg $colorfg $colorblk
 # Assign windows to workspaces
 assign [class="discord"] 3
 assign [class="Firefox"] 2
+
+
+# Set a border
+# for_window [class="^.*"] border pixel 4
