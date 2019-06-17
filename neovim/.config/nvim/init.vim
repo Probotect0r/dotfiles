@@ -4,7 +4,7 @@ source ~/.config/nvim/plugins.vim
 syntax enable
 set background=dark
 set termguicolors
-colorscheme oceanic-next-dark
+colorscheme gooey
 set fillchars+=vert:\ 
 let g:airline_theme = 'generic_airline'
 let g:airline#extensions#tabline#enabled = 1
