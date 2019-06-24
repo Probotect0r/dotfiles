@@ -162,10 +162,10 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Launch Polybar, Albert, kdeconnect-cli
-# exec_always --no-startup-id ~/.config/polybar/launch.sh
-# exec_always --no-startup-id albert
-# exec_always --no-startup-id kdeconnect-indicator
-# exec_always --no-startup-id nm-applet
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id albert
+exec_always --no-startup-id kdeconnect-indicator
+exec_always --no-startup-id nm-applet
 
 # Audio controls
 bindsym $mod+p  exec amixer sset Master 5%+
@@ -173,7 +173,7 @@ bindsym $mod+o  exec amixer sset Master 5%-
 bindsym $mod+i  exec amixer sset Master toggle
 
 # Set wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Pictures/mountains.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
 
 # Set Window colors 
 client.focused $colorred $colorbg $colorfg $colorfg $colorred
