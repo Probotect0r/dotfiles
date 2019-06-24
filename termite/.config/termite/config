@@ -1,0 +1,53 @@
+#0 is black
+#1 is red
+#2 is green
+#3 is yellow
+#4 is blue
+#5 is mag
+#6 is cyn
+#7 is white
+#8 is bblack
+
+[options]
+font = Iosevka Nerd Font 11
+
+[colors]
+# Base16 Gooey
+# Scheme: Alex Booker <alexbooker@fastmail.im>
+
+foreground      = #d1d4e0
+foreground_bold = #d1d4e0
+cursor          = #d1d4e0
+background      = #101218
+
+# 16 color space
+# Red
+color1  = #ee829f
+color9  = #ee829f
+
+# Green
+color2  = #a5ffe1
+color10 = #a5ffe1
+
+# Yellow
+color3  = #ffefcc
+color11 = #ffefcc
+
+# # Blue
+color4  = #97bbf7
+color12 = #97bbf7
+
+# Magenta/Purple
+color5  = #c0b7f9
+color13 = #c0b7f9
+
+# Cyn
+color5  = #c0b7f9
+color6  = #97e0ff
+color14 = #97e0ff
+
+# Black, Grey, Silver, White
+color0  = #1f222d
+color7  = #d1d4e0
+color8  = #7780a1
+color15 = #ffffff
