@@ -42,11 +42,13 @@ Plug 'tbastos/vim-lua'
 " Code formatting and linting
 Plug 'sbdchd/neoformat'
 
-" Markdow
+" Markdown
 Plug 'shime/vim-livedown'
 
 " Comments
 Plug 'scrooloose/nerdcommenter'
 
+" DevOps helpers
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
