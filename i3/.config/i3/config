@@ -187,4 +187,4 @@ assign [class="Firefox"] 2
 
 
 # Set a border
-# for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 4
