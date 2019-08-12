@@ -4,9 +4,12 @@ source ~/.config/nvim/plugins.vim
 syntax enable
 set background=dark
 set termguicolors
-colorscheme gooey
+
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
+" colorscheme gooey
+" let g:airline_theme = 'generic_airline'
 set fillchars+=vert:\ 
-let g:airline_theme = 'generic_airline'
 let g:airline#extensions#tabline#enabled = 1
 
 " General stuff
@@ -145,4 +148,3 @@ nnoremap <silent> <leader>gs :call LanguageClient_textDocument_documentSymbol()<
 nnoremap <silent> <leader>gr :call LanguageClient_textDocument_references()<CR>
 nnoremap <silent> <leader>c :call LanguageClient_textDocument_codeAction()<CR>
 nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
-
