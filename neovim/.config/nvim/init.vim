@@ -6,9 +6,9 @@ set background=dark
 set termguicolors
 
 let g:gruvbox_contrast_dark='hard'
-colorscheme gruvbox
-" colorscheme gooey
-" let g:airline_theme = 'generic_airline'
+" colorscheme gruvbox
+colorscheme gooey
+let g:airline_theme = 'generic_airline'
 set fillchars+=vert:\ 
 let g:airline#extensions#tabline#enabled = 1
 
@@ -109,7 +109,12 @@ let g:ctrlp_show_hidden = 1
 
 " Let fzf jump to open windows when possible
 let g:fzf_buffers_jump = 1
-" ==========================================================================================================
+
+" Lower fade level
+let g:vimade = {}
+let g:vimade.fadelevel = 0.7
+let g:vimade.enablesigns = 1
+"" ==========================================================================================================
 " =========================================== Mappings =====================================================
 " ==========================================================================================================
 

@@ -8,7 +8,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'majutsushi/tagbar'
-Plug 'TaDaa/vimade'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
@@ -16,6 +15,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
+Plug 'TaDaa/vimade'
 
 " Git Plugins
 Plug 'airblade/vim-gitgutter'

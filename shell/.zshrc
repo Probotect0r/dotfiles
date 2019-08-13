@@ -26,8 +26,8 @@ zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
 
 zplug load
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs virtualenv)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs virtualenv)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time)
 
 # User configuration
 bindkey '^ ' autosuggest-execute
