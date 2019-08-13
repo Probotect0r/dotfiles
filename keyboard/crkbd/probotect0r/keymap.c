@@ -1,5 +1,11 @@
 #include QMK_KEYBOARD_H
-
+#ifdef SSD1306OLED
+  #include "ssd1306.h"
+#endif
+#ifdef PROTOCOL_LUFA
+  #include "lufa.h"
+  #include "split_util.h"
+#endif
 extern keymap_config_t keymap_config;
 
 #ifdef RGBLIGHT_ENABLE
