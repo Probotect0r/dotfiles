@@ -95,15 +95,6 @@ let g:NERDTrimTrailingWhitespace = 1
 " Enable JSX highlighting in all files
 let g:jsx_ext_required=0
 
-let g:LanguageClient_autoStart = 1
-let g:LanguageClient_loadSettings = 1
-let g:LangaugeClient_settingsPath = '/home/sagar/.config/nvim/settings.json'
-let g:LanguageClient_serverCommands = {
-            \ 'python': ['pyls'],
-            \ 'javascript.jsx': ['javascript-typescript-stdio'],
-            \ 'typescript': ['javascript-typescript-stdio']
-            \ }
-
 " Let Ctrlp show hidden files
 let g:ctrlp_show_hidden = 1
 
@@ -114,6 +105,7 @@ let g:fzf_buffers_jump = 1
 let g:vimade = {}
 let g:vimade.fadelevel = 0.7
 let g:vimade.enablesigns = 1
+
 "" ==========================================================================================================
 " =========================================== Mappings =====================================================
 " ==========================================================================================================
@@ -144,12 +136,25 @@ vnoremap <leader>k :m-2<CR>gv=gv
 " Browse open buffers
 nmap <leader>b :Buffers<cr>
 
-nnoremap <silent> <leader>K :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> <leader>gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> <leader>gt :call LanguageClient_textDocument_typeDefinition()<CR>
-nnoremap <silent> <leader>gi :call LanguageClient_textDocument_implementation()<CR>
-nnoremap <silent> <leader>a :call LanguageClient_contextMenu()<CR>
-nnoremap <silent> <leader>gs :call LanguageClient_textDocument_documentSymbol()<CR>
-nnoremap <silent> <leader>gr :call LanguageClient_textDocument_references()<CR>
-nnoremap <silent> <leader>c :call LanguageClient_textDocument_codeAction()<CR>
-nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+" COC
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <leader>K :call CocAction('doHover')<CR>
+
+nmap <leader>rn <Plug>(coc-rename)
+
+" Remap for format selected region
+nmap <silent> <leader>fo :call CocAction('format')<CR>
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+nnoremap <silent> <leader>d  :<C-u>CocList diagnostics<CR>
+
+nmap <leader>ac  <Plug>(coc-codeaction)
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
