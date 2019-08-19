@@ -109,7 +109,7 @@ let g:vimade.fadelevel = 0.7
 let g:vimade.enablesigns = 1
 
 " Define dir for storing tags files
-let g:gutentags_cache_dir=~/.tags
+let g:gutentags_cache_dir='~/.tags'
 "" ==========================================================================================================
 " =========================================== Mappings =====================================================
 " ==========================================================================================================
@@ -140,7 +140,10 @@ vnoremap <leader>k :m-2<CR>gv=gv
 " Browse open buffers
 nmap <leader>b :Buffers<cr>
 
-" COC
+" ======== FZF =========
+nmap <leader>f :GFiles<cr>
+nmap <leader>gf :GFiles<cr>
+" ======== COC ==========
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
@@ -154,7 +157,7 @@ nmap <silent> <leader>K :call CocAction('doHover')<CR>
 nmap <leader>rn <Plug>(coc-rename)
 
 " Remap for format selected region
-nmap <silent> <leader>fo :call CocAction('format')<CR>
+nmap <leader>fo :call CocActionAsync('format')<CR>
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 nnoremap <silent> <leader>d  :<C-u>CocList diagnostics<CR>
