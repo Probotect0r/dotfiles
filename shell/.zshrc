@@ -13,7 +13,7 @@ zplug "plugins/nvm", from:oh-my-zsh
 zplug "plugins/wd", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
-zplug "plugins/pipenv", from:oh-my-zsh
+# zplug "plugins/pipenv", from:oh-my-zsh
 
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
@@ -46,3 +46,4 @@ export SYSTEM_SPECIFIC_ZSHRC=~/.system_zshrc
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
