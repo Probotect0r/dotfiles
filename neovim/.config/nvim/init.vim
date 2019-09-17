@@ -145,25 +145,46 @@ nmap <leader>b :Buffers<cr>
 " ======== FZF =========
 nmap <leader>f :GFiles<cr>
 nmap <leader>gf :GFiles<cr>
+
 " ======== COC ==========
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" Browse diagnositics
+nmap <silent> <leader>dn <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>dp <Plug>(coc-diagnostic-prev)
+nnoremap <silent> <leader>dl  :<C-u>CocList diagnostics<CR>
+
+" Show info for symbol under cursor
 nmap <silent> <leader>K :call CocAction('doHover')<CR>
 
+" Rename
 nmap <leader>rn <Plug>(coc-rename)
 
 " Remap for format selected region
 nmap <leader>fo :call CocActionAsync('format')<CR>
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-nnoremap <silent> <leader>d  :<C-u>CocList diagnostics<CR>
+xmap <leader>fo  <Plug>(coc-format-selected)
 
-nmap <leader>ac  <Plug>(coc-codeaction)
+" Code action
+nmap <leader>ac <Plug>(coc-codeaction)
+xmap <leader>ac <Plug>(coc-codeaction-selected)
+" Fix current line
+nmap <leader>fc <Plug>(coc-fix-current)
+" Refactor
+nmap <leader>rf <Plug>(coc-refactor)
+xmap <leader>rf <Plug>(coc-codeaction-selected)
 
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" :OR for organizing imports
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+" CocList
+nmap <leader>o :CocList outline<cr>
+nmap <leader>co :CocList commands<cr>
+nmap <leader>sy :CocList -I symbols<cr>
