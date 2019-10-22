@@ -7,7 +7,7 @@ set termguicolors
 
 let g:gruvbox_contrast_dark='hard'
 " colorscheme gruvbox
-colorscheme gooey
+colorscheme substrata
 let g:airline_theme = 'generic_airline'
 set fillchars+=vert:\ 
 let g:airline#extensions#tabline#enabled = 1
@@ -76,6 +76,18 @@ set hidden
 set ai
 
 set wildignore+=node_modules*
+
+" Statusline
+set statusline=\       " Just a space to begin with
+set statusline+=%f\    " Filename relative to PWD
+set statusline+=%w     " Preview window
+set statusline+=%r     " Readonly
+set statusline+=%m     " Modified
+set statusline+=%y     " Filetype
+set statusline+=%{FugitiveStatusline()}
+set statusline+=%=%l\/ " Current line number
+set statusline+=%-6L\  " Total number of lines
+set statusline+=%3c\   " Column
 
 " ==========================================================================================================
 " ========================================== PLUGIN CONFIG =================================================

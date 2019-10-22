@@ -13,9 +13,9 @@ Plug 'junegunn/fzf.vim'
 
 " UI
 Plug 'gruvbox-community/gruvbox'
-Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 Plug 'TaDaa/vimade'
+Plug 'arzg/vim-substrata'
 
 " Git Plugins
 Plug 'airblade/vim-gitgutter'
@@ -33,6 +33,7 @@ Plug 'othree/yajs.vim'
 Plug 'mxw/vim-jsx'
 Plug 'rust-lang/rust.vim'
 Plug 'tbastos/vim-lua'
+Plug 'cespare/vim-toml'
 
 " Code formatting and linting
 Plug 'sbdchd/neoformat'
