@@ -33,6 +33,7 @@ Plug 'othree/yajs.vim'
 Plug 'mxw/vim-jsx'
 Plug 'rust-lang/rust.vim'
 Plug 'tbastos/vim-lua'
+Plug 'cespare/vim-toml'
 
 " Code formatting and linting
 Plug 'sbdchd/neoformat'
