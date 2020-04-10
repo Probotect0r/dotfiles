@@ -6,7 +6,8 @@ set background=dark
 set termguicolors
 
 " Colorscheme settings
-colorscheme xcodedark
+" colorscheme xcodedark
+colorscheme substrata
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_italic = 1
 let g:two_firewatch_italics=1
