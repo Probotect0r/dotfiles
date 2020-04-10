@@ -5,10 +5,11 @@ syntax enable
 set background=dark
 set termguicolors
 
-let g:gruvbox_contrast_dark='hard'
-" colorscheme gruvbox
-colorscheme substrata
-let g:airline_theme = 'generic_airline'
+" Colorscheme settings
+colorscheme xcodedark
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_italic = 1
+let g:two_firewatch_italics=1
 set fillchars+=vert:\ 
 let g:airline#extensions#tabline#enabled = 1
 
@@ -40,7 +41,7 @@ set incsearch
 set inccommand=nosplit
 
 " Mouse only in normal mode
-set mouse=n
+" set mouse=n
 
 " Start scrolling when we're 10 lines away from top or bottom
 " And 15 characters from end of line
@@ -123,7 +124,14 @@ let g:vimade.enablesigns = 1
 " Define dir for storing tags files
 let g:gutentags_cache_dir='~/.tags'
 
+" remove buffers from airline's tabline
 let g:airline#extensions#coc#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_splits = 0
+
+" Use MD syntax for vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
 "" ==========================================================================================================
 " =========================================== Mappings =====================================================
 " ==========================================================================================================
@@ -153,11 +161,14 @@ vnoremap <leader>k :m-2<CR>gv=gv
 
 " Browse open buffers
 nmap <leader>b :Buffers<cr>
+nmap <leader>l :Lines<cr>
 
 " ======== FZF =========
-nmap <leader>f :GFiles<cr>
-nmap <leader>gf :GFiles<cr>
+nmap <C-p> :GFiles<cr>
+nmap <leader><C-p> :Files<cr>
 
+" ======== Terminal ========
+tnoremap <Esc> <C-\><C-n>
 " ======== COC ==========
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
@@ -200,3 +211,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 nmap <leader>o :CocList outline<cr>
 nmap <leader>co :CocList commands<cr>
 nmap <leader>sy :CocList -I symbols<cr>
+
+
+autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2 expandtab
+
