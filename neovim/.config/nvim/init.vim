@@ -6,12 +6,14 @@ set background=dark
 set termguicolors
 
 " Colorscheme settings
-colorscheme xcodedark
+colorscheme iceberg
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_italic = 1
 let g:two_firewatch_italics=1
 set fillchars+=vert:\ 
 let g:airline#extensions#tabline#enabled = 1
+let g:sonokai_style = 'andromeda'
+let g:sonokai_enable_italic = 1
 
 " General stuff
 set number
@@ -115,6 +117,7 @@ let g:ctrlp_show_hidden = 1
 
 " Let fzf jump to open windows when possible
 let g:fzf_buffers_jump = 1
+let g:fzf_preview_window = ''
 
 " Lower fade level
 let g:vimade = {}
@@ -132,6 +135,14 @@ let g:airline#extensions#tabline#show_splits = 0
 " Use MD syntax for vimwiki
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
+
+let g:indentLine_char = '│'
+augroup vim-colors-xcode
+    autocmd!
+augroup END
+
+autocmd vim-colors-xcode ColorScheme * hi Comment        cterm=italic gui=italic
+autocmd vim-colors-xcode ColorScheme * hi SpecialComment cterm=italic gui=italic
 "" ==========================================================================================================
 " =========================================== Mappings =====================================================
 " ==========================================================================================================
@@ -139,7 +150,7 @@ let g:vimwiki_list = [{'path': '~/vimwiki/',
 let mapleader = ','
 let g:mapleader = ','
 nmap <leader>. :NERDTreeFind<cr>
-nmap <leader>t :TagbarOpen jf<cr>
+nmap <leader>ta :TagbarOpen jf<cr>
 nmap <leader>wq :wq<cr>
 nmap <leader>w :w<cr>
 nmap <leader>q :q<cr>
@@ -169,6 +180,8 @@ nmap <leader><C-p> :Files<cr>
 
 " ======== Terminal ========
 tnoremap <Esc> <C-\><C-n>
+nmap <leader>tt :FloatermToggle<CR>
+
 " ======== COC ==========
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
@@ -198,6 +211,7 @@ xmap <leader>fo  <Plug>(coc-format-selected)
 " Code action
 nmap <leader>ac <Plug>(coc-codeaction)
 xmap <leader>ac <Plug>(coc-codeaction-selected)
+
 " Fix current line
 nmap <leader>fc <Plug>(coc-fix-current)
 " Refactor

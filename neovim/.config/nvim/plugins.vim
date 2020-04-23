@@ -15,6 +15,8 @@ Plug 'yuki-ycino/fzf-preview.vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'ryanoasis/vim-devicons'
 Plug 'TaDaa/vimade'
+Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'arzg/vim-colors-xcode'
 Plug 'arcticicestudio/nord-vim'
 Plug 'arzg/vim-substrata'
@@ -26,7 +28,8 @@ Plug 'ajmwagar/vim-deus'
 Plug 'mhartington/oceanic-next'
 Plug 'rakr/vim-two-firewatch'
 Plug 'cocopon/iceberg.vim'
-" Plug 'vim-airline/vim-airline'
+Plug 'sainnhe/sonokai'
+Plug 'vim-airline/vim-airline'
 
 
 " Git Plugins
@@ -61,5 +64,8 @@ Plug 'vimwiki/vimwiki'
 
 " Theme creation helper
 Plug 'lifepillar/vim-colortemplate'
+
+" Terminal helper
+Plug 'voldikss/vim-floaterm'
 call plug#end()
 
