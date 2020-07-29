@@ -7,15 +7,19 @@ set termguicolors
 
 " Colorscheme settings
 colorscheme iceberg
+
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_italic = 1
+
 let g:two_firewatch_italics=1
-set fillchars+=vert:\ 
-let g:airline#extensions#tabline#enabled = 1
-let g:sonokai_style = 'andromeda'
+
+let g:sonokai_style = 'shusia'
 let g:sonokai_enable_italic = 1
 
+let g:neodark#background = '#202020'
+
 " General stuff
+set fillchars+=vert:\ 
 set number
 set noswapfile
 set noshowcmd
@@ -128,6 +132,7 @@ let g:vimade.enablesigns = 1
 let g:gutentags_cache_dir='~/.tags'
 
 " remove buffers from airline's tabline
+let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_splits = 0
@@ -181,6 +186,7 @@ nmap <leader><C-p> :Files<cr>
 " ======== Terminal ========
 tnoremap <Esc> <C-\><C-n>
 nmap <leader>tt :FloatermToggle<CR>
+nmap <leader>tn :FloatermNext<CR>
 
 " ======== COC ==========
 " Use <c-space> to trigger completion.
