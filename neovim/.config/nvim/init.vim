@@ -6,17 +6,26 @@ set background=dark
 set termguicolors
 
 " Colorscheme settings
-colorscheme iceberg
-
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_italic = 1
 
 let g:two_firewatch_italics=1
 
-let g:sonokai_style = 'shusia'
+let g:sonokai_style = 'andromeda'
 let g:sonokai_enable_italic = 1
 
 let g:neodark#background = '#202020'
+
+let ayucolor = "mirage"
+
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+let g:nord_underline = 1
+let g:nord_cursor_line_number_background = 1
+
+colorscheme nord
+
+filetype plugin on
 
 " General stuff
 set fillchars+=vert:\ 
@@ -133,9 +142,9 @@ let g:gutentags_cache_dir='~/.tags'
 
 " remove buffers from airline's tabline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#coc#enabled = 1
 
 " Use MD syntax for vimwiki
 let g:vimwiki_list = [{'path': '~/vimwiki/',
@@ -148,7 +157,9 @@ augroup END
 
 autocmd vim-colors-xcode ColorScheme * hi Comment        cterm=italic gui=italic
 autocmd vim-colors-xcode ColorScheme * hi SpecialComment cterm=italic gui=italic
-"" ==========================================================================================================
+
+let g:indentLine_concealcursor = 'vc'
+" ==========================================================================================================
 " =========================================== Mappings =====================================================
 " ==========================================================================================================
 

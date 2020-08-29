@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Check if zplug is installed
@@ -19,12 +26,9 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-history-substring-search"
 
 # Theme
-zplug "romkatv/powerlevel10k", use:powerlevel10k.zsh-theme
+zplug romkatv/powerlevel10k, as:theme, depth:1
 
 zplug load
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs virtualenv)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time)
 
 # User configuration
 bindkey '^ ' autosuggest-execute
@@ -37,3 +41,5 @@ source ~/.profile
 export SYSTEM_SPECIFIC_ZSHRC=~/.system_zshrc
 [[ -f "$SYSTEM_SPECIFIC_ZSHRC" ]] && . "$SYSTEM_SPECIFIC_ZSHRC"
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
