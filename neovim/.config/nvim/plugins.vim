@@ -13,9 +13,6 @@ Plug 'yuki-ycino/fzf-preview.vim'
 
 " UI
 Plug 'gruvbox-community/gruvbox'
-Plug 'ryanoasis/vim-devicons'
-Plug 'TaDaa/vimade'
-Plug 'Yggdroot/indentLine'
 Plug 'arzg/vim-colors-xcode'
 Plug 'arcticicestudio/nord-vim'
 Plug 'arzg/vim-substrata'
@@ -29,7 +26,14 @@ Plug 'rakr/vim-two-firewatch'
 Plug 'cocopon/iceberg.vim'
 Plug 'sainnhe/sonokai'
 Plug 'KeitaNakamura/neodark.vim'
+Plug 'lifepillar/vim-solarized8'
+Plug 'co1ncidence/mountaineer.vim'
+Plug 'humanoid-colors/vim-humanoid-colorscheme', { 'branch': 'main' }
+
 Plug 'vim-airline/vim-airline'
+Plug 'ryanoasis/vim-devicons'
+" Plug 'TaDaa/vimade'
+Plug 'Yggdroot/indentLine'
 
 
 " Git Plugins

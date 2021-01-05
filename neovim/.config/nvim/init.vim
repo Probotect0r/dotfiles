@@ -6,7 +6,8 @@ set background=dark
 set termguicolors
 
 " Colorscheme settings
-let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_contrast_light = 'soft'
 let g:gruvbox_italic = 1
 
 let g:two_firewatch_italics=1
@@ -22,6 +23,14 @@ let g:nord_italic = 1
 let g:nord_italic_comments = 1
 let g:nord_underline = 1
 let g:nord_cursor_line_number_background = 1
+
+" Enable italic comments
+augroup vim-colors-xcode
+    autocmd!
+augroup END
+
+autocmd vim-colors-xcode ColorScheme * hi Comment        cterm=italic gui=italic
+autocmd vim-colors-xcode ColorScheme * hi SpecialComment cterm=italic gui=italic
 
 colorscheme nord
 
@@ -145,18 +154,13 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_splits = 0
 let g:airline#extensions#coc#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " Use MD syntax for vimwiki
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
 let g:indentLine_char = '│'
-augroup vim-colors-xcode
-    autocmd!
-augroup END
-
-autocmd vim-colors-xcode ColorScheme * hi Comment        cterm=italic gui=italic
-autocmd vim-colors-xcode ColorScheme * hi SpecialComment cterm=italic gui=italic
 
 let g:indentLine_concealcursor = 'vc'
 " ==========================================================================================================
