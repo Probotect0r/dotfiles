@@ -2,7 +2,7 @@ source ~/.config/nvim/plugins.vim
 
 " Theme and colors stuff
 syntax enable
-set background=dark
+set background=light
 set termguicolors
 
 " Colorscheme settings
@@ -32,7 +32,7 @@ augroup END
 autocmd vim-colors-xcode ColorScheme * hi Comment        cterm=italic gui=italic
 autocmd vim-colors-xcode ColorScheme * hi SpecialComment cterm=italic gui=italic
 
-colorscheme nord
+colorscheme gruvbox
 
 filetype plugin on
 

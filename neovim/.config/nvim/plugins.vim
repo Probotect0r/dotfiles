@@ -9,7 +9,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'majutsushi/tagbar'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'yuki-ycino/fzf-preview.vim'
 
 " UI
 Plug 'gruvbox-community/gruvbox'
@@ -32,7 +31,6 @@ Plug 'humanoid-colors/vim-humanoid-colorscheme', { 'branch': 'main' }
 
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
-" Plug 'TaDaa/vimade'
 Plug 'Yggdroot/indentLine'
 
 
@@ -65,9 +63,6 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Note taking
 Plug 'vimwiki/vimwiki'
-
-" Theme creation helper
-Plug 'lifepillar/vim-colortemplate'
 
 " Terminal helper
 Plug 'voldikss/vim-floaterm'
