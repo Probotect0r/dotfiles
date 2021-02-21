@@ -9,7 +9,8 @@
 #8 is bblack
 
 [options]
-font = iA Writer Mono S 10
+# font = Iosevka Semibold 11
+font = Iosevka 11.5
 
 [colors]
 # foreground      = #d1d4e0
@@ -40,7 +41,6 @@ font = iA Writer Mono S 10
 # color13 = #c0b7f9
 
 # # Cyn
-# color5  = #c0b7f9
 # color6  = #97e0ff
 # color14 = #97e0ff
 
@@ -51,40 +51,108 @@ font = iA Writer Mono S 10
 # color15 = #ffffff
 
 # Substrata
-foreground      = #b5b4c9
-foreground_bold = #b5b4c9
-cursor          = #b5b4c9
-cursor_foreground = #191c25
-background      = #191c25
+# foreground      = #b5b4c9
+# foreground_bold = #b5b4c9
+# cursor          = #b5b4c9
+# cursor_foreground = #191c25
+# background      = #191c25
 
-# Black
-color0  = #2e313d
-color8  = #5b5f71
+# # Black
+# color0  = #2e313d
+# color8  = #5b5f71
 
-# Red
-color1  = #cf8164
-color9  = #fe9f7c
+# # Red
+# color1  = #cf8164
+# color9  = #fe9f7c
 
-# Green
-color2  = #76a065
-color10 = #92c47e
+# # Green
+# color2  = #76a065
+# color10 = #92c47e
 
-# Yellow
-color3  = #ab924c
-color11 = #d2b45f
+# # Yellow
+# color3  = #ab924c
+# color11 = #d2b45f
 
-# # Blue
-color4  = #8296b0
-color12 = #a0b9d8
+# # # Blue
+# color4  = #8296b0
+# color12 = #a0b9d8
 
-# Magenta/Purple
-color5  = #a18daf
-color13 = #c6aed7
+# # Magenta/Purple
+# color5  = #a18daf
+# color13 = #c6aed7
 
-# Cyn
-color6  = #659ea2
-color14 = #7dc2c7
+# # Cyn
+# color6  = #659ea2
+# color14 = #7dc2c7
 
-# White
-color7  = #b5b4c9
-color15 = #f0ecfe
+# # White
+# color7  = #b5b4c9
+# color15 = #f0ecfe
+
+# Nord
+# cursor = #d8dee9
+# cursor_foreground = #2e3440
+
+# foreground = #d8dee9
+# foreground_bold = #d8dee9
+# background = #2e3440
+
+# highlight = #4c566a
+
+# color0  = #3b4252
+# color1  = #bf616a
+# color2  = #a3be8c
+# color3  = #ebcb8b
+# color4  = #81a1c1
+# color5  = #b48ead
+# color6  = #88c0d0
+# color7  = #e5e9f0
+# color8  = #4c566a
+# color9  = #bf616a
+# color10 = #a3be8c
+# color11 = #ebcb8b
+# color12 = #81a1c1
+# color13 = #b48ead
+# color14 = #8fbcbb
+# color15 = #eceff4
+
+# Gruvbox
+# hard contrast: background = #f9f5d7
+# background = #fbf1c7
+# soft contrast: 
+background = #f2e5bc
+foreground = #3c3836
+foreground_bold = #3c3836
+
+# light0 + gray
+color0 = #fbf1c7
+color8 = #928374
+
+# neutral_red + faded_red
+color1 = #cc241d
+color9 = #9d0006
+
+# neutral_green + faded_green
+color2 = #98971a
+color10 = #79740e
+
+# neutral_yellow + faded_yellow
+color3 = #d79921
+color11 = #b57614
+
+# neutral_blue + faded_blue
+color4 = #458588
+color12 = #076678
+
+# neutral_purple + faded_purple
+color5 = #b16286
+color13 = #8f3f71
+
+# neutral_aqua + faded_aqua
+color6 = #689d6a
+color14 = #427b58
+
+# dark4 + dark1
+color7 = #7c6f64
+color15 = #3c3836
+
