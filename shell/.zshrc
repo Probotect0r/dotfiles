@@ -16,7 +16,6 @@ source ~/.zplug/init.zsh
 
 zplug "robbyrussell/oh-my-zsh", as:plugin, use:"lib/*.zsh"
 zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/nvm", from:oh-my-zsh
 zplug "plugins/wd", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
