@@ -28,6 +28,8 @@ Plug 'KeitaNakamura/neodark.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'co1ncidence/mountaineer.vim'
 Plug 'humanoid-colors/vim-humanoid-colorscheme', { 'branch': 'main' }
+Plug 'b4skyx/serenade'
+Plug 'embark-theme/vim', { 'as': 'embark' }
 
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'

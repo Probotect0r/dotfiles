@@ -99,6 +99,7 @@ set hidden
 
 " Auto indent the next line based on current line
 set ai
+set smartindent
 
 set wildignore+=node_modules*
 
