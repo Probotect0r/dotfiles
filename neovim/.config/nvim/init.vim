@@ -93,6 +93,7 @@ set tabstop=4
 " Don't wrap unless in a text file
 set nowrap
 autocmd Filetype text setlocal wrap linebreak
+autocmd Filetype vimwiki setlocal wrap linebreak
 
 " Don't unload buffers, hide them instead
 set hidden
