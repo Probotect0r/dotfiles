@@ -30,8 +30,11 @@ Plug 'co1ncidence/mountaineer.vim'
 Plug 'humanoid-colors/vim-humanoid-colorscheme', { 'branch': 'main' }
 Plug 'b4skyx/serenade'
 Plug 'embark-theme/vim', { 'as': 'embark' }
+Plug 'projekt0n/github-nvim-theme'
+Plug 'sainnhe/gruvbox-material'
 
 Plug 'vim-airline/vim-airline'
+Plug 'hoob3rt/lualine.nvim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
 
@@ -50,6 +53,7 @@ Plug 'sheerun/vim-polyglot'
 
 " Code formatting and linting
 Plug 'sbdchd/neoformat'
+Plug 'editorconfig/editorconfig-vim'
 
 " Markdown
 Plug 'shime/vim-livedown'

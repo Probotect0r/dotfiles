@@ -9,6 +9,8 @@ set termguicolors
 let g:gruvbox_contrast_dark = 'soft'
 let g:gruvbox_contrast_light = 'soft'
 let g:gruvbox_italic = 1
+let g:gruvbox_material_background = 'soft'
+let g:gruvbox_material_enable_italic = 1
 
 let g:two_firewatch_italics=1
 
@@ -32,7 +34,7 @@ augroup END
 autocmd vim-colors-xcode ColorScheme * hi Comment        cterm=italic gui=italic
 autocmd vim-colors-xcode ColorScheme * hi SpecialComment cterm=italic gui=italic
 
-colorscheme gruvbox
+colorscheme gruvbox-material
 
 filetype plugin on
 
@@ -165,6 +167,20 @@ let g:vimwiki_list = [{'path': '~/vimwiki/',
 let g:indentLine_char = '│'
 
 let g:indentLine_concealcursor = 'vc'
+
+" lua << EOF
+" require("github-theme").setup({
+  " themeStyle = "dimmed"
+" })
+" EOF
+
+" lua << EOF
+" require('lualine').setup {
+  " options = {
+    " theme = 'github'
+  " }
+" }
+" EOF
 " ==========================================================================================================
 " =========================================== Mappings =====================================================
 " ==========================================================================================================
