@@ -35,7 +35,6 @@ Plug 'sainnhe/gruvbox-material'
 
 Plug 'vim-airline/vim-airline'
 Plug 'hoob3rt/lualine.nvim'
-Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
 
 
@@ -72,5 +71,8 @@ Plug 'vimwiki/vimwiki'
 
 " Terminal helper
 Plug 'voldikss/vim-floaterm'
+
+" Has to load last
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
