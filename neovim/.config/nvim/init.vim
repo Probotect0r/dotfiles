@@ -1,10 +1,5 @@
 source ~/.config/nvim/plugins.vim
 
-" Theme and colors stuff
-syntax enable
-set background=light
-set termguicolors
-
 " Colorscheme settings
 let g:gruvbox_contrast_dark = 'soft'
 let g:gruvbox_contrast_light = 'soft'
@@ -34,6 +29,10 @@ augroup END
 autocmd vim-colors-xcode ColorScheme * hi Comment        cterm=italic gui=italic
 autocmd vim-colors-xcode ColorScheme * hi SpecialComment cterm=italic gui=italic
 
+" Theme and colors stuff
+syntax enable
+set background=dark
+set termguicolors
 colorscheme gruvbox-material
 
 filetype plugin on
