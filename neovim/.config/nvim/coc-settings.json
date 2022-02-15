@@ -1,20 +1,15 @@
 {
-    "diagnostic.errorSign": " ",
-    "diagnostic.warningSign": " ",
-	"diagnostic.infoSign": " ",
-	"diagnostic.hintSign": "",
-    "languageserver": {
-        "php": {
-            "command": "intelephense",
-            "args": [
-                "--stdio"
-            ],
-            "filetypes": [
-                "php"
-            ],
-            "initializationOptions": {
-                "storagePath": "/tmp/intelephense"
-            }
-        }
+  "diagnostic.errorSign": " ",
+  "diagnostic.warningSign": " ",
+  "diagnostic.infoSign": " ",
+  "diagnostic.hintSign": "",
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
+      "settings": {}
     }
+  }
 }
