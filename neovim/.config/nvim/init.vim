@@ -29,15 +29,16 @@ augroup END
 autocmd vim-colors-xcode ColorScheme * hi Comment        cterm=italic gui=italic
 autocmd vim-colors-xcode ColorScheme * hi SpecialComment cterm=italic gui=italic
 
-" Theme and colors stuff
 syntax enable
-set background=dark
+set background=light
 set termguicolors
-colorscheme gruvbox-material
+colorscheme catppuccin
 
 filetype plugin on
 
-" General stuff
+" ==========================================================================================================
+" ========================================== GENERAL STUFF =================================================
+" ==========================================================================================================
 set fillchars+=vert:\ 
 set number
 set noswapfile
@@ -66,7 +67,7 @@ set incsearch
 set inccommand=nosplit
 
 " Mouse only in normal mode
-" set mouse=n
+set mouse=a
 
 " Start scrolling when we're 10 lines away from top or bottom
 " And 15 characters from end of line
@@ -117,6 +118,8 @@ set statusline+=%=%l\/ " Current line number
 set statusline+=%-6L\  " Total number of lines
 set statusline+=%3c\   " Column
 
+" Set syntax for certain file extensions
+au BufRead,BufNewFile *.sh.tpl set filetype=bash
 " ==========================================================================================================
 " ========================================== PLUGIN CONFIG =================================================
 " ==========================================================================================================
@@ -167,21 +170,26 @@ let g:indentLine_char = '│'
 
 let g:indentLine_concealcursor = 'vc'
 
-" lua << EOF
-" require("github-theme").setup({
-  " themeStyle = "dimmed"
-" })
-" EOF
+" Treesitter config
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained",
+  highlight = {
+    enable = true,
+  },
+  indent = {
+    enable = true
+  }
+}
+EOF
 
-" lua << EOF
-" require('lualine').setup {
-  " options = {
-    " theme = 'github'
-  " }
-" }
-" EOF
+lua << END
+require('lualine').setup()
+END
+
+
 " ==========================================================================================================
-" =========================================== Mappings =====================================================
+" =========================================== MAPPINGS =====================================================
 " ==========================================================================================================
 
 let mapleader = ','
@@ -217,8 +225,9 @@ nmap <leader><C-p> :Files<cr>
 
 " ======== Terminal ========
 tnoremap <Esc> <C-\><C-n>
-nmap <leader>tt :FloatermToggle<CR>
-nmap <leader>tn :FloatermNext<CR>
+nmap <leader>ss :FloatermToggle<CR>
+nmap <leader>sn :FloatermNext<CR>
+nmap <leader>sa :FloatermNew<CR>
 
 " ======== COC ==========
 " Use <c-space> to trigger completion.
