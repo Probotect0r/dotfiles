@@ -43,8 +43,3 @@ export SYSTEM_SPECIFIC_ZSHRC=~/.system_zshrc
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export GPG_TTY=$(tty)
-
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-
