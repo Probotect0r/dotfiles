@@ -22,6 +22,9 @@ Plug 'sainnhe/sonokai'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'sainnhe/gruvbox-material'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+Plug 'michaeldyrynda/carbon'
+Plug 'RRethy/nvim-base16'
+Plug 'sainnhe/everforest'
 
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'Yggdroot/indentLine'

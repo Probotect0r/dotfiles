@@ -1,10 +1,10 @@
 source ~/.config/nvim/plugins.vim
 
 " Colorscheme settings
-let g:gruvbox_contrast_dark = 'soft'
+let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_contrast_light = 'soft'
 let g:gruvbox_italic = 1
-let g:gruvbox_material_background = 'soft'
+let g:gruvbox_material_background = 'hard'
 let g:gruvbox_material_enable_italic = 1
 
 let g:two_firewatch_italics=1
@@ -21,7 +21,7 @@ let g:nord_italic_comments = 1
 let g:nord_underline = 1
 let g:nord_cursor_line_number_background = 1
 
-" Enable italic comments
+" Enable italic comments in vim-colors-xcode
 augroup vim-colors-xcode
     autocmd!
 augroup END
@@ -29,10 +29,12 @@ augroup END
 autocmd vim-colors-xcode ColorScheme * hi Comment        cterm=italic gui=italic
 autocmd vim-colors-xcode ColorScheme * hi SpecialComment cterm=italic gui=italic
 
+let g:everforest_background = 'medium'
+
 syntax enable
-set background=light
+set background=dark
 set termguicolors
-colorscheme catppuccin
+colorscheme gruvbox-material
 
 filetype plugin on
 
@@ -184,7 +186,16 @@ require'nvim-treesitter.configs'.setup {
 EOF
 
 lua << END
-require('lualine').setup()
+require('lualine').setup {
+  sections = {
+    lualine_c = {
+      {
+        "filename",
+        path=1
+      }
+    }
+  }
+}
 END
 
 
@@ -272,7 +283,3 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 nmap <leader>o :CocList outline<cr>
 nmap <leader>co :CocList commands<cr>
 nmap <leader>sy :CocList -I symbols<cr>
-
-
-autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2 expandtab
-
