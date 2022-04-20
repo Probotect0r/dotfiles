@@ -32,9 +32,18 @@ zplug load
 # User configuration
 bindkey '^ ' autosuggest-execute
 
-source ~/.profile
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+
+# Set some common env vars
+export PATH=$PATH:~/.local/bin
+export EDITOR=nvim
+export GPG_TTY=$(tty)
+
+# Source scripts
+source ~/.aliases.sh
 
 # Source system specific zshrc file
 export SYSTEM_SPECIFIC_ZSHRC=~/.system_zshrc
