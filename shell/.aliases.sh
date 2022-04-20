@@ -12,3 +12,10 @@ alias vim="nvim"
 
 # Docker
 alias dr="docker run --rm -it"
+
+# Interactive aws connect
+aws-connect() {
+ instance=$(aws ec2 describe-instances | jq '.Reservations| .[] | .Instances | .[] | "\(.Tags | .[] | select(.Key == "Name") | .Value), \(.InstanceId)"' | fzf | sed 's/"//g' | awk -F ", " '{print $2}')
+ echo "$instance"
+ aws ssm start-session --target "$instance"
+}
