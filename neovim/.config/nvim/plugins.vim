@@ -36,8 +36,13 @@ Plug 'tpope/vim-fugitive'
 " Language servers
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Working inside containers
+Plug 'jamestthompson3/nvim-remote-containers'
+
 " Syntax highlight
+Plug 'sheerun/vim-polyglot' " Required for good indentation
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 
 " Code formatting and linting
 Plug 'sbdchd/neoformat'
