@@ -15,7 +15,7 @@ alias dr="docker run --rm -it"
 
 # Interactive aws connect to ec2 instances using SSM
 aws-connect() {
- instance=$(aws ec2 describe-instances | jq '.Reservations| .[] | .Instances | .[] | "\(.Tags | .[] | select(.Key == "Name") | .Value), \(.InstanceId)"' | fzf | sed 's/"//g' | awk -F ", " '{print $2}')
+ instance=$(aws ec2 describe-instances --filters Name=instance-state-name,Values=running | jq '.Reservations| .[] | .Instances | .[] | "\(.Tags | .[] | select(.Key == "Name") | .Value), \(.InstanceId)"' | fzf | sed 's/"//g' | awk -F ", " '{print $2}')
  echo "$instance"
  aws ssm start-session --target "$instance"
 }
