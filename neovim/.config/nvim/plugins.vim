@@ -23,12 +23,13 @@ Plug 'projekt0n/github-nvim-theme'
 Plug 'sainnhe/gruvbox-material'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'michaeldyrynda/carbon'
-Plug 'RRethy/nvim-base16'
 Plug 'sainnhe/everforest'
+Plug 'EdenEast/nightfox.nvim'
 
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'Yggdroot/indentLine'
 Plug 'luukvbaal/stabilize.nvim'
+Plug 'norcalli/nvim-colorizer.lua'
 
 " Git Plugins
 Plug 'tpope/vim-fugitive'

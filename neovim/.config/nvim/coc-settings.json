@@ -11,6 +11,10 @@
       "filetypes": ["terraform", "tf"],
       "initializationOptions": {},
       "settings": {}
+    },
+    "elixirLS": {
+      "command": "/opt/elixir-ls/language_server.sh",
+      "filetypes": ["elixir", "eelixir"]
     }
   }
 }

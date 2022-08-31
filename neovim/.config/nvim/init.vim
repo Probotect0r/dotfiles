@@ -4,7 +4,7 @@ source ~/.config/nvim/plugins.vim
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_contrast_light = 'soft'
 let g:gruvbox_italic = 1
-let g:gruvbox_material_background = 'hard'
+let g:gruvbox_material_background = 'medium'
 let g:gruvbox_material_enable_italic = 1
 
 let g:two_firewatch_italics=1
@@ -34,7 +34,8 @@ let g:everforest_background = 'medium'
 syntax enable
 set background=dark
 set termguicolors
-colorscheme gruvbox-material
+" colorscheme gruvbox-material
+colorscheme carbon
 
 filetype plugin on
 
