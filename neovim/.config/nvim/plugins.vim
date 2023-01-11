@@ -25,6 +25,9 @@ Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'michaeldyrynda/carbon'
 Plug 'sainnhe/everforest'
 Plug 'EdenEast/nightfox.nvim'
+Plug 'Yazeed1s/oh-lucy.nvim'
+Plug 'sam4llis/nvim-tundra'
+Plug 'rose-pine/neovim'
 
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'Yggdroot/indentLine'

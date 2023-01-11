@@ -29,13 +29,13 @@ augroup END
 autocmd vim-colors-xcode ColorScheme * hi Comment        cterm=italic gui=italic
 autocmd vim-colors-xcode ColorScheme * hi SpecialComment cterm=italic gui=italic
 
-let g:everforest_background = 'medium'
+let g:everforest_background = 'hard'
+let g:everforest_enable_italic = 1
 
 syntax enable
-set background=dark
+set background=light
 set termguicolors
-" colorscheme gruvbox-material
-colorscheme carbon
+colorscheme rose-pine
 
 filetype plugin on
 
@@ -129,9 +129,6 @@ au BufRead,BufNewFile *.sh.tpl set filetype=bash
 
 " Increase NerdTree window size
 let NERDTreeWinSize=50
-
-" Start deoplete autocompletion on startup
-let g:deoplete#enable_at_startup = 1
 
 " NERD Commenter
 " Add spaces after comment delimiters by default
@@ -227,11 +224,9 @@ nnoremap <leader>k :m-2<CR>==
 vnoremap <leader>j :m'>+<CR>gv=gv
 vnoremap <leader>k :m-2<CR>gv=gv
 
-" Browse open buffers
+" ======== FZF =========
 nmap <leader>b :Buffers<cr>
 nmap <leader>l :Lines<cr>
-
-" ======== FZF =========
 nmap <C-p> :GFiles<cr>
 nmap <leader><C-p> :Files<cr>
 
