@@ -1,0 +1,9 @@
+[buildPlans.iosevka-custom]      # <iosevka-custom> is your plan name
+family = "Iosevka Custom"        # Font menu family name
+spacing = "normal"               # Optional; Values: `normal`, `term`, `fontconfig-mono`, or `fixed`
+serifs = "sans"                  # Optional; Values: `sans` or `slab`
+export-glyph-names = "true"
+
+[buildPlans.iosevka-custom.metric-override]
+leading = 1400
+
