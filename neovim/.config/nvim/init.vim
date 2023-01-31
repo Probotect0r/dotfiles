@@ -2,9 +2,9 @@ source ~/.config/nvim/plugins.vim
 
 " Colorscheme settings
 let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_contrast_light = 'soft'
+let g:gruvbox_contrast_light = 'hard'
 let g:gruvbox_italic = 1
-let g:gruvbox_material_background = 'medium'
+let g:gruvbox_material_background = 'soft'
 let g:gruvbox_material_enable_italic = 1
 
 let g:two_firewatch_italics=1
@@ -35,7 +35,7 @@ let g:everforest_enable_italic = 1
 syntax enable
 set background=light
 set termguicolors
-colorscheme rose-pine
+colorscheme gruvbox-material
 
 filetype plugin on
 
