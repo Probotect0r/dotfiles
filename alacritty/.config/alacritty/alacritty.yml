@@ -367,5 +367,5 @@ schemes:
         foreground: "#9893a5"
         background: "#fffaf3"
 
-colors: *rose_pine_dawn
+colors: *gruvbox_material_soft_light
 
