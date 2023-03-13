@@ -31,6 +31,7 @@ Plug 'Yazeed1s/oh-lucy.nvim'
 Plug 'sam4llis/nvim-tundra'
 Plug 'rose-pine/neovim'
 Plug 'AlexvZyl/nordic.nvim'
+Plug 'nyoom-engineering/oxocarbon.nvim'
 
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'Yggdroot/indentLine'
@@ -48,6 +49,7 @@ Plug 'jamestthompson3/nvim-remote-containers'
 
 " Syntax highlight
 Plug 'sheerun/vim-polyglot' " Required for good indentation
+Plug 'tpope/vim-sleuth'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 
