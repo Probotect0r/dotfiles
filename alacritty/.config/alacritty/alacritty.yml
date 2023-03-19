@@ -367,5 +367,5 @@ schemes:
         foreground: "#9893a5"
         background: "#fffaf3"
 
-colors: *gruvbox_material_medium_dark
+colors: *everforest_hard_dark
 

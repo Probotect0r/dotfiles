@@ -35,7 +35,7 @@ let g:everforest_enable_italic = 1
 syntax enable
 set background=dark
 set termguicolors
-colorscheme gruvbox-material
+colorscheme everforest
 
 filetype plugin on
 
