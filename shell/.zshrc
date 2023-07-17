@@ -49,6 +49,8 @@ source ~/.aliases.sh
 export SYSTEM_SPECIFIC_ZSHRC=~/.system_zshrc
 [[ -f "$SYSTEM_SPECIFIC_ZSHRC" ]] && . "$SYSTEM_SPECIFIC_ZSHRC"
 
+export AWS_SDK_LOAD_CONFIG=1
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
