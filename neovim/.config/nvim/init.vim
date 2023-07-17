@@ -35,7 +35,7 @@ let g:everforest_enable_italic = 1
 syntax enable
 set background=dark
 set termguicolors
-colorscheme everforest
+colorscheme gruvbox-material
 
 filetype plugin on
 
@@ -174,9 +174,11 @@ let g:indentLine_concealcursor = 'vc'
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all",
-  highlight = {
-    enable = true,
-  }
+  highlight = { enable = true },
+  incremental_selection = { enable = true },
+  autotag = { enable = true },
+  context_commentstring = { enable = true, enable_autocmd = false },
+
   -- indent = {
     -- enable = true
   -- }

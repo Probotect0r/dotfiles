@@ -13,7 +13,6 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
 
 " UI
 " Colour schemes
-Plug 'gruvbox-community/gruvbox'
 Plug 'arzg/vim-colors-xcode'
 Plug 'arcticicestudio/nord-vim'
 Plug 'arzg/vim-substrata'
@@ -48,7 +47,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jamestthompson3/nvim-remote-containers'
 
 " Syntax highlight
-Plug 'sheerun/vim-polyglot' " Required for good indentation
+"Plug 'sheerun/vim-polyglot' " Required for good indentation
 Plug 'tpope/vim-sleuth'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
